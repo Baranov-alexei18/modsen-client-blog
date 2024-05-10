@@ -1,11 +1,15 @@
 import Image from 'next/image';
 
-import styles from './page.module.scss';
+import { Banner } from './home/banner';
+import SectionPost from './home/section-posts';
+
+import styles from './styles.module.scss';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      Home
+      <Banner />
+      <SectionPost />
     </main>
   );
 }

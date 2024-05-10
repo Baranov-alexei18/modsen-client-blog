@@ -5,8 +5,10 @@
     border: none;
     padding: var(--spacing-16) var(--spacing-40);
     margin-right: var(--spacing-20);
-    
+    transition: box-shadow 1s;
+    box-shadow: none;
+
     &:hover {
-        box-shadow: var(--spacing-8) var(--spacing-4) var(--spacing-4) var(--color-dark);
+        box-shadow: var(--spacing-4) var(--spacing-4) var(--spacing-4) var(--color-dark);
     }
   }

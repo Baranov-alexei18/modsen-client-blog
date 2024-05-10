@@ -1,0 +1,89 @@
+.sectionPost {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-24);
+    padding: 80px 128px;
+  }
+  
+  .featuredPostWrapper {
+    flex: 1;
+  }
+  
+  .allPostWrapper {
+    flex: 1;
+  }
+  
+  .headerAllPost{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+      margin-bottom: var(--spacing-16);
+      color: var(--color-purple);
+    }
+  }
+  .sectionName {
+    font-size: var(--font-size-36);
+    font-weight: var(--font-weight-700);
+    line-height: 48px;
+    margin-bottom: var(--spacing-28);
+  }
+
+  .postCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 720px;
+    padding: var(--spacing-32);
+  }
+  
+  .image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+  }
+  .infoPost {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-400);
+    margin: var(--spacing-24) var(--spacing-0);
+  }
+
+  .title {
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-700);
+    line-height: var(--spacing-40);
+  }
+  
+  .subtitle {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-400);
+    line-height: var(--spacing-28);
+    margin: var(--spacing-24) var(--spacing-0);
+  }
+  
+  .authorCard {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 22%;
+    width: 520px;
+    padding: var(--spacing-28);
+
+    &:hover {
+        background-color: var(--color-light-yellow);
+    }
+  }
+  .authorInfo{
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-500);
+    margin-bottom: var(--spacing-12);
+  }
+  .cardTitle {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+  }
+  
