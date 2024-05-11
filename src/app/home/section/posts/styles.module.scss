@@ -2,12 +2,12 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    gap: var(--spacing-24);
-    padding: 80px 128px;
+    gap: var(--spacing-40);
+    padding: var(--spacing-80);
   }
   
   .featuredPostWrapper {
-    flex: 1;
+    flex: 1.5;
   }
   
   .allPostWrapper {
@@ -32,10 +32,10 @@
   }
 
   .postCard {
-    border: 1px solid #ccc;
+    width: 100%;
     border-radius: 5px;
-    margin-bottom: 20px;
-    width: 720px;
+    margin-bottom: var(--spacing-20);
+    border: 1px solid var(--color-light-grey);
     padding: var(--spacing-32);
   }
   
