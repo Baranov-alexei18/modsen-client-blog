@@ -9,15 +9,17 @@
   --color-dark-grey: #4C4C4C;
   --color-grey: #6D6E76;
   --color-light-grey: #d0d0da;
+  --color-light-grey-second: #F4F4F4;
   --color-white: #FFFFFF;
   --color-yellow: #FFD050;
-  --color-light-yellow: #FBF6EA;
+  --color-light-yellow: #f9ecd0;
   --color-purple: #592EA9;
   --color-light-purple: #F4F0F8;
-  
+
   --font-size-12: 12px;
   --font-size-14: 14px;
   --font-size-16: 16px;
+  --font-size-18: 18px;
   --font-size-20: 20px;
   --font-size-24: 24px;
   --font-size-28: 28px;
@@ -58,24 +60,20 @@
     --background-end-rgb: 0, 0, 0;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+    --secondary-glow: linear-gradient(to bottom right,
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0.3));
 
     --tile-start-rgb: 2, 13, 46;
     --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+    --tile-border: conic-gradient(#ffffff80,
+        #ffffff40,
+        #ffffff30,
+        #ffffff20,
+        #ffffff10,
+        #ffffff10,
+        #ffffff80);
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
