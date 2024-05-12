@@ -5,7 +5,7 @@ import { ButtonApp } from '@/components/ui-components/button';
 
 import styles from './styles.module.scss';
 
-export const SectionAboutUs = () => (
+const SectionAboutUs = () => (
   <section className={styles.sectionAboutUs}>
     <div className={styles.colorBar} />
     <div className={styles.AboutUsWrapper}>
@@ -35,3 +35,5 @@ export const SectionAboutUs = () => (
     </div>
   </section>
 );
+
+export default SectionAboutUs;

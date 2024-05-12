@@ -18,6 +18,7 @@
     "no-unused-vars": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "react/no-unused-prop-types": "off",
+    "react/display-name": "off",
     "import/prefer-default-export": ["off", { "target": "any" }],
     "simple-import-sort/imports": [
       "error",

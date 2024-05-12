@@ -12,7 +12,7 @@ import { SubscribeForm } from '../Forms/SubscribeForm';
 
 import styles from './styles.module.scss';
 
-export const Footer = () => {
+const Footer = () => {
   const [isModal, setIsModal] = useState(false);
 
   return (
@@ -51,3 +51,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

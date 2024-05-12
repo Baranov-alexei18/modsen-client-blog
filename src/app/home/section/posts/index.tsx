@@ -5,7 +5,7 @@ import { ButtonApp } from '@/components/ui-components/button';
 
 import styles from './styles.module.scss';
 
-export const SectionPost = () => (
+const SectionPost = () => (
   <section className={styles.sectionPost}>
     <div className={styles.featuredPostWrapper}>
       <h1 className={styles.sectionName}>Featured Post</h1>
@@ -75,3 +75,5 @@ export const SectionPost = () => (
     </div>
   </section>
 );
+
+export default SectionPost;

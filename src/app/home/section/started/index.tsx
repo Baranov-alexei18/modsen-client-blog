@@ -8,7 +8,7 @@ import { categories } from '@/constants/serverData';
 
 import styles from './styles.module.scss';
 
-export const SectionStarted = () => (
+const SectionStarted = () => (
   <section className={styles.sectionStarted}>
     <div className={styles.imageContainer}>
       <Image
@@ -33,3 +33,5 @@ export const SectionStarted = () => (
     </div>
   </section>
 );
+
+export default SectionStarted;

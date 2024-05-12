@@ -22,3 +22,5 @@ export const SectionCategory = () => (
     </div>
   </section>
 );
+
+export default SectionCategory;

@@ -24,3 +24,5 @@ export const SectionTestimonial = () => (
     </div>
   </section>
 );
+
+export default SectionTestimonial;
