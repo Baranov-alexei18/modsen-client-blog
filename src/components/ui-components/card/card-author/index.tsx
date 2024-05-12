@@ -7,8 +7,10 @@ import { AuthorCardType } from './types';
 
 import styles from './styles.module.scss';
 
-export const AuthorCard = ({ src, title, subTitle }: AuthorCardType) => (
-  <div className={styles.card}>
+export const AuthorCard = ({
+  src, title, subTitle, onHandleClick,
+}: AuthorCardType) => (
+  <div className={styles.card} onClick={onHandleClick} aria-hidden>
     <Image
       width="128"
       height="128"

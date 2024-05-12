@@ -4,8 +4,10 @@ import { CategoryCardType } from './types';
 
 import styles from './styles.module.scss';
 
-export const CategoryCard = ({ src, title, subTitle }: CategoryCardType) => (
-  <div className={styles.card}>
+export const CategoryCard = ({
+  src, title, subTitle, onHandleClick,
+}: CategoryCardType) => (
+  <div className={styles.card} onClick={onHandleClick} aria-hidden>
     <Image
       width="48"
       height="48"

@@ -1,5 +1,6 @@
 export type CategoryCardType = {
     src: string,
     title: string,
-    subTitle: string
+    subTitle: string,
+    onHandleClick: () => void;
 };

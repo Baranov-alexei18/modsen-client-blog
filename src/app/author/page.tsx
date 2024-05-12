@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import styles from '../page.module.css';
+import styles from '../styles.module.scss';
 
 export default function Author() {
   return (
