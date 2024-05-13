@@ -1,17 +1,41 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { PostCard } from '@/components/ui-components/card/card-post';
+import { formatDate } from '@/helpers/formatDate';
 
 import styles from './styles.module.scss';
 
 const SectionPost = () => {
+  const [posts, setPosts] = useState([]);
+  const [featuredPost, setFeaturedPost] = useState({
+    title: 'Exemple',
+    subtitle: 'Subtitle exemple',
+    date_created: '2022-05-01',
+    src: '/image/image-post.png',
+  });
   const router = useRouter();
+
+  const {
+    src, title, subtitle, date_created,
+  } = featuredPost!;
 
   const handleClickToBlogPostPage = () => {
     router.push('/blog-post');
   };
+
+  useEffect(() => {
+    fetch('http://localhost:3001/posts')
+      .then((response) => response.json())
+      .then((data) => {
+        setPosts(data.slice(1, 5));
+        setFeaturedPost(data[0]);
+      });
+  }, []);
+
   return (
     <section className={styles.sectionPost}>
       <div className={styles.featuredPostWrapper}>
@@ -19,23 +43,18 @@ const SectionPost = () => {
         <div className={styles.postCard}>
           <div className={styles.image}>
             <Image
-              src="/image/image-post.png"
+              src={src}
               alt="Post Image"
               fill
-              objectFit="cover"
             />
           </div>
-          <p className={styles.infoPost}>By John Doe   l   May 23, 2022</p>
+          <p className={styles.infoPost}>{`By Jhon Doe | ${formatDate(date_created)}`}</p>
           <div className={styles.content}>
             <h2 className={styles.title}>
-              Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor.
+              {title}
             </h2>
             <p className={styles.subtitle}>
-              Duis aute irure dolor in reprehenderit
-              in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident.
+              {subtitle}
             </p>
             <ButtonApp
               backgroundColor="var(--color-yellow)"
@@ -51,38 +70,16 @@ const SectionPost = () => {
           <h1 className={styles.sectionName}>All Posts</h1>
           <Link href="/blog">View All</Link>
         </div>
-
-        <div className={styles.authorCard}>
-          <div className={styles.authorInfo}>
-            <p>By John Deo   |   Aug 23, 2021 </p>
-          </div>
-          <h3 className={styles.cardTitle}>
-            8 Figma design systems that you can download for free today.
-          </h3>
-        </div>
-        <div className={styles.authorCard}>
-          <div className={styles.authorInfo}>
-            <p>By John Deo   |   Aug 23, 2021 </p>
-          </div>
-          <h3 className={styles.cardTitle}>
-            8 Figma design systems that you can download for free today.
-          </h3>
-        </div>
-        <div className={styles.authorCard}>
-          <div className={styles.authorInfo}>
-            <p>By John Deo   |   Aug 23, 2021 </p>
-          </div>
-          <h3 className={styles.cardTitle}>
-            8 Figma design systems that you can download for free today.
-          </h3>
-        </div>
-        <div className={styles.authorCard}>
-          <div className={styles.authorInfo}>
-            <p>By John Deo   |   Aug 23, 2021 </p>
-          </div>
-          <h3 className={styles.cardTitle}>
-            8 Figma design systems that you can download for free today.
-          </h3>
+        <div className={styles.allPostWrapper}>
+          {posts.map(({ title, date_created }) => (
+            <PostCard
+              key={`${title}-${date_created}`}
+              name="Jhon Deo"
+              date={date_created}
+              title={title}
+              onHandleClick={handleClickToBlogPostPage}
+            />
+          ))}
         </div>
       </div>
     </section>
