@@ -9,9 +9,11 @@ import styles from './styles.module.scss';
 
 export const SubscribeForm = () => {
   const [email, setEmail] = useState('');
+  const [errorEmail, setErrorEmail] = useState(false);
 
-  const getToSubscribeEmail = (e: { target: { value: string }}) => {
+  const getToSubscribeEmail = (e: { target: { value: string } }, email: boolean) => {
     setEmail(e.target.value);
+    setErrorEmail(!email);
   };
 
   const templateParams = {
@@ -49,10 +51,12 @@ export const SubscribeForm = () => {
         value={email}
         placeholder="Enter Your Email"
         onChange={getToSubscribeEmail}
+        error="Invalid email"
       />
       <ButtonApp
         backgroundColor="var(--color-yellow)"
         onClick={sendEmail}
+        disabled={errorEmail}
       >
         Subscribe
       </ButtonApp>
