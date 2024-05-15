@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
@@ -36,4 +37,4 @@ const SectionAboutUs = () => (
   </section>
 );
 
-export default SectionAboutUs;
+export default withVisibilityObserver(SectionAboutUs);

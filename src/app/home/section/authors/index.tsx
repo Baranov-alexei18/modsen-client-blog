@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { AuthorCard } from '@/components/ui-components/card/card-author';
+import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
@@ -41,4 +42,4 @@ export const SectionAuthor = () => {
   );
 };
 
-export default SectionAuthor;
+export default withVisibilityObserver(SectionAuthor);

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
@@ -43,4 +44,4 @@ const SectionStarted = () => {
   );
 };
 
-export default SectionStarted;
+export default withVisibilityObserver(SectionStarted);

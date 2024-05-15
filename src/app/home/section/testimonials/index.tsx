@@ -1,8 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-import { ButtonApp } from '@/components/ui-components/button';
 import { Slider } from '@/components/ui-components/slider';
+import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
@@ -25,4 +22,4 @@ export const SectionTestimonial = () => (
   </section>
 );
 
-export default SectionTestimonial;
+export default withVisibilityObserver(SectionTestimonial);

@@ -1,10 +1,8 @@
-import { subtle } from 'crypto';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import { CategoryCard } from '@/components/ui-components/card/card-category';
 import { categories } from '@/constants/serverData';
+import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
@@ -33,4 +31,4 @@ export const SectionCategory = () => {
   );
 };
 
-export default SectionCategory;
+export default withVisibilityObserver(SectionCategory);

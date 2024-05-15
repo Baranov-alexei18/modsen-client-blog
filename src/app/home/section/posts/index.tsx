@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ButtonApp } from '@/components/ui-components/button';
 import { PostCard } from '@/components/ui-components/card/card-post';
 import { formatDate } from '@/helpers/formatDate';
+import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
@@ -86,4 +87,4 @@ const SectionPost = () => {
   );
 };
 
-export default SectionPost;
+export default withVisibilityObserver(SectionPost);
