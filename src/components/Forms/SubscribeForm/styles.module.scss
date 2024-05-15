@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-dark-grey);
+    padding: inherit;
+    margin-bottom: var(--spacing-20);
+  
+  .info {
+    width: 190%;
+    font-size: var(--font-size-36);
+    font-weight: var(--font-weight-700);
+    margin-right: var(--spacing-40);
+  }
+  }

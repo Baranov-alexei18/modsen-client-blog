@@ -18,6 +18,8 @@
     "no-unused-vars": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "react/no-unused-prop-types": "off",
+    "react/display-name": "off",
+    "no-shadow": "off",
     "import/prefer-default-export": ["off", { "target": "any" }],
     "simple-import-sort/imports": [
       "error",
@@ -33,10 +35,11 @@
       }
     ],
     "simple-import-sort/exports": "error",
-    "import/no-unresolved": "off",
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
     "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration" ] }],
     "camelcase": "off",
     "no-undef": "off",

@@ -1,0 +1,21 @@
+.sectionJoinForm {
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-80);
+  max-width: 630px;
+}
+
+.title {
+  font-size: var(--font-size-36);
+  font-weight: var(--font-weight-700);
+  margin: var(--spacing-20) var(--spacing-0);
+}
+
+.subtitle {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-400);
+  color: var(--color-grey);
+  margin-bottom: var(--spacing-20);
+}

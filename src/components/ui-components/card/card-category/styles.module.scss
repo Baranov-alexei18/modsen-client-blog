@@ -1,0 +1,32 @@
+.card {
+    width: 296px;
+    height: 228px;
+    text-align: start;
+    border-radius: var(--border-radius-4);
+    padding: var(--spacing-20);
+    border: 1px solid var(--color-light-grey);
+
+    .icon {
+        background-color: var(--color-light-yellow);
+        border-radius: var(--border-radius-12);
+        padding: var(--spacing-12);
+        margin-bottom: var(--spacing-12);
+
+    }
+
+    .title {
+        font-size: var(--font-size-28);
+        font-weight: var(--font-weight-700);
+        margin-bottom: var(--spacing-12);
+
+    }
+
+    .subtitle {
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-400);
+    }
+
+    &:hover {
+        background-color: var(--color-yellow);
+    }
+}

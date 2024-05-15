@@ -1,0 +1,32 @@
+.sectionStarted {
+  position: relative;
+  padding: var(--spacing-52) var(--spacing-80);
+  width: 100%;
+}
+.imageContainer {
+  position: relative;
+  width: 75%;
+  height: 700px;
+}
+
+.overlayWrapper {
+  position: absolute;
+  right: -200px;
+  bottom: var(--spacing-0);
+  max-width: 60%;
+  background-color: var(--color-white);
+  padding: var(--spacing-80);
+}
+
+.title {
+  font-size: var(--font-size-36);
+  font-weight: var(--font-weight-700);
+  margin: var(--spacing-20) var(--spacing-0);
+}
+
+.subtitle {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-400);
+  color: var(--color-grey);
+  margin-bottom: var(--spacing-20);
+}
