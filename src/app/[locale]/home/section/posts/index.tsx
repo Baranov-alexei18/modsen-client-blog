@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { PostCard } from '@/components/ui-components/card/card-post';
@@ -19,6 +20,7 @@ const SectionPost = () => {
     src: '/image/image-post.png',
   });
   const router = useRouter();
+  const locale = useLocale();
 
   const {
     src, title, subtitle, date_created,
@@ -69,7 +71,7 @@ const SectionPost = () => {
       <div className={styles.allPostWrapper}>
         <div className={styles.headerAllPost}>
           <h1 className={styles.sectionName}>All Posts</h1>
-          <Link href="/blog">View All</Link>
+          <Link href={`${locale}/blog`} locale={locale}>View All</Link>
         </div>
         <div className={styles.allPostWrapper}>
           {posts.map(({ title, date_created }) => (
