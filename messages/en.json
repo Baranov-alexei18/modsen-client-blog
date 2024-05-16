@@ -1,6 +1,66 @@
 {
     "header": {
       "title": "Hello world!",
-      "btnModalTitle": "Video about us"
+      "btnModalTitle": "Video about us",
+      "home": "Home",
+      "blog": "Blog",
+      "aboutUs": "About Us",
+      "contact": "Contact Us",
+      "privacyPolice": "Privacy police"
+    },
+    "forms": {
+      "subscribe":{
+        "placeholder": "Enter your email",
+        "title": "Subscribe to our news letter to get latest updates and news",
+        "subscribe": "Subscribe",
+        "invalidData": "Invalid email"
+      },
+      "join":{
+        "title": "Join our team to be a part of our story",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "btnTitle": "Join now"
+      }
+    },
+    "pages":{
+      "home": {
+        "banner":{
+          "startInfo": "POSTED ON STARTUP",
+          "title": "Step-by-step guide to choosing great font pairs",
+          "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+          "btnTitle": "Read More >"
+        },
+        "posts":{
+          "featuredPost": "Featured Post",
+          "allPost": "All Post",
+          "view": "View all",
+          "btnTitle": "Read More >"
+        },
+        "aboutUs":{
+          "sectionTitleAboutUs": "ABOUT US",
+          "sectionTitleMision": "OUR MISION",
+          "titleAboutUs": "We are a community of content writers who share their learnings",
+          "titleMision": "Creating valuable content for creatives all around the world",
+          "subtitleAboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "link": "Read More >"
+        },
+        "category":{
+          "sectionTitle": "Choose A Catagory"
+        },
+        "started":{
+          "sectionTitle": "WHY WE STARTED",
+          "title": "It started out as a simple idea and evolved into our passion",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+          "btnTitle": "Discover our story >"
+        },
+        "authors":{
+          "sectionTitle": "List of Authors"
+        },
+        "testimonials":{
+          "sectionTitle": "TESTIMONIALS",
+          "title": "What people say about our blog",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        }
+      }
     }
 }

@@ -30,7 +30,7 @@ export const Header = () => {
       <header className={styles.header}>
         <div className={styles.logo}>Modsen Client Blog </div>
         <div className={styles.actions}>
-          {LINKS_HEADER.map(({ path, name }) => <Link key={`${path}-${name}`} href={`/${locale}/${path}`} replace>{name}</Link>)}
+          {LINKS_HEADER.map(({ path, name }) => <Link key={`${path}-${name}`} href={`/${locale}/${path}`}>{t(`${name}`)}</Link>)}
           <ButtonApp onClick={openModal}>{t('btnModalTitle')}</ButtonApp>
           <SelectLanguage />
         </div>

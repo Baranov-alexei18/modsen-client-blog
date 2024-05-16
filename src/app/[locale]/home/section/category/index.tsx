@@ -1,4 +1,5 @@
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { CategoryCard } from '@/components/ui-components/card/card-category';
 import { categories } from '@/constants/serverData';
@@ -8,6 +9,7 @@ import styles from './styles.module.scss';
 
 export const SectionCategory = () => {
   const router = useRouter();
+  const t = useTranslations('pages.home.category');
 
   const handleClickToCategoryPage = () => {
     router.push('/category');
@@ -15,7 +17,7 @@ export const SectionCategory = () => {
 
   return (
     <section className={styles.sectionCategory}>
-      <h2 className={styles.sectionTitle}>Choose A Catagory</h2>
+      <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
       <div className={styles.categoryContainer}>
         {categories.map(({ src, title, subtitle }) => (
           <CategoryCard

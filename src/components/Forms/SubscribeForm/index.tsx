@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
@@ -10,6 +11,8 @@ import styles from './styles.module.scss';
 export const SubscribeForm = () => {
   const [email, setEmail] = useState('');
   const [errorEmail, setErrorEmail] = useState(false);
+
+  const t = useTranslations('forms.subscribe');
 
   const getToSubscribeEmail = (e: { target: { value: string } }, email: boolean) => {
     setEmail(e.target.value);
@@ -45,20 +48,20 @@ export const SubscribeForm = () => {
   return (
     <form className={styles.wrapper} onSubmit={sendEmail}>
       <span className={styles.info}>
-        Subscribe to our news letter to get latest updates and news
+        {t('title')}
       </span>
       <InputApp
         value={email}
-        placeholder="Enter Your Email"
+        placeholder={t('placeholder')}
         onChange={getToSubscribeEmail}
-        error="Invalid email"
+        error={t('invalidData')}
       />
       <ButtonApp
         {...YellowButton}
         onClick={sendEmail}
         disabled={errorEmail}
       >
-        Subscribe
+        {t('subscribe')}
       </ButtonApp>
     </form>
   );

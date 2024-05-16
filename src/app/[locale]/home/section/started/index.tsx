@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
@@ -9,6 +10,7 @@ import styles from './styles.module.scss';
 
 const SectionStarted = () => {
   const router = useRouter();
+  const t = useTranslations('pages.home.started');
 
   const handleClickToAboutUsPage = () => {
     router.push('/about-us');
@@ -23,21 +25,20 @@ const SectionStarted = () => {
           objectFit="cover"
         />
         <div className={styles.overlayWrapper}>
-          <h4>WHY WE STARTED </h4>
+          <h4>
+            {t('sectionTitle')}
+          </h4>
           <p className={styles.title}>
-            It started out as a simple idea and evolved into our passion
+            {t('title')}
           </p>
           <p className={styles.subtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            {t('subtitle')}
           </p>
           <ButtonApp
             {...YellowButton}
             onClick={handleClickToAboutUsPage}
           >
-            {'Discover our story >'}
+            {t('btnTitle')}
           </ButtonApp>
         </div>
       </div>

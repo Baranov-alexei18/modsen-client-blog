@@ -1,4 +1,5 @@
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
@@ -7,6 +8,7 @@ import styles from './styles.module.scss';
 
 export const JoinForm = () => {
   const router = useRouter();
+  const t = useTranslations('forms.join');
 
   const handleClickToContactPage = () => {
     router.push('/contact');
@@ -14,18 +16,17 @@ export const JoinForm = () => {
 
   return (
     <section className={styles.sectionJoinForm}>
-      <p className={styles.title}>
-        Join our team to be a part of our story
-      </p>
+      <h3 className={styles.title}>
+        {t('title')}
+      </h3>
       <p className={styles.subtitle}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt.
+        {t('subtitle')}
       </p>
       <ButtonApp
         {...YellowButton}
         onClick={handleClickToContactPage}
       >
-        Join now
+        {t('btnTitle')}
       </ButtonApp>
     </section>
   );

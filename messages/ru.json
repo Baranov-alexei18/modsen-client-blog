@@ -1,6 +1,66 @@
 {
     "header": {
       "title": "Ну привет мир!",
-      "btnModalTitle": "Видео о нас"
+      "btnModalTitle": "Видео о нас",
+      "home": "Главная",
+      "blog": "Блог",
+      "aboutUs": "О нас",
+      "contact": "Контакты",
+      "privacyPolice": "Конфиденциальность"
+    },
+    "forms": {
+      "subscribe":{
+        "placeholder": "Введите ваш емайл",
+        "title": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+        "subscribe": "Подписаться",
+        "invalidData": "Неверный email"
+      },
+      "join":{
+        "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "btnTitle": "Присоединяйся сейчас"
+      }
+    },
+    "pages":{
+      "home": {
+        "banner":{
+          "startInfo": "Размещено в STARTUP",
+          "title": "Пошаговое руководство по выбору отличных пар шрифтов",
+          "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+          "btnTitle": "Читать далее"
+        },
+        "posts":{
+          "featuredPost": "Лучший пост",
+          "allPost": "Посты",
+          "view": "Смотреть все",
+          "btnTitle": "Читать далее"
+        },
+        "aboutUs":{
+          "sectionTitleAboutUs": "О НАС",
+          "sectionTitleMision": "НАША МИССИЯ",
+          "titleAboutUs": "Мы — сообщество авторов контента, которые делятся своими знаниями.",
+          "titleMision": "Создание ценного контента для креативщиков по всему миру",
+          "subtitleAboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "link": "Читать далее"
+        },
+        "category":{
+          "sectionTitle": "Выберите категорию"
+        },
+        "started":{
+          "sectionTitle": "ПОЧЕМУ МЫ НАЧАЛИ",
+          "title": "Все началось с простой идеи и превратилось в нашу страсть.",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+          "btnTitle": "Откройте для себя нашу историю"
+        },
+        "authors":{
+          "sectionTitle": "Список авторов"
+        },
+        "testimonials":{
+          "sectionTitle": "ОТЗЫВЫ",
+          "title": "Что люди говорят о нашем блоге",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        }
+      }
     }
 }

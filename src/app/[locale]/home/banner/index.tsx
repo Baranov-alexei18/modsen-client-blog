@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
@@ -8,6 +9,7 @@ import styles from './styles.module.scss';
 
 export const Banner = () => {
   const router = useRouter();
+  const t = useTranslations('pages.home.banner');
 
   const handleClickToBlogPostPage = () => {
     router.push('/blog-post');
@@ -25,10 +27,9 @@ export const Banner = () => {
       <div className={styles.overlay}>
         <div className={styles.textContainer}>
           <span className={styles.info}>
-            POSTED ON
-            <b>{' STARTUP'}</b>
+            {t('startInfo')}
           </span>
-          <h3 className={styles.title}>Step-by-step guide to choosing great font pairs</h3>
+          <h3 className={styles.title}>{t('title')}</h3>
           <p className={styles.subtitle}>By James West  |  May 23, 2022 </p>
           <p className={styles.subtitle}>
             Duis aute irure dolor in reprehenderit in voluptate
@@ -39,7 +40,7 @@ export const Banner = () => {
             {...YellowButton}
             onClick={handleClickToBlogPostPage}
           >
-            {'Read More >'}
+            {t('btnTitle')}
           </ButtonApp>
         </div>
       </div>

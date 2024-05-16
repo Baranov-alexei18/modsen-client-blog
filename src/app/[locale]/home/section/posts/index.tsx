@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
@@ -20,6 +20,8 @@ const SectionPost = () => {
     date_created: '2022-05-01',
     src: '/image/image-post.png',
   });
+
+  const t = useTranslations('pages.home.posts');
   const router = useRouter();
   const locale = useLocale();
 
@@ -43,7 +45,7 @@ const SectionPost = () => {
   return (
     <section className={styles.sectionPost}>
       <div className={styles.featuredPostWrapper}>
-        <h1 className={styles.sectionName}>Featured Post</h1>
+        <h1 className={styles.sectionName}>{t('featuredPost')}</h1>
         <div className={styles.postCard}>
           <div className={styles.image}>
             <Image
@@ -64,15 +66,15 @@ const SectionPost = () => {
               {...YellowButton}
               onClick={handleClickToBlogPostPage}
             >
-              {'Read More >'}
+              {t('btnTitle')}
             </ButtonApp>
           </div>
         </div>
       </div>
       <div className={styles.allPostWrapper}>
         <div className={styles.headerAllPost}>
-          <h1 className={styles.sectionName}>All Posts</h1>
-          <Link href={`${locale}/blog`} locale={locale}>View All</Link>
+          <h1 className={styles.sectionName}>{t('allPost')}</h1>
+          <Link href={`${locale}/blog`} locale={locale}>{t('view')}</Link>
         </div>
         <div className={styles.allPostWrapper}>
           {posts.map(({ title, date_created }) => (
