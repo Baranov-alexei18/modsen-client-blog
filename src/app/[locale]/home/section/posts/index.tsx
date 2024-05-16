@@ -30,7 +30,7 @@ const SectionPost = () => {
   } = featuredPost!;
 
   const handleClickToBlogPostPage = () => {
-    router.push('/blog-post');
+    router.push(`${locale}/blog-post`);
   };
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { CategoryCard } from '@/components/ui-components/card/card-category';
 import { categories } from '@/constants/serverData';
@@ -9,10 +9,11 @@ import styles from './styles.module.scss';
 
 export const SectionCategory = () => {
   const router = useRouter();
+  const locale = useLocale();
   const t = useTranslations('pages.home.category');
 
   const handleClickToCategoryPage = () => {
-    router.push('/category');
+    router.push(`${locale}/category`);
   };
 
   return (

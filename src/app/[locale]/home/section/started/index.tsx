@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
@@ -10,10 +10,11 @@ import styles from './styles.module.scss';
 
 const SectionStarted = () => {
   const router = useRouter();
+  const locale = useLocale();
   const t = useTranslations('pages.home.started');
 
   const handleClickToAboutUsPage = () => {
-    router.push('/about-us');
+    router.push(`${locale}/about-us`);
   };
   return (
     <section className={styles.sectionStarted}>

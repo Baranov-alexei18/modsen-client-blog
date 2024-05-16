@@ -1,10 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
 import { JoinForm } from '@/components/Forms/JoinForm';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 import { Banner } from './home/banner';
 

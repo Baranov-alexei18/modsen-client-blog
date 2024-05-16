@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { LINKS_FOOTER, SOCIAL_NETWORK_LINKS } from '@/constants/links';
 
@@ -11,6 +11,7 @@ import { SubscribeForm } from '../Forms/SubscribeForm';
 import styles from './styles.module.scss';
 
 const Footer = () => {
+  const locale = useLocale();
   const t = useTranslations('header');
 
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
       <div className={styles.row}>
         <div className={styles.logo}>Modsen Client Blog</div>
         <div className={styles.actions}>
-          {LINKS_FOOTER.map(({ path, name }) => <Link key={`${path}-${name}`} href={path}>{t(`${name}`)}</Link>)}
+          {LINKS_FOOTER.map(({ path, name }) => <Link key={`${path}-${name}`} href={`/${locale}/${path}`}>{t(`${name}`)}</Link>)}
         </div>
       </div>
       <div />
