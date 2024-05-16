@@ -1,8 +1,8 @@
-import { SetStateAction, useState } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { YellowButton } from '@/components/ui-components/button/options';
 import { InputApp } from '@/components/ui-components/input';
 
 import styles from './styles.module.scss';
@@ -54,7 +54,7 @@ export const SubscribeForm = () => {
         error="Invalid email"
       />
       <ButtonApp
-        backgroundColor="var(--color-yellow)"
+        {...YellowButton}
         onClick={sendEmail}
         disabled={errorEmail}
       >

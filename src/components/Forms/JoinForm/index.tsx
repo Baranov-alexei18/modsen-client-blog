@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { YellowButton } from '@/components/ui-components/button/options';
 
 import styles from './styles.module.scss';
 
@@ -21,7 +22,7 @@ export const JoinForm = () => {
         elit, sed do eiusmod tempor incididunt.
       </p>
       <ButtonApp
-        backgroundColor="var(--color-yellow)"
+        {...YellowButton}
         onClick={handleClickToContactPage}
       >
         Join now

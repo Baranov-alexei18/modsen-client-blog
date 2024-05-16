@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { YellowButton } from '@/components/ui-components/button/options';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -33,7 +34,7 @@ const SectionStarted = () => {
             quis nostrud exercitation ullamco laboris nisi ut aliquip.
           </p>
           <ButtonApp
-            backgroundColor="var(--color-yellow)"
+            {...YellowButton}
             onClick={handleClickToAboutUsPage}
           >
             {'Discover our story >'}

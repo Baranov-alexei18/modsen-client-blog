@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { YellowButton } from '@/components/ui-components/button/options';
 import { PostCard } from '@/components/ui-components/card/card-post';
 import { formatDate } from '@/helpers/formatDate';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
@@ -60,7 +61,7 @@ const SectionPost = () => {
               {subtitle}
             </p>
             <ButtonApp
-              backgroundColor="var(--color-yellow)"
+              {...YellowButton}
               onClick={handleClickToBlogPostPage}
             >
               {'Read More >'}
