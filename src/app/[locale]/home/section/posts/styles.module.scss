@@ -24,6 +24,10 @@
     a{
       margin-bottom: var(--spacing-16);
       color: var(--color-purple);
+
+      &::after {
+        background-color: var(--color-purple);
+      }
     }
   }
   .sectionName {

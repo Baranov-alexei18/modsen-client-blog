@@ -22,6 +22,10 @@
     font-weight: var(--font-weight-700);
     margin-bottom: var(--spacing-16);
     color: var(--color-purple);
+    
+    &::after {
+      background-color: var(--color-purple);
+    }
   }
 
   h2{
