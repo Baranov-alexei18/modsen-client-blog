@@ -67,7 +67,14 @@ const SectionPost = () => {
               fill
             />
           </div>
-          <p className={styles.infoPost}>{`By ${authorName} | ${formatDate(date_created)}`}</p>
+          <p className={styles.infoPost}>
+            By
+            <span>
+              {` ${authorName} `}
+            </span>
+            |
+            {` ${formatDate(date_created!)}`}
+          </p>
           <div className={styles.content}>
             <h2 className={styles.title}>
               {title}

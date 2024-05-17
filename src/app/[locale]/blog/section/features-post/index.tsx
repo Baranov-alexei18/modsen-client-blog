@@ -23,27 +23,29 @@ export const SectionFeaturedPost = ({ data }: PostDataProps) => {
   } = data!;
 
   return (
-    <section className={styles.sectionPost}>
+    <section className={styles.wrapper}>
       <div className={styles.featuredPostWrapper}>
-        <h1 className={styles.sectionName}>{t('featuredPost').toUpperCase()}</h1>
-        <div className={styles.postCard}>
-          <h2 className={styles.title}>
-            {title}
-          </h2>
-          <p className={styles.infoPost}>{`By ${authorName} | ${formatDate(date_created!)}`}</p>
-          <div className={styles.content}>
-
-            <p className={styles.subtitle}>
-              {subtitle}
-            </p>
-            <ButtonApp
-              {...YellowButton}
-              onClick={handleClickToBlogPostPage}
-            >
-              {t('btnTitle')}
-            </ButtonApp>
-          </div>
-        </div>
+        <h3 className={styles.sectionName}>{t('featuredPost').toUpperCase()}</h3>
+        <h2 className={styles.title}>
+          {title}
+        </h2>
+        <p className={styles.infoPost}>
+          By
+          <span>
+            {` ${authorName} `}
+          </span>
+          |
+          {` ${formatDate(date_created!)}`}
+        </p>
+        <p className={styles.subtitle}>
+          {subtitle}
+        </p>
+        <ButtonApp
+          {...YellowButton}
+          onClick={handleClickToBlogPostPage}
+        >
+          {t('btnTitle')}
+        </ButtonApp>
       </div>
       <div className={styles.image}>
         <Image

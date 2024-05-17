@@ -56,6 +56,10 @@
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-400);
     margin: var(--spacing-24) var(--spacing-0);
+
+    span{
+      color: var(--color-purple);
+    }
   }
 
   .title {

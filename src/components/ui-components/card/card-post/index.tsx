@@ -10,7 +10,12 @@ export const PostCard = ({
   <div className={styles.card} onClick={onHandleClick} aria-hidden>
     <div className={styles.authorInfo}>
       <p>
-        {`By ${name} | ${formatDate(date)}`}
+        By
+        <span>
+          {` ${name} `}
+        </span>
+        |
+        {` ${formatDate(date)}`}
       </p>
     </div>
     <h3 className={styles.cardTitle}>

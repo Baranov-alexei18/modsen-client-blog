@@ -1,73 +1,54 @@
-.sectionPost {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--color-light-purple);
-    width: 100%;
-    padding: var(--spacing-80);
-    gap: var(--spacing-80);
-  }
-  
-  .featuredPostWrapper {
-    flex: 1;
-  }
-  
-  .allPostWrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  
-  .headerAllPost{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-light-purple);
+  width: 100%;
+  padding: var(--spacing-80);
+  gap: var(--spacing-80);
+}
 
-    a{
-      margin-bottom: var(--spacing-16);
-      color: var(--color-purple);
+.featuredPostWrapper {
+  flex: 1;
+  width: 100%;
 
-      &::after {
-        background-color: var(--color-purple);
-      }
-    }
-  }
-  .sectionName {
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-500);
-    margin-bottom: var(--spacing-28);
-  }
+}
 
-  .postCard {
-    width: 100%;
-  }
-  
-  .image {
-    flex: 1;
-    position: relative;
-    width: 350px;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--border-radius-4);
-  }
-  .infoPost {
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-400);
-    margin: var(--spacing-24) var(--spacing-0);
-  }
+.sectionName {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-500);
+  margin-bottom: var(--spacing-28);
+}
 
-  .title {
-    font-size: var(--font-size-28);
-    font-weight: var(--font-weight-700);
-    line-height: var(--spacing-40);
-  }
-  
-  .subtitle {
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-400);
-    line-height: var(--spacing-28);
-    margin: var(--spacing-24) var(--spacing-0);
-  }
+.image {
+  flex: 1;
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--border-radius-4);
+}
 
-  
+.infoPost {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-500);
+  margin: var(--spacing-24) var(--spacing-0);
+
+  span{
+    color: var(--color-purple);
+  }
+}
+
+.title {
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-700);
+  line-height: var(--spacing-40);
+}
+
+.subtitle {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-400);
+  line-height: var(--spacing-28);
+  margin: var(--spacing-24) var(--spacing-0);
+}
