@@ -21,7 +21,13 @@
     align-items: center;
     font-size: var(--font-size-16);
 
-    
+    a {
+        margin-right: var(--spacing-28);
+
+        &:last-child {
+            margin-right: var(--spacing-0);
+        }
+    }
 }
 
 .info {
@@ -31,6 +37,10 @@
 
 .icons {
     display: flex;
+
+    &::after {
+        display: none;
+    }
 
     img {
         cursor: pointer;

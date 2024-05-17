@@ -8,6 +8,7 @@ import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
 import { PostCard } from '@/components/ui-components/card/card-post';
 import { formatDate } from '@/helpers/formatDate';
+import { getAuthorNameById } from '@/helpers/getAuthorName';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -19,6 +20,7 @@ const SectionPost = () => {
     subtitle: 'Subtitle exemple',
     date_created: '2022-05-01',
     src: '/image/image-post.png',
+    authorName: 'Jhon Doe',
   });
 
   const t = useTranslations('pages.home.posts');
@@ -26,7 +28,7 @@ const SectionPost = () => {
   const locale = useLocale();
 
   const {
-    src, title, subtitle, date_created,
+    src, title, subtitle, date_created, authorName,
   } = featuredPost!;
 
   const handleClickToBlogPostPage = () => {
@@ -34,12 +36,23 @@ const SectionPost = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3001/posts')
-      .then((response) => response.json())
-      .then((data) => {
-        setPosts(data.slice(1, 5));
-        setFeaturedPost(data[0]);
-      });
+    // Запрос на пагинацию
+    // const response = fetch('http://localhost:3001/posts?_page=2')
+    const getPost = async () => {
+      const posts = await fetch('http://localhost:3001/posts?_page=1');
+      const authors = await fetch('http://localhost:3001/authors');
+
+      const { data } = await posts.json();
+      const dataAuthors = await authors.json();
+
+      const dataWithAuthor = data.map((post: { authorId: number; }) => ({
+        ...post,
+        authorName: getAuthorNameById(post.authorId, dataAuthors),
+      }));
+      setPosts(dataWithAuthor.slice(1, 5));
+      setFeaturedPost(dataWithAuthor[0]);
+    };
+    getPost();
   }, []);
 
   return (
@@ -54,7 +67,7 @@ const SectionPost = () => {
               fill
             />
           </div>
-          <p className={styles.infoPost}>{`By Jhon Doe | ${formatDate(date_created)}`}</p>
+          <p className={styles.infoPost}>{`By ${authorName} | ${formatDate(date_created)}`}</p>
           <div className={styles.content}>
             <h2 className={styles.title}>
               {title}
@@ -77,10 +90,10 @@ const SectionPost = () => {
           <Link href={`${locale}/blog`} locale={locale}>{t('view')}</Link>
         </div>
         <div className={styles.allPostWrapper}>
-          {posts.map(({ title, date_created }) => (
+          {posts.map(({ title, date_created, authorName }) => (
             <PostCard
               key={`${title}-${date_created}`}
-              name="Jhon Deo"
+              name={authorName}
               date={date_created}
               title={title}
               onHandleClick={handleClickToBlogPostPage}

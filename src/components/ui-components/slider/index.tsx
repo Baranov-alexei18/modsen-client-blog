@@ -1,6 +1,5 @@
 'use client';
 
-// eslint-disable-next-line no-use-before-define
 import React, { useState } from 'react';
 import Image from 'next/image';
 
@@ -10,7 +9,7 @@ const reviewsData = [
   {
     id: 1,
     author: 'John Doe',
-    city: 'New york, USA',
+    city: 'New York, USA',
     image: '/image/png/person1.png',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut libero nec elit tincidunt venenatis. Sed a vestibulum tortor.',
   },
@@ -32,18 +31,29 @@ const reviewsData = [
 
 export const Slider = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handlePrev = () => {
-    setCurrentReviewIndex((prev) => (prev === 0 ? reviewsData.length - 1 : prev - 1));
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentReviewIndex((prev) => (prev === 0 ? reviewsData.length - 1 : prev - 1));
+      setIsAnimating(false);
+    }, 300);
   };
 
   const handleNext = () => {
-    setCurrentReviewIndex((prev) => (prev === reviewsData.length - 1 ? 0 : prev + 1));
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setTimeout(() => {
+      setCurrentReviewIndex((prev) => (prev === reviewsData.length - 1 ? 0 : prev + 1));
+      setIsAnimating(false);
+    }, 300);
   };
 
   return (
     <div className={styles.slider}>
-      <div className={styles.review}>
+      <div className={`${styles.review} ${isAnimating ? styles.fade : ''}`}>
         <p className={styles.content}>{reviewsData[currentReviewIndex].content}</p>
       </div>
       <div className={styles.sliderFooter}>

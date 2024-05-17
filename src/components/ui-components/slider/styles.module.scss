@@ -10,6 +10,12 @@
     font-weight: var(--font-weight-700);
     margin-bottom: var(--spacing-12);
     height: inherit;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    &.fade {
+        opacity: 0;
+    }
 }
 
 .sliderFooter {
@@ -45,7 +51,7 @@
         border-radius: var(--border-radius-circle);
         border: none;
         background-color: var(--color-white);
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, transform 0.3s;
 
         &:hover {
             background-color: var(--color-dark-grey);
