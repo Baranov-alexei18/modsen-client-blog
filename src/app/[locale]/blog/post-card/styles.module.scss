@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  gap: var(--spacing-32);
+  margin-bottom: var(--spacing-80);
+}
+
+.image {
+  position: relative;
+  width: 490px;
+  height: 318px;
+}
+
+.content {
+  max-width: 60%;
+  margin: auto 0;
+}
+
+.category {
+  color: #6c63ff;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-600);
+  margin-bottom: var(--spacing-20);
+}
+
+.title {
+  font-size: var(--font-size-36);
+  font-weight: var(--font-weight-700);
+  margin-bottom: var(--spacing-16);
+}
+
+.description {
+  color: var(--color-grey);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-400);
+}

@@ -61,6 +61,10 @@
           "title": "Что люди говорят о нашем блоге",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
         }
+      },
+      "blog":{
+        "next": "След.",
+        "prev": "Пред."
       }
     }
 }

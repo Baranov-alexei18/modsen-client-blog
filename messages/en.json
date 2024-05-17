@@ -61,6 +61,10 @@
           "title": "What people say about our blog",
           "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
         }
+      },
+      "blog":{
+        "next": "Next >",
+        "prev": "< Prev"
       }
     }
 }
