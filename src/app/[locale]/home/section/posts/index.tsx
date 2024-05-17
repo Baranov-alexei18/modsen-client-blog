@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
+import { getPosts } from '@/api/getPosts';
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
 import { PostCard } from '@/components/ui-components/card/card-post';
@@ -15,45 +16,33 @@ import styles from './styles.module.scss';
 
 const SectionPost = () => {
   const [posts, setPosts] = useState([]);
-  const [featuredPost, setFeaturedPost] = useState({
-    title: 'Exemple',
-    subtitle: 'Subtitle exemple',
-    date_created: '2022-05-01',
-    src: '/image/image-post.png',
-    authorName: 'Jhon Doe',
-  });
+  const [featuredPost, setFeaturedPost] = useState(null);
 
   const t = useTranslations('pages.home.posts');
   const router = useRouter();
   const locale = useLocale();
-
-  const {
-    src, title, subtitle, date_created, authorName,
-  } = featuredPost!;
 
   const handleClickToBlogPostPage = () => {
     router.push(`${locale}/blog-post`);
   };
 
   useEffect(() => {
-    // Запрос на пагинацию
-    // const response = fetch('http://localhost:3001/posts?_page=2')
-    const getPost = async () => {
-      const posts = await fetch('http://localhost:3001/posts?_page=1');
-      const authors = await fetch('http://localhost:3001/authors');
-
-      const { data } = await posts.json();
-      const dataAuthors = await authors.json();
-
-      const dataWithAuthor = data.map((post: { authorId: number; }) => ({
-        ...post,
-        authorName: getAuthorNameById(post.authorId, dataAuthors),
-      }));
-      setPosts(dataWithAuthor.slice(1, 5));
-      setFeaturedPost(dataWithAuthor[0]);
+    const getPostsData = async () => {
+      const posts = await getPosts();
+      setPosts(posts.slice(1, 5));
+      setFeaturedPost(posts[0]);
     };
-    getPost();
+
+    getPostsData();
   }, []);
+
+  if (!featuredPost) {
+    return <div>Loading...</div>;
+  }
+
+  const {
+    src, title, subtitle, date_created, authorName,
+  } = featuredPost!;
 
   return (
     <section className={styles.sectionPost}>

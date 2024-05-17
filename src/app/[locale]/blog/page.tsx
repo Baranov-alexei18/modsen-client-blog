@@ -12,6 +12,7 @@ import { SectionPosts } from './section/all-posts';
 import { SectionFeaturedPost } from './section/features-post';
 
 import styles from '../styles.module.scss';
+import { getPostsPage } from '@/api/getPostsPage';
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -20,24 +21,12 @@ export default function Blog() {
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    // Запрос на пагинацию
-    // const response = fetch('http://localhost:3001/posts?_page=2')
     const getPost = async () => {
-      const posts = await fetch(`http://localhost:3001/posts?_page=${page}`);
-      const authors = await fetch('http://localhost:3001/authors');
-
-      const data = await posts.json();
-      const dataAuthors = await authors.json();
-
-      setTotalPages(data.pages);
-
-      const dataWithAuthor = data.data.map((post: { authorId: number; }) => ({
-        ...post,
-        authorName: getAuthorNameById(post.authorId, dataAuthors),
-      }));
-      setPosts(dataWithAuthor);
+      const posts = await getPostsPage(page);
+      setTotalPages(posts?.total);
+      setPosts(posts?.data);
       if (!featuredPost) {
-        setFeaturedPost(dataWithAuthor[0]);
+        setFeaturedPost(posts?.data[0]);
       }
     };
     getPost();

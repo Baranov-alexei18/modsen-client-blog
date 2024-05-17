@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
+import { getAuthors } from '@/api/getAuthors';
 import { AuthorCard } from '@/components/ui-components/card/card-author';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
@@ -20,9 +21,12 @@ export const SectionAuthor = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3001/authors')
-      .then((response) => response.json())
-      .then((data) => serAuthors(data.slice(0, 4)));
+    const getAuthorsData = async () => {
+      const data = await getAuthors();
+      serAuthors(data.slice(0, 4));
+    };
+
+    getAuthorsData();
   }, []);
 
   return (
