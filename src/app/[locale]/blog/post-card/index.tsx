@@ -5,17 +5,17 @@ import { PostDataProps } from '@/types/post';
 
 import styles from './styles.module.scss';
 
-export const PostCard = ({ data }: PostDataProps) => {
+export const PostCard = ({ data, handleClickPost }: PostDataProps) => {
   const {
-    title, category, subtitle, src,
+    title, categoryTitle, subtitle, src,
   } = data;
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={handleClickPost} aria-hidden>
       <div className={styles.image}>
         <Image src={src} alt={title} fill />
       </div>
       <div className={styles.content}>
-        <p className={styles.category}>{category.toUpperCase()}</p>
+        <p className={styles.category}>{categoryTitle.toUpperCase()}</p>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{subtitle}</p>
       </div>

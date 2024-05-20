@@ -1,10 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 
+import { getPostsPage } from '@/api/getPostsPage';
 import { JoinForm } from '@/components/Forms/JoinForm';
-import { getAuthorNameById } from '@/helpers/getAuthorName';
 
 import { SectionCategory } from '../home/section/category';
 
@@ -12,7 +11,6 @@ import { SectionPosts } from './section/all-posts';
 import { SectionFeaturedPost } from './section/features-post';
 
 import styles from '../styles.module.scss';
-import { getPostsPage } from '@/api/getPostsPage';
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);

@@ -1,6 +1,7 @@
 {
     "authors": [
       {
+        "id":1,
         "authorId": 1,
         "src": "/image/png/person1.png",
         "name": "Floyd Miles",
@@ -13,6 +14,7 @@
         "company": "Content Writer @Company"
       },
       {
+        "id":2,
         "authorId": 2,
         "src": "/image/png/person2.png",
         "name": "Dianne Russell",
@@ -25,6 +27,7 @@
         "company": "Content Writer @Company"
       },
       {
+        "id":3,
         "authorId": 3,
         "src": "/image/png/person3.png",
         "name": "Jenny Wilson",
@@ -38,6 +41,7 @@
         "company": "Content Writer @Company"
       },
       {
+        "id":4,
         "authorId": 4,
         "src": "/image/png/person4.png",
         "name": "Leslie Alexander",
@@ -50,6 +54,7 @@
         "company": "Content Writer @Company"
       },
       {
+        "id":5,
         "authorId": 5,
         "src": "/image/png/person1.png",
         "name": "Eve Davis",
@@ -62,6 +67,7 @@
         "company": "JKL Corporation"
       },
       {
+        "id":6,
         "authorId": 6,
         "src": "/image/png/person1.png",
         "name": "Michael Wilson",
@@ -74,6 +80,7 @@
         "company": "MNO Group"
       },
       {
+        "id":7,
         "authorId": 7,
         "src": "/image/png/person1.png",
         "name": "Sarah Lee",
@@ -86,6 +93,7 @@
         "company": "PQR Enterprises"
       },
       {
+        "id":8,
         "authorId": 8,
         "src": "/image/png/person1.png",
         "name": "David Clark",
@@ -98,23 +106,49 @@
         "company": "STU LLC"
       }
     ],
-
+    "categories":[
+      {
+        "id": 1,
+        "title": "Business",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "src": "/image/svg/building.svg"
+      },
+      {
+        "id": 2,
+        "title": "Startup",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "src": "/image/svg/shuttle.svg"
+      },
+      {
+        "id": 3,
+        "title": "Economy",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "src": "/image/svg/economy.svg"
+      },
+      {
+        "id": 4,
+        "title": "Technology",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+        "src": "/image/svg/cyborg.svg"
+      }
+    ],
     "posts": [
       {
         "id": 1,
         "authorId": 1,
         "date_created": "2022-05-01",
         "src": "/image/png/image-post.png",
-        "category": "Business",
+        "categoryId": 1,
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-        "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.", "body": "This is the body of post 1"
+        "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+        "body": "This is the body of post 1"
       },
       {
         "id": 2,
         "authorId": 2,
         "date_created": "2022-05-02",
         "src": "/image/png/image-post.png",
-        "category": "Startup",
+        "categoryId": 2,
         "title": "2. 8 Figma design systems that you can download for free today.",
         "subtitle": "Subtitle 2",
         "body": "This is the body of post 2"
@@ -124,7 +158,7 @@
         "authorId": 3,
         "date_created": "2022-05-03",
         "src": "/image/png/image-post.png",
-        "category": "Economy",
+        "categoryId": 3,
         "title": "3. 8 Figma design systems that you can download for free today.",
         "subtitle": "Subtitle 3",
         "body": "This is the body of post 3"
@@ -134,7 +168,7 @@
         "authorId": 4,
         "date_created": "2022-05-04",
         "src": "/image/png/image-post.png",
-        "category": "Technology",
+        "categoryId": 4,
         "title": "4. 8 Figma design systems that you can download for free today.",
         "subtitle": "Subtitle 4",
         "body": "This is the body of post 4"
@@ -144,7 +178,7 @@
         "authorId": 5,
         "date_created": "2022-05-05",
         "src": "/image/png/image-post.png",
-        "category": "Business",
+        "categoryId": 1,
         "title": "5. 8 Figma design systems that you can download for free today.",
         "subtitle": "Subtitle 5",
         "body": "This is the body of post 5"
@@ -154,7 +188,7 @@
         "authorId": 6,
         "date_created": "2022-05-06",
         "src": "/image/png/image-post.png",
-        "category": "Startup",
+        "categoryId": 2,
         "title": "Post 6",
         "subtitle": "Subtitle 6",
         "body": "This is the body of post 6"
@@ -164,7 +198,7 @@
         "authorId": 7,
         "date_created": "2022-05-07",
         "src": "/image/png/image-post.png",
-        "category": "Economy",
+        "categoryId": 3,
         "title": "Post 7",
         "subtitle": "Subtitle 7",
         "body": "This is the body of post 7"
@@ -174,7 +208,7 @@
         "authorId": 8,
         "date_created": "2022-05-08",
         "src": "/image/png/image-post.png",
-        "category": "Technology",
+        "categoryId": 3,
         "title": "Post 8",
         "subtitle": "Subtitle 8",
         "body": "This is the body of post 8"
@@ -184,7 +218,7 @@
         "authorId": 1,
         "date_created": "2022-05-09",
         "src": "/image/png/image-post.png",
-        "category": "Business",
+        "categoryId": 1,
         "title": "Post 9",
         "subtitle": "Subtitle 9",
         "body": "This is the body of post 9"
@@ -194,7 +228,7 @@
         "authorId": 2,
         "date_created": "2022-05-10",
         "src": "/image/png/image-post.png",
-        "category": "Startup",
+        "categoryId": 2,
         "title": "Post 10",
         "subtitle": "Subtitle 10",
         "body": "This is the body of post 10"
@@ -204,7 +238,7 @@
         "authorId": 3,
         "date_created": "2022-05-11",
         "src": "/image/png/image-post.png",
-        "category": "Economy",
+        "categoryId": 3,
         "title": "Post 11",
         "subtitle": "Subtitle 11",
         "body": "This is the body of post 11"
@@ -214,7 +248,7 @@
         "authorId": 4,
         "date_created": "2022-05-12",
         "src": "/image/png/image-post.png",
-        "category": "Technology",
+        "categoryId": 4,
         "title": "Post 12",
         "subtitle": "Subtitle 12",
         "body": "This is the body of post 12"
@@ -224,7 +258,7 @@
         "authorId": 5,
         "date_created": "2022-05-13",
         "src": "/image/png/image-post.png",
-        "category": "Business",
+        "categoryId": 1,
         "title": "Post 13",
         "subtitle": "Subtitle 13",
         "body": "This is the body of post 13"
@@ -234,7 +268,7 @@
         "authorId": 6,
         "date_created": "2022-05-14",
         "src": "/image/png/image-post.png",
-        "category": "Startup",
+        "categoryId": 2,
         "title": "Post 14",
         "subtitle": "Subtitle 14",
         "body": "This is the body of post 14"
@@ -244,7 +278,7 @@
         "authorId": 7,
         "date_created": "2022-05-15",
         "src": "/image/png/image-post.png",
-        "category": "Economy",
+        "categoryId": 3,
         "title": "Post 15",
         "subtitle": "Subtitle 15",
         "body": "This is the body of post 15"
@@ -254,7 +288,7 @@
         "authorId": 8,
         "date_created": "2022-05-16",
         "src": "/image/png/image-post.png",
-        "category": "Technology",
+        "categoryId": 4,
         "title": "Post 16",
         "subtitle": "Subtitle 16",
         "body": "This is the body of post 16"
@@ -264,7 +298,7 @@
         "authorId": 1,
         "date_created": "2022-05-17",
         "src": "/image/png/image-post.png",
-        "category": "Business",
+        "categoryId": 1,
         "title": "Post 17",
         "subtitle": "Subtitle 17",
         "body": "This is the body of post 17"
@@ -274,7 +308,7 @@
         "authorId": 2,
         "date_created": "2022-05-18",
         "src": "/image/png/image-post.png",
-        "category": "Startup",
+        "categoryId": 2,
         "title": "Post 18",
         "subtitle": "Subtitle 18",
         "body": "This is the body of post 18"
@@ -284,7 +318,7 @@
         "authorId": 3,
         "date_created": "2022-05-19",
         "src": "/image/png/image-post.png",
-        "category": "Economy",
+        "categoryId": 3,
         "title": "Post 19",
         "subtitle": "Subtitle 19",
         "body": "This is the body of post 19"
@@ -294,7 +328,7 @@
         "authorId": 4,
         "date_created": "2022-05-20",
         "src": "/image/png/image-post.png",
-        "category": "Technology",
+        "categoryId": 4,
         "title": "Post 20",
         "subtitle": "Subtitle 20",
         "body": "This is the body of post 20"
@@ -304,7 +338,7 @@
         "authorId": 4,
         "date_created": "2022-05-20",
         "src": "/image/png/image-post.png",
-        "category": "Technology",
+        "categoryId": 1,
         "title": "Post 21",
         "subtitle": "Subtitle 21",
         "body": "This is the body of post 21"

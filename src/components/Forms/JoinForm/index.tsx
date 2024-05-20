@@ -1,3 +1,5 @@
+'use client';
+
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -12,7 +14,7 @@ export const JoinForm = () => {
   const t = useTranslations('forms.join');
 
   const handleClickToContactPage = () => {
-    router.push(`${locale}/contact`);
+    router.push(`/${locale}/contact`);
   };
 
   return (

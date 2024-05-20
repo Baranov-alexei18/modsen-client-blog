@@ -1,0 +1,53 @@
+.articleCard {
+    cursor: pointer;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-12);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    flex: 1 1 calc(33.333% - 10px);
+
+    &:hover{
+        background-color: var(--color-light-yellow);
+    }
+    @media (max-width: 1200px) {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    @media (max-width: 768px) {
+        flex: 1 1 100%;
+    }
+}
+
+.articleImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.articleContent {
+    padding: var(--spacing-20);
+
+    span {
+        color: var(--color-purple);
+    }
+}
+
+.authorInfo {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-500);
+    margin-bottom: var(--spacing-12);
+}
+
+.articleTitle {
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-700);
+    margin: var(--spacing-20) var(--spacing-0);
+}
+
+.articleDescription {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-400);
+    color: var(--color-grey);
+}

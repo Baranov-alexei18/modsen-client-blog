@@ -43,6 +43,7 @@
     "import/no-duplicates": "error",
     "import/no-unresolved": "off",
     "import/extensions": "off",
+    "@next/next/no-async-client-component": "off",
     "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration" ] }],
     "camelcase": "off",
     "no-undef": "off",

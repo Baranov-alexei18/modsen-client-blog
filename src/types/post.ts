@@ -5,11 +5,13 @@ export type PostDataType = {
     date_created: string,
     authorName: string,
     authorId: number,
-    category: string,
+    categoryId: number,
+    categoryTitle: string,
     id: number,
     body: string,
 };
 
 export type PostDataProps = {
-    data: PostDataType
+    data: PostDataType,
+    handleClickPost?: () => void
 }

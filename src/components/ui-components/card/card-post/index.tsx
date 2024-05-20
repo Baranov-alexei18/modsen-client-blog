@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { formatDate } from '@/helpers/formatDate';
 
 import { PostCardType } from './types';
@@ -5,9 +7,9 @@ import { PostCardType } from './types';
 import styles from './styles.module.scss';
 
 export const PostCard = ({
-  title, name, date, onHandleClick,
-}: PostCardType) => (
-  <div className={styles.card} onClick={onHandleClick} aria-hidden>
+  title, name, date, locale, id,
+}: Partial<PostCardType & {locale: string}>) => (
+  <Link className={styles.card} href={`${locale}/blog-post/${id}`}>
     <div className={styles.authorInfo}>
       <p>
         By
@@ -15,11 +17,11 @@ export const PostCard = ({
           {` ${name} `}
         </span>
         |
-        {` ${formatDate(date)}`}
+        {` ${formatDate(date!)}`}
       </p>
     </div>
     <h3 className={styles.cardTitle}>
       {title}
     </h3>
-  </div>
+  </Link>
 );

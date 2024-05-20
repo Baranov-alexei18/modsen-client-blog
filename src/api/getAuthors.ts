@@ -1,6 +1,7 @@
-export const getAuthors = async () => {
+export const getAuthors = async (id?: string) => {
   try {
-    const authors = await fetch('http://localhost:3001/authors', { cache: 'force-cache' });
+    const path = !id ? 'http://localhost:3001/authors' : `http://localhost:3001/authors/${id}`;
+    const authors = await fetch(path, { cache: 'force-cache' });
 
     const dataAuthors = await authors.json();
 

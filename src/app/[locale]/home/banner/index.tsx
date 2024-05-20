@@ -13,7 +13,7 @@ export const Banner = () => {
   const t = useTranslations('pages.home.banner');
 
   const handleClickToBlogPostPage = () => {
-    router.push(`${locale}/blog-post`);
+    router.push(`${locale}/blog-post/1`);
   };
 
   return (

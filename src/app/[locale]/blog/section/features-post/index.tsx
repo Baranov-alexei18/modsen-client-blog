@@ -15,7 +15,7 @@ export const SectionFeaturedPost = ({ data }: PostDataProps) => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    // update click button
+    router.push(`/${locale}/blog-post/1`);
   };
 
   const {

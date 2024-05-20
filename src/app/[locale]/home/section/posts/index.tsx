@@ -9,7 +9,6 @@ import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
 import { PostCard } from '@/components/ui-components/card/card-post';
 import { formatDate } from '@/helpers/formatDate';
-import { getAuthorNameById } from '@/helpers/getAuthorName';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -23,7 +22,7 @@ const SectionPost = () => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    router.push(`${locale}/blog-post`);
+    router.push(`${locale}/blog-post/1`);
   };
 
   useEffect(() => {
@@ -86,13 +85,16 @@ const SectionPost = () => {
           <Link href={`${locale}/blog`} locale={locale}>{t('view')}</Link>
         </div>
         <div className={styles.allPostWrapper}>
-          {posts.map(({ title, date_created, authorName }) => (
+          {posts.map(({
+            title, date_created, authorName, id,
+          }) => (
             <PostCard
               key={`${title}-${date_created}`}
+              id={id}
               name={authorName}
               date={date_created}
               title={title}
-              onHandleClick={handleClickToBlogPostPage}
+              locale={locale}
             />
           ))}
         </div>
