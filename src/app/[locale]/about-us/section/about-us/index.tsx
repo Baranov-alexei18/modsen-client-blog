@@ -24,27 +24,11 @@ export const SectionAboutUs = () => {
         </div>
         <div className={styles.imageWrapper}>
           <Image
-            src="/image/png/peopleOnBeach.png"
+            src="/image/png/imageStatistics.png"
             alt="Image about us"
             fill
             className={styles.image}
           />
-        </div>
-        <div className={styles.stats}>
-          <div className={styles.stat}>
-            <h3>12+</h3>
-            <p>{t('blogsPublish')}</p>
-          </div>
-          <div className={styles.stat}>
-            <h3>18K+</h3>
-            <p>{t('viewsOnFinsweet')}</p>
-          </div>
-          <div className={styles.stat}>
-            <h3>30K+</h3>
-            <p>{t('activeUser')}</p>
-          </div>
-          <div className={styles.colorBar} />
-
         </div>
       </div>
       <div className={styles.aboutUsWrapper}>
