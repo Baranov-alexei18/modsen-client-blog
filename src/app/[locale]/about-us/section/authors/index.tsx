@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -20,7 +19,7 @@ export const SectionAuthor = async () => {
         {authors.length && authors.map(({
           authorId, src, name, company,
         }: AuthorCardType) => (
-          <Link key={authorId} href={`${locale}/author/${authorId}`}>
+          <Link key={authorId} href={`/${locale}/author/${authorId}`}>
             <AuthorCard
               src={src}
               title={name}

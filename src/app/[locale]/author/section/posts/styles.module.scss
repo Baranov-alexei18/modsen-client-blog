@@ -1,0 +1,22 @@
+.wrapper {
+  width: 80%;
+  margin: auto;
+  padding: var(--spacing-80);
+
+  h1{
+    padding-bottom: var(--spacing-28);
+    margin-bottom: var(--spacing-40);
+  }
+}
+
+.postsList {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: var(--spacing-40);
+
+  :hover{
+    background-color: var(--color-light-yellow);
+  }
+}
