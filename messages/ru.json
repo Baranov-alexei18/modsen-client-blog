@@ -65,6 +65,21 @@
       "blog":{
         "next": "След.",
         "prev": "Пред."
+      },
+      "aboutUs":{
+        "aboutUs": "О НАС",
+        "title": "Мы — команда авторов контента, которые делятся своими знаниями",
+        "sectionTitleMision": "НАША МИССИЯ",
+        "titleMision": "Создание ценного контента для креативщиков по всему миру",
+        "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "sectionTitleVision": "НАШЕ ВИДЕНИЕ",
+        "titleVision": "Платформа, которая дает людям возможность совершенствоваться",
+        "subtitleVision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "blogsPublish": "блогов опубликовано",
+        "viewsOnFinsweet": "просмотров в Finsweet",
+        "activeUser": "активных пользователей",
+        "teamCreatives": "Наша креативная команда",
+        "whyStarted": "Почему мы запустили этот блог"
       }
     }
 }

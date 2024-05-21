@@ -65,6 +65,21 @@
       "blog":{
         "next": "Next >",
         "prev": "< Prev"
+      },
+      "aboutUs":{
+        "aboutUs": "ABOUT US",
+        "title": "We are a team of content writers who share their learnings",
+        "sectionTitleMision": "OUR MISION",
+        "titleMision": "Creating valuable content for creatives all around the world",
+        "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "sectionTitleVision": "OUR VISION",
+        "titleVision": "A platform that empowers individuals to improve",
+        "subtitleVision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "blogsPublish": "Blogs Published",
+        "viewsOnFinsweet": "Views on Finsweet",
+        "activeUser": "Total active Users",
+        "teamCreatives": "Our team of creatives",
+        "whyStarted": "Why we started this Blog"
       }
     }
 }
