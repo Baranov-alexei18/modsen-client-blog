@@ -30,17 +30,22 @@
 
     .iconGroup {
         display: flex;
-        gap:  var(--spacing-20);
+        gap: var(--spacing-20);
 
         a::after {
             display: none;
+        }
+
+        button {
+            border: none;
+            background-color: inherit;
         }
 
         img {
             cursor: pointer;
 
             &:hover {
-                filter: invert(50%);
+                filter: invert(70%);
             }
         }
     }

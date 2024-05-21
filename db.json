@@ -308,7 +308,7 @@
         "authorId": 2,
         "date_created": "2022-05-18",
         "src": "/image/png/image-post.png",
-        "categoryId": 2,
+        "categoryId": 3,
         "title": "Post 18",
         "subtitle": "Subtitle 18",
         "body": "This is the body of post 18"
