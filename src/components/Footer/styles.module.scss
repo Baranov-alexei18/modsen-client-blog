@@ -42,6 +42,10 @@
         display: none;
     }
 
+    a::after {
+        display: none;
+    }
+
     img {
         cursor: pointer;
         margin-left: var(--spacing-20);
