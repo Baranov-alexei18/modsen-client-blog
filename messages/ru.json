@@ -15,6 +15,15 @@
         "subscribe": "Подписаться",
         "invalidData": "Неверный email"
       },
+      "contact":{
+        "email": "Ваш емайл",
+        "name": "ФИО",
+        "queryRelated": "Связанный запрос",
+        "support": "Поддержка",
+        "sales": "Продажи",
+        "message": "Сообщение",
+        "btnTitle": "Отправить сообщение"
+      },
       "join":{
         "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
         "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
@@ -80,6 +89,15 @@
         "activeUser": "активных пользователей",
         "teamCreatives": "Наша креативная команда",
         "whyStarted": "Почему мы запустили этот блог"
+      },
+      "contact":{
+        "contactUs": "СВЯЗАТЬСЯ С НАМИ",
+        "title": "Давайте начнем беседу",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+        "worksHoursTitle": "Рабочее время",
+        "worksHours": "9:00 до 20:00",
+        "worksDays": "С понедельника по пятницу",
+        "support": "Служба поддержки доступна 24/7"
       }
     }
 }

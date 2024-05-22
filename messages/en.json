@@ -15,6 +15,15 @@
         "subscribe": "Subscribe",
         "invalidData": "Invalid email"
       },
+      "contact":{
+        "email": "Your Email",
+        "name": "Full Name",
+        "queryRelated": "Query Related",
+        "support": "Support",
+        "sales": "Sales",
+        "message": "Message",
+        "btnTitle": "Send Message"
+      },
       "join":{
         "title": "Join our team to be a part of our story",
         "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
@@ -80,6 +89,15 @@
         "activeUser": "Total active Users",
         "teamCreatives": "Our team of creatives",
         "whyStarted": "Why we started this Blog"
+      },
+      "contact":{
+        "contactUs": "CONTACT US",
+        "title": "Let's Start a Conversation",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+        "worksHoursTitle": "Working hours",
+        "worksHours": "9:00 AM to 8:00 PM",
+        "worksDays": "Monday To Friday",
+        "support": "Our Support Team is available 24/7"
       }
     }
 }
