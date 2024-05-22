@@ -22,6 +22,7 @@
     "react/display-name": "off",
     "no-shadow": "off",
     "consistent-return": "off",
+    "react/button-has-type": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": ["off", { "target": "any" }],
     "simple-import-sort/imports": [
