@@ -98,6 +98,10 @@
         "worksHours": "9:00 AM to 8:00 PM",
         "worksDays": "Monday To Friday",
         "support": "Our Support Team is available 24/7"
+      },
+      "privacyPolice":{
+        "title": "Privacy Policy",
+        "lastUpdate": "Last Updated  on 23th May 2024"
       }
     }
 }
