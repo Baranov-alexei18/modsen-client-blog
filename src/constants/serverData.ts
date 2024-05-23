@@ -1,20 +1,24 @@
 export const categories = [
   {
+    id: 1,
     title: 'Business',
     subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     src: '/image/svg/building.svg',
   },
   {
+    id: 2,
     title: 'Startup',
     subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     src: '/image/svg/shuttle.svg',
   },
   {
+    id: 3,
     title: 'Economy',
     subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     src: '/image/svg/economy.svg',
   },
   {
+    id: 4,
     title: 'Technology',
     subtitle: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
     src: '/image/svg/cyborg.svg',
