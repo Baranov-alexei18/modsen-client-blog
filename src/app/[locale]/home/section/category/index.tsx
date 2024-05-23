@@ -12,21 +12,23 @@ export const SectionCategory = () => {
   const locale = useLocale();
   const t = useTranslations('pages.home.category');
 
-  const handleClickToCategoryPage = () => {
-    router.push(`${locale}/category`);
+  const handleClickToCategoryPage = (id: number) => {
+    router.push(`/${locale}/category/${id}`);
   };
 
   return (
     <section className={styles.sectionCategory}>
       <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
       <div className={styles.categoryContainer}>
-        {categories.map(({ src, title, subtitle }) => (
+        {categories.map(({
+          src, title, subtitle, id,
+        }) => (
           <CategoryCard
             key={src}
             src={src}
             title={title}
             subTitle={subtitle}
-            onHandleClick={handleClickToCategoryPage}
+            onHandleClick={() => handleClickToCategoryPage(id)}
           />
         ))}
       </div>

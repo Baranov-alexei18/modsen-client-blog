@@ -2,6 +2,7 @@ export type PostDataType = {
     src: string,
     title: string,
     subtitle: string,
+    tags: string[],
     date_created: string,
     authorName: string,
     authorId: number,

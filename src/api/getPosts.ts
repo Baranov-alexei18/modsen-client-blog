@@ -1,6 +1,8 @@
 import { getAuthorName } from '@/helpers/getAuthorName';
+import { getCategoryById } from '@/helpers/getCategoryById';
 
 import { getAuthors } from './getAuthors';
+import { getCategories } from './getCategories';
 
 export const getPosts = async () => {
   try {
@@ -8,10 +10,12 @@ export const getPosts = async () => {
     const data = await posts.json();
 
     const authors = await getAuthors();
+    const categories = await getCategories();
 
-    const dataWithAuthor = data.map((post: { authorId: number; }) => ({
+    const dataWithAuthor = data.map((post: { authorId: number; categoryId: number; }) => ({
       ...post,
       authorName: getAuthorName(post.authorId, authors),
+      categoryTitle: getCategoryById(post.categoryId, categories),
     }));
 
     return dataWithAuthor;

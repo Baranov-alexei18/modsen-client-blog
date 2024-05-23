@@ -1,8 +1,15 @@
 .card {
   min-width: 100%;
-  height: auto;
+  max-height: 318px;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
   display: flex;
   gap: var(--spacing-32);
+
+  &:hover {
+    background-color: var(--color-yellow);
+  }
 }
 
 .image {
@@ -33,6 +40,13 @@
 }
 
 .description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: var(--spacing-80);
+  line-height: var(--spacing-24);
   color: var(--color-grey);
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-400);
