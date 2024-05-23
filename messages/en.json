@@ -99,9 +99,15 @@
         "worksDays": "Monday To Friday",
         "support": "Our Support Team is available 24/7"
       },
+      "category":{
+        "loading": "Loading...",
+        "nonPosts": "There are no posts by request",
+        "categories": "Categories",
+        "tags": "All Tags"
+      },
       "privacyPolice":{
         "title": "Privacy Policy",
         "lastUpdate": "Last Updated  on 23th May 2024"
-      }
+      } 
     }
 }
