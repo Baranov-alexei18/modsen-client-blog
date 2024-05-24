@@ -102,6 +102,7 @@
         .wrapperNextPosts {
             display: flex;
             flex-wrap: wrap;
+            width: 100%;
             justify-content: space-between;
             padding-bottom: var(--spacing-40);
             border-bottom: 1px solid var(--color-light-grey);
@@ -111,6 +112,10 @@
 
     @media (max-width: 768px) {
         margin: var(--spacing-64) var(--spacing-20);
+
+        .wrapperNextPosts {
+            justify-content: center;
+        }
 
         .header {
             h1 {

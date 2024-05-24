@@ -2,7 +2,8 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { PostCard } from '../../post-card';
+import { PostCard } from '@/components/ui-components/card/card-blog-post';
+import { LINK_BLOG_POST } from '@/constants/links';
 
 import { PostsAllTypes } from './types';
 
@@ -17,7 +18,7 @@ export const SectionPosts = ({
   const locale = useLocale();
 
   const handleClickToBlogPostPage = (id: number) => {
-    router.push(`/${locale}/blog-post/${id}`);
+    router.push(`/${locale}/${LINK_BLOG_POST.path}/${id}`);
   };
 
   return (

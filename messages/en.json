@@ -47,7 +47,8 @@
           "featuredPost": "Featured Post",
           "allPost": "All Post",
           "view": "View all",
-          "btnTitle": "Read More >"
+          "btnTitle": "Read More >",
+          "myPosts": "My Posts"
         },
         "aboutUs":{
           "sectionTitleAboutUs": "ABOUT US",
@@ -68,7 +69,8 @@
           "btnTitle": "Discover our story >"
         },
         "authors":{
-          "sectionTitle": "List of Authors"
+          "sectionTitle": "List of Authors",
+          "title": "Hey there, I’m {name} and welcome to my Blog"
         },
         "testimonials":{
           "sectionTitle": "TESTIMONIALS",

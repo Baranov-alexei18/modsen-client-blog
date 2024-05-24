@@ -8,6 +8,7 @@ import { getPosts } from '@/api/getPosts';
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
 import { PostCard } from '@/components/ui-components/card/card-post';
+import { LINK_BLOG, LINK_BLOG_POST } from '@/constants/links';
 import { formatDate } from '@/helpers/formatDate';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
@@ -22,7 +23,7 @@ const SectionPost = () => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    router.push(`${locale}/blog-post/1`);
+    router.push(`${locale}/${LINK_BLOG_POST.path}/1`);
   };
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const SectionPost = () => {
       <div className={styles.allPostWrapper}>
         <div className={styles.headerAllPost}>
           <h1 className={styles.sectionName}>{t('allPost')}</h1>
-          <Link href={`${locale}/blog`} locale={locale}>{t('view')}</Link>
+          <Link href={`${locale}/${LINK_BLOG.path}`} locale={locale}>{t('view')}</Link>
         </div>
         <div className={styles.allPostWrapper}>
           {posts.map(({

@@ -6,11 +6,12 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { getCategories } from '@/api/getCategories';
 import { getFilteredPosts } from '@/api/getFilteredPosts';
-import { PostCard } from '@/app/[locale]/blog/post-card';
+import { PostCard } from '@/components/ui-components/card/card-blog-post';
 import { CategorySearchCard } from '@/components/ui-components/card/card-category-search';
 import { Chip } from '@/components/ui-components/chip';
 import { ElasticSearch } from '@/components/ui-components/elastic-search-input';
 import { tags } from '@/constants';
+import { LINK_BLOG_POST } from '@/constants/links';
 import { PostDataType } from '@/types/post';
 
 import styles from './styles.module.scss';
@@ -67,7 +68,7 @@ export const ListPosts = ({ slug }: { slug: string }) => {
         {!isLoading
           && filteredPosts
           && filteredPosts.map((item: PostDataType) => (
-            <Link key={item.id} href={`/${locale}/blog-post/${item.id}`}>
+            <Link key={item.id} href={`/${locale}/${LINK_BLOG_POST.path}/${item.id}`}>
               <PostCard data={item} />
             </Link>
           ))}

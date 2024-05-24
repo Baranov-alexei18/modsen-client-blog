@@ -4,13 +4,11 @@ import { useTranslations } from 'next-intl';
 
 import { AuthorCardType } from '@/components/ui-components/card/card-author/types';
 import { SOCIAL_NETWORK_LINKS } from '@/constants/links';
-import { formatDate } from '@/helpers/formatDate';
-import { PostDataProps } from '@/types/post';
 
 import styles from './styles.module.scss';
 
 export const SectionAuthorMeta = ({ data }: { data: AuthorCardType }) => {
-  const t = useTranslations('pages.home.posts');
+  const t = useTranslations('pages.home.authors');
 
   const { src, name } = data!;
 
@@ -27,11 +25,7 @@ export const SectionAuthorMeta = ({ data }: { data: AuthorCardType }) => {
           </div>
           <div className={styles.userMeta}>
             <h2 className={styles.title}>
-              Hey there, I’m
-              <span>
-                {` ${name} `}
-              </span>
-              and welcome to my Blog
+              {t('title', { name })}
             </h2>
             <p className={styles.subtitle}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,

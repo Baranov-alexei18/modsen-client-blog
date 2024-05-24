@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { getAuthors } from '@/api/getAuthors';
 import { AuthorCard } from '@/components/ui-components/card/card-author';
+import { LINK_AUTHOR } from '@/constants/links';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -16,8 +17,8 @@ export const SectionAuthor = () => {
   const locale = useLocale();
   const t = useTranslations('pages.home.authors');
 
-  const handleClickToAuthorPage = () => {
-    router.push(`${locale}/author`);
+  const handleClickToAuthorPage = (id: number) => {
+    router.push(`${locale}/${LINK_AUTHOR.path}/${id}`);
   };
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export const SectionAuthor = () => {
             src={src}
             title={name}
             subTitle={company}
-            onHandleClick={handleClickToAuthorPage}
+            onHandleClick={() => handleClickToAuthorPage(authorId)}
           />
         ))}
       </div>

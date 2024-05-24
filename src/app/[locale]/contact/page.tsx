@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { ContactForm } from '@/components/Forms/ContactForm';
 
 import { ContactInfo } from './components/contactInfo';

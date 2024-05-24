@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 
 import { getAuthors } from '@/api/getAuthors';
 import { AuthorCard } from '@/components/ui-components/card/card-author';
 import { AuthorCardType } from '@/components/ui-components/card/card-author/types';
+import { LINK_AUTHOR } from '@/constants/links';
 
 import styles from './styles.module.scss';
 
@@ -18,7 +19,7 @@ export const SectionAuthor = async () => {
         {authors.length && authors.map(({
           authorId, src, name, company,
         }: AuthorCardType) => (
-          <Link key={authorId} href={`/${locale}/author/${authorId}`}>
+          <Link key={authorId} href={`/${locale}/${LINK_AUTHOR.path}/${authorId}`}>
             <AuthorCard
               src={src}
               title={name}

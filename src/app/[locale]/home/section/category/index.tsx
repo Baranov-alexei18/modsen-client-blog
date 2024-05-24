@@ -2,6 +2,7 @@ import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { CategoryCard } from '@/components/ui-components/card/card-category';
+import { LINK_CATEGORY } from '@/constants/links';
 import { categories } from '@/constants/serverData';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
@@ -13,7 +14,7 @@ export const SectionCategory = () => {
   const t = useTranslations('pages.home.category');
 
   const handleClickToCategoryPage = (id: number) => {
-    router.push(`/${locale}/category/${id}`);
+    router.push(`/${locale}/${LINK_CATEGORY.path}/${id}`);
   };
 
   return (

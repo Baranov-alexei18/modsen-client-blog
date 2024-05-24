@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
+import { LINK_BLOG_POST } from '@/constants/links';
 import { formatDate } from '@/helpers/formatDate';
 import { PostDataProps } from '@/types/post';
 
@@ -15,7 +16,7 @@ export const SectionFeaturedPost = ({ data }: PostDataProps) => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    router.push(`/${locale}/blog-post/1`);
+    router.push(`/${locale}/${LINK_BLOG_POST.path}/1`);
   };
 
   const {

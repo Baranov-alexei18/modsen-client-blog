@@ -1,11 +1,13 @@
 import { Suspense } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLocale } from 'next-intl';
 
 import { getOwnPost } from '@/api/getOwnPost';
 import { getPosts } from '@/api/getPosts';
 import { JoinForm } from '@/components/Forms/JoinForm';
 import { ArticlePostCard } from '@/components/ui-components/card/card-article-post';
+import { LINK_BLOG_POST } from '@/constants/links';
 import { formatDate } from '@/helpers/formatDate';
 import { PostDataType } from '@/types/post';
 
@@ -65,11 +67,11 @@ export default async function PagePost({ params }: { params: { slug: string } })
           <h1>What to read next</h1>
           <div className={styles.wrapperNextPosts}>
             {nextPosts && nextPosts.map((post: PostDataType) => (
-              <ArticlePostCard
-                key={post.id}
-                data={post}
-                locale={locale}
-              />
+              <Link className={styles.postCard} href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
+                <ArticlePostCard
+                  data={post}
+                />
+              </Link>
             ))}
           </div>
         </div>

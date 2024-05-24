@@ -4,7 +4,7 @@ import { getAuthors } from '@/api/getAuthors';
 import { SectionAuthorMeta } from '../section/author';
 import { SectionAuthorPosts } from '../section/posts';
 
-import styles from './styles.module.scss';
+import styles from '../../styles.module.scss';
 
 export default async function Author({ params }: { params: { slug: string } }) {
   const author = await getAuthors(params.slug);

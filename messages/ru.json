@@ -47,7 +47,8 @@
           "featuredPost": "Лучший пост",
           "allPost": "Посты",
           "view": "Смотреть все",
-          "btnTitle": "Читать далее"
+          "btnTitle": "Читать далее",
+          "myPosts": "Мои посты"
         },
         "aboutUs":{
           "sectionTitleAboutUs": "О НАС",
@@ -68,7 +69,8 @@
           "btnTitle": "Откройте для себя нашу историю"
         },
         "authors":{
-          "sectionTitle": "Список авторов"
+          "sectionTitle": "Список авторов",
+          "title": "Привет, Меня зовут {name} и добро пожаловать в Мой Блог"
         },
         "testimonials":{
           "sectionTitle": "ОТЗЫВЫ",

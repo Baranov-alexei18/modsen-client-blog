@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
+import { LINK_ABOUT_US } from '@/constants/links';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -14,7 +15,7 @@ const SectionStarted = () => {
   const t = useTranslations('pages.home.started');
 
   const handleClickToAboutUsPage = () => {
-    router.push(`${locale}/about-us`);
+    router.push(`${locale}/${LINK_ABOUT_US.path}`);
   };
   return (
     <section className={styles.sectionStarted}>

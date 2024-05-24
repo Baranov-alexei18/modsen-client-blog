@@ -5,7 +5,6 @@ import styles from './styles.module.scss';
 
 export const SectionAboutUs = () => {
   const t = useTranslations('pages.aboutUs');
-  const locale = useLocale();
 
   return (
     <section className={styles.wrapper}>

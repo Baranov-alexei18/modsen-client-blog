@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
+import { LINK_CONTACT } from '@/constants/links';
 
 import styles from './styles.module.scss';
 
@@ -14,7 +15,7 @@ export const JoinForm = () => {
   const t = useTranslations('forms.join');
 
   const handleClickToContactPage = () => {
-    router.push(`/${locale}/contact`);
+    router.push(`/${locale}/${LINK_CONTACT.path}`);
   };
 
   return (

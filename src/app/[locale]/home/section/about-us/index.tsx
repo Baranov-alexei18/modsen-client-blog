@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
+import { LINK_ABOUT_US } from '@/constants/links';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -21,7 +22,7 @@ const SectionAboutUs = () => {
           <p className={styles.subtitle}>
             {t('subtitleAboutUs')}
           </p>
-          <Link href={`${locale}/about-us`}>{t('link')}</Link>
+          <Link href={`${locale}/${LINK_ABOUT_US.path}`}>{t('link')}</Link>
         </div>
         <div className={styles.InfoWrapper}>
           <h2>{t('sectionTitleMision')}</h2>

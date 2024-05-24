@@ -2,20 +2,19 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { formatDate } from '@/helpers/formatDate';
 import { PostDataProps } from '@/types/post';
 
 import styles from './styles.module.scss';
 
-export const ArticlePostCard = ({ data, locale }: PostDataProps & {locale: string}) => {
+export const ArticlePostCard = ({ data }: PostDataProps) => {
   const {
     src, title, subtitle, date_created, authorName, id,
   } = data;
 
   return (
-    <Link className={styles.articleCard} href={`/${locale}/blog-post/${id}`}>
+    <div className={styles.articleCard}>
       <Image src={src} alt="Article" width={200} height={200} className={styles.articleImage} />
       <div className={styles.articleContent}>
         <div className={styles.articleInfo}>
@@ -35,6 +34,6 @@ export const ArticlePostCard = ({ data, locale }: PostDataProps & {locale: strin
           {subtitle}
         </p>
       </div>
-    </Link>
+    </div>
   );
 };

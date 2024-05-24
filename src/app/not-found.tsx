@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
-import Footer from '@/components/Footer';
-import { Header } from '@/components/Header';
+import { LINK_HOME } from '@/constants/links';
 
 import styles from './styles.module.scss';
 
@@ -10,7 +9,7 @@ export default function NotFound() {
     <div className={styles.wrapper}>
       <h2>Not Found page</h2>
       <p>Could not find requested resource</p>
-      <Link href="/">Return to home page</Link>
+      <Link href={LINK_HOME.path}>Return to home page</Link>
     </div>
   );
 }
