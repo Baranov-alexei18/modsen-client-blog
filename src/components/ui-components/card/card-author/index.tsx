@@ -32,20 +32,18 @@ export const AuthorCard = ({
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.subtitle}>{subTitle}</p>
       <div className={styles.iconGroup}>
-        {SOCIAL_NETWORK_LINKS.map((item) => (
-          <button
-            type="button"
-            key={item.name}
-            onClick={(event) => toSocialNetwork(event, item)}
+        {SOCIAL_NETWORK_LINKS.map(({ path, name, src }) => (
+          <a
+            href={path}
+            key={name}
           >
             <Image
-              src={item.src}
+              src={src}
               width={20}
               height={20}
-              alt={item.name}
+              alt={name}
             />
-          </button>
-
+          </a>
         ))}
       </div>
     </div>

@@ -22,7 +22,6 @@ const Footer = () => {
           {LINKS_FOOTER.map(({ path, name }) => <Link key={`${path}-${name}`} href={`/${locale}/${path}`}>{t(`${name}`)}</Link>)}
         </div>
       </div>
-      <div />
       <SubscribeForm />
       <div className={styles.row}>
         <div className={styles.info}>

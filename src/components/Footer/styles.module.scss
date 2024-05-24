@@ -2,56 +2,81 @@
     background-color: var(--color-dark);
     color: #fff;
     padding: var(--spacing-52) var(--spacing-80);
-}
 
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-20);
-}
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--spacing-20);
 
-.logo {
-    font-size: var(--font-size-24);
-    font-weight: var(--font-weight-700);
-}
+        .logo {
+            font-size: var(--font-size-24);
+            font-weight: var(--font-weight-700);
+        }
 
-.actions {
-    display: flex;
-    align-items: center;
-    font-size: var(--font-size-16);
+        .actions {
+            display: flex;
+            align-items: center;
+            font-size: var(--font-size-16);
 
-    a {
-        margin-right: var(--spacing-28);
+            a {
+                margin-right: var(--spacing-28);
 
-        &:last-child {
-            margin-right: var(--spacing-0);
+                &:last-child {
+                    margin-right: var(--spacing-0);
+                }
+            }
         }
     }
-}
 
-.info {
-    font-size: var(--font-size-16);
-    line-height: var(--font-size-28);
-}
 
-.icons {
-    display: flex;
-
-    &::after {
-        display: none;
+    .info {
+        font-size: var(--font-size-16);
+        line-height: var(--font-size-28);
+        margin-bottom: var(--spacing-20);
     }
 
-    a::after {
-        display: none;
+    .icons {
+        display: flex;
+
+        &::after {
+            display: none;
+        }
+
+        a::after {
+            display: none;
+        }
+
+        img {
+            cursor: pointer;
+            margin-left: var(--spacing-20);
+
+            &:hover {
+                filter: invert(100%);
+            }
+        }
     }
 
-    img {
-        cursor: pointer;
-        margin-left: var(--spacing-20);
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: var(--spacing-20);
 
-        &:hover {
-            filter: invert(100%);
+        .row {
+            flex-direction: column;
+
+            .logo {
+                margin-bottom: var(--spacing-20);
+            }
+
+            .actions {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: var(--spacing-12);
+            }
+        }
+
+        .info{
+            text-align: center;
         }
     }
 }
