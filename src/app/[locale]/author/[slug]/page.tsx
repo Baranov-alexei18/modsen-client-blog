@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 export default async function Author({ params }: { params: { slug: string } }) {
   const author = await getAuthors(params.slug);
   const posts = await getAuthorPosts(params.slug);
+
   return (
     <main className={styles.main}>
       <SectionAuthorMeta data={author} />

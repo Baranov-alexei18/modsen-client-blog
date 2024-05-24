@@ -21,18 +21,17 @@
 
     .image {
       position: relative;
-      width: 250px;
+      min-width: 250px;
       height: 300px;
       background-size: cover;
       background-position: center;
     }
 
     .userMeta {
-      width: 700px;
+      max-width: 700px;
 
       .title {
         font-size: var(--font-size-48);
-        font-weight: var(--font-weight-700);
       }
 
       .subtitle {
@@ -53,6 +52,59 @@
       width: 80%;
       margin: auto;
       background: linear-gradient(to right, var(--color-purple) 70%, var(--color-yellow) 50%);
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: var(--spacing-20);
+
+
+    .container {
+      .user {
+        margin-bottom: var(--spacing-12);
+      }
+
+      .image {
+        width: 250px;
+        height: 300px;
+      }
+
+      .userMeta {
+        max-width: 700px;
+
+        .title {
+          font-size: var(--font-size-32);
+        }
+
+        .subtitle {
+          font-size: var(--font-size-14);
+        }
+      }
+
+      .colorBar {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+
+
+    .container {
+      .user {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image {
+        width: 150px;
+        height: 230px;
+      }
+
+      .icons {
+        justify-content: center;
+      }
     }
   }
 }
