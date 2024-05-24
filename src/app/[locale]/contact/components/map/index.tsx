@@ -19,8 +19,8 @@ export const MapSection = () => {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0, 20],
-        zoom: 1.5,
+        center: [20, 55],
+        zoom: 3.5,
       });
 
       const markers = [

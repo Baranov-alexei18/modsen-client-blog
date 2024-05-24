@@ -25,7 +25,9 @@
         "support": "Support",
         "sales": "Sales",
         "message": "Message",
-        "btnTitle": "Send Message"
+        "btnTitle": "Send Message",
+        "successMessage": "Message sent successful",
+        "errorMessage": "Message sent failed. Please try again"
       },
       "join":{
         "title": "Join our team to be a part of our story",
