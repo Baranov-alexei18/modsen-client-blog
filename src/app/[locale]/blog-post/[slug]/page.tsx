@@ -30,38 +30,35 @@ export default async function PagePost({ params }: { params: { slug: string } })
 
   return (
     <div className={styles.wrapper}>
-      <div>
-        <div className={styles.header}>
-          <div className={styles.userInfo}>
-            <Image
-              src={author.src}
-              alt={author.name}
-              width={48}
-              height={48}
-              className={styles.avatar}
-            />
-            <div className={styles.info}>
-              <p className={styles.name}>
-                <span>{author.name}</span>
-              </p>
-              <p>
-                {`Posted on ${formatDate(date_created)}`}
-              </p>
-            </div>
-          </div>
-          <h1>{title}</h1>
-          <div className={styles.category}>
-            <Image src={category.src} alt={category.title} width={20} height={20} />
-            {category.title}
+      <div className={styles.header}>
+        <div className={styles.userInfo}>
+          <Image
+            src={author.src}
+            alt={author.name}
+            fill
+            className={styles.avatar}
+          />
+          <div className={styles.info}>
+            <p className={styles.name}>
+              <span>{author.name}</span>
+            </p>
+            <p>
+              {`Posted on ${formatDate(date_created)}`}
+            </p>
           </div>
         </div>
-        <div className={styles.image}>
-          <Image src={src} alt={title} fill />
+        <h1>{title}</h1>
+        <div className={styles.category}>
+          <Image src={category.src} alt={category.title} fill className={styles.categoryImage} />
+          {category.title}
         </div>
-        <div className={styles.content}>
-          <h3>{subtitle}</h3>
-          <p>{body}</p>
-        </div>
+      </div>
+      <div className={styles.image}>
+        <Image src={src} alt={title} fill />
+      </div>
+      <div className={styles.content}>
+        <h3>{subtitle}</h3>
+        <p>{body}</p>
       </div>
       <Suspense fallback={<div>Загрузка...</div>}>
         <div className={styles.sectionNext}>

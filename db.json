@@ -139,7 +139,7 @@
         "date_created": "2022-05-01",
         "src": "/image/png/image-post.png",
         "tags": ["Business", "Experience"],
-        "categoryId": 1,
+        "categoryId": 3,
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
         "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
         "body": "This is the body of post 1"
