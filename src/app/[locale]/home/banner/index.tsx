@@ -22,7 +22,6 @@ export const Banner = () => {
         src="/image/backgroundBannerHome.png"
         alt="Banner Image"
         fill
-        objectFit="cover"
         className={styles.image}
       />
       <div className={styles.overlay}>

@@ -5,22 +5,28 @@
   width: 520px;
   padding: var(--spacing-28);
 
+  .authorInfo {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-500);
+    margin-bottom: var(--spacing-12);
+
+    span {
+      color: var(--color-purple);
+    }
+  }
+
+  .cardTitle {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-700);
+  }
+
   &:hover {
     background-color: var(--color-light-yellow);
   }
-}
 
-.authorInfo {
-  font-size: var(--font-size-14);
-  font-weight: var(--font-weight-500);
-  margin-bottom: var(--spacing-12);
-
-  span {
-    color: var(--color-purple);
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding: var(--spacing-20) var(--spacing-0);
+    border-bottom: 1px solid var(--color-light-grey);
   }
-}
-
-.cardTitle {
-  font-size: var(--font-size-24);
-  font-weight: var(--font-weight-700);
 }

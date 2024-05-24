@@ -32,7 +32,7 @@ export const SectionAuthor = () => {
   return (
     <section className={styles.sectionAuthor}>
       <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
-      <div className={styles.categoryContainer}>
+      <div className={styles.cardsAuthors}>
         {authors.map(({
           authorId, src, name, company,
         }) => (

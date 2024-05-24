@@ -44,7 +44,7 @@ const SectionPost = () => {
   } = featuredPost!;
 
   return (
-    <section className={styles.sectionPost}>
+    <section className={styles.wrapper}>
       <div className={styles.featuredPostWrapper}>
         <h1 className={styles.sectionName}>{t('featuredPost')}</h1>
         <div className={styles.postCard}>
