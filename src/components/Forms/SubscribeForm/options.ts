@@ -9,5 +9,5 @@ export const options = {
       .email('Invalid email address')
       .required('Required'),
   }),
-  onSubmit: (values: any, { resetForm }: { resetForm: () => void }) => {},
+  onSubmit: () => {},
 };
