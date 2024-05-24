@@ -27,8 +27,7 @@ export const SectionTeam = () => {
           <Image
             src="/image/png/image-team1.png"
             alt="Team"
-            width={500}
-            height={500}
+            fill
             className={styles.image}
           />
           <div className={styles.decorationYellow} />
@@ -39,8 +38,7 @@ export const SectionTeam = () => {
           <Image
             src="/image/png/image-team2.png"
             alt="Team"
-            width={500}
-            height={500}
+            fill
             className={styles.image}
           />
           <div className={styles.decorationPurple} />

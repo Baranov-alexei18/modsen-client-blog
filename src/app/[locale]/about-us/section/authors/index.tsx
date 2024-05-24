@@ -10,12 +10,11 @@ import styles from './styles.module.scss';
 export const SectionAuthor = async () => {
   const authors = await getAuthors();
   const locale = useLocale();
-  // const t = useTranslations('pages.home.authors');
 
   return (
     <section className={styles.sectionAuthor}>
       <h2 className={styles.sectionTitle}>List authors</h2>
-      <div className={styles.categoryContainer}>
+      <div className={styles.cardsAuthors}>
         {authors.length && authors.map(({
           authorId, src, name, company,
         }: AuthorCardType) => (

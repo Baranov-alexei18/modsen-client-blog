@@ -6,10 +6,9 @@
 }
 
 .headerSection {
-    position: relative;
+    width: 100%;
 
     .headerText {
-        position: relative;
         width: 500px;
         color: var(--color-grey);
         font-size: var(--font-size-18);
@@ -55,30 +54,30 @@
 
 .InfoWrapper {
     flex: 1;
-}
 
-.title {
-    font-size: var(--font-size-28);
-    font-weight: var(--font-weight-700);
-    margin-bottom: var(--spacing-20);
-}
+    .title {
+        font-size: var(--font-size-28);
+        font-weight: var(--font-weight-700);
+        margin-bottom: var(--spacing-20);
+    }
 
-.subtitle {
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-400);
-    margin-bottom: var(--spacing-20);
-    color: var(--color-grey);
+    .subtitle {
+        font-size: var(--font-size-16);
+        font-weight: var(--font-weight-400);
+        margin-bottom: var(--spacing-20);
+        color: var(--color-grey);
+    }
 }
 
 .text {
     position: absolute;
-    width: 600px;
+    max-width: 600px;
     top: 30px;
     left: 120px;
     background-color: var(--color-white);
-    margin-right: 20px;
+    margin-right: var(--spacing-20);
     padding: var(--spacing-52);
-    z-index: 1;
+    z-index: var(--z-index-1);
 
     h2 {
         font-size: var(--font-size-16);
@@ -89,6 +88,54 @@
     h1 {
         font-size: var(--font-size-36);
         font-weight: var(--font-weight-700);
-        margin: 10px 0;
+        margin: var(--spacing-12) var(--spacing-0);
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        margin: var(--spacing-0);
+    }
+
+    .cardsAuthors {
+        gap: var(--spacing-20);
+    }
+
+    .headerText {
+        display: none;
+    }
+
+    .imageWrapper {
+        position: relative;
+        height: 300px;
+
+        .image {
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    .text {
+        position: relative;
+        top: var(--spacing-0);
+        left: var(--spacing-0);
+        text-align: center;
+        padding: var(--spacing-20);
+        margin: auto;
+
+        h2 {
+            font-size: var(--font-size-14);
+        }
+
+        h1 {
+            font-size: var(--font-size-24);
+            margin: var(--spacing-12) var(--spacing-0);
+        }
+    }
+
+    .aboutUsWrapper {
+        flex-direction: column;
+        padding: var(--spacing-20);
     }
 }
