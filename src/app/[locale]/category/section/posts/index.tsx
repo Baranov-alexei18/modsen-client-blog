@@ -45,19 +45,12 @@ export const ListPosts = ({ slug }: { slug: string }) => {
   }, [activeCategory, activeTags, activeTags.length]);
 
   const setCategory = (id: string) => {
-    if (id === activeCategory) {
-      setActiveCategory(null);
-      return;
-    }
-    setActiveCategory(id);
+    setActiveCategory((prev) => (prev === id ? null : id));
   };
 
   const setTags = (tag: string) => {
-    if (activeTags?.includes(tag)) {
-      setActiveTags(activeTags.filter((item) => item !== tag));
-      return;
-    }
-    setActiveTags((prev) => [...prev!, tag]);
+    setActiveTags((prev) => (
+      prev.includes(tag) ? prev.filter((item) => item !== tag) : [...prev, tag]));
   };
 
   return (
@@ -83,7 +76,7 @@ export const ListPosts = ({ slug }: { slug: string }) => {
               src={src}
               className={activeCategory === id ? styles.active : ''}
               title={title}
-              onHandleClick={() => setCategory(id)}
+              onHandleClick={setCategory.bind(null, id)}
             />
           ))}
         </div>
@@ -94,7 +87,7 @@ export const ListPosts = ({ slug }: { slug: string }) => {
               <Chip
                 key={tag}
                 className={activeTags!.includes(tag) ? styles.active : ''}
-                onHandleClick={() => setTags(tag)}
+                onHandleClick={setTags.bind(null, tag)}
               >
                 {tag}
               </Chip>

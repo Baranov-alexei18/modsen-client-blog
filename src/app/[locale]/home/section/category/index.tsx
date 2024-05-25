@@ -1,4 +1,4 @@
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { CategoryCard } from '@/components/ui-components/card/card-category';
@@ -9,13 +9,8 @@ import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 import styles from './styles.module.scss';
 
 export const SectionCategory = () => {
-  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations('pages.home.category');
-
-  const handleClickToCategoryPage = (id: number) => {
-    router.push(`/${locale}/${LINK_CATEGORY.path}/${id}`);
-  };
 
   return (
     <section className={styles.sectionCategory}>
@@ -24,13 +19,13 @@ export const SectionCategory = () => {
         {categories.map(({
           src, title, subtitle, id,
         }) => (
-          <CategoryCard
-            key={src}
-            src={src}
-            title={title}
-            subTitle={subtitle}
-            onHandleClick={() => handleClickToCategoryPage(id)}
-          />
+          <Link key={src} href={`/${locale}/${LINK_CATEGORY.path}/${id}`}>
+            <CategoryCard
+              src={src}
+              title={title}
+              subTitle={subtitle}
+            />
+          </Link>
         ))}
       </div>
     </section>

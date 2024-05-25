@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { getAuthors } from '@/api/getAuthors';
@@ -13,13 +13,8 @@ import styles from './styles.module.scss';
 
 export const SectionAuthor = () => {
   const [authors, serAuthors] = useState([]);
-  const router = useRouter();
   const locale = useLocale();
   const t = useTranslations('pages.home.authors');
-
-  const handleClickToAuthorPage = (id: number) => {
-    router.push(`${locale}/${LINK_AUTHOR.path}/${id}`);
-  };
 
   useEffect(() => {
     const getAuthorsData = async () => {
@@ -37,13 +32,13 @@ export const SectionAuthor = () => {
         {authors.map(({
           authorId, src, name, company,
         }) => (
-          <AuthorCard
-            key={authorId}
-            src={src}
-            title={name}
-            subTitle={company}
-            onHandleClick={() => handleClickToAuthorPage(authorId)}
-          />
+          <Link key={authorId} href={`${locale}/${LINK_AUTHOR.path}/${authorId}`}>
+            <AuthorCard
+              src={src}
+              title={name}
+              subTitle={company}
+            />
+          </Link>
         ))}
       </div>
     </section>

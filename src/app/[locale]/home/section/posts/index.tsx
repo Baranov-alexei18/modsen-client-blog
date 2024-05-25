@@ -23,7 +23,7 @@ const SectionPost = () => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    router.push(`${locale}/${LINK_BLOG_POST.path}/1`);
+    router.push(`${locale}/${LINK_BLOG_POST.path}/2`);
   };
 
   useEffect(() => {
@@ -89,14 +89,13 @@ const SectionPost = () => {
           {posts.map(({
             title, date_created, authorName, id,
           }) => (
-            <PostCard
-              key={`${title}-${date_created}`}
-              id={id}
-              name={authorName}
-              date={date_created}
-              title={title}
-              locale={locale}
-            />
+            <Link key={`${title}-${date_created}`} href={`${locale}/${LINK_BLOG_POST.path}/${id}`}>
+              <PostCard
+                name={authorName}
+                date={date_created}
+                title={title}
+              />
+            </Link>
           ))}
         </div>
       </div>

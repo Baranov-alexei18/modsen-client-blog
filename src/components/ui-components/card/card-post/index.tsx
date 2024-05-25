@@ -7,9 +7,9 @@ import { PostCardType } from './types';
 import styles from './styles.module.scss';
 
 export const PostCard = ({
-  title, name, date, locale, id,
-}: Partial<PostCardType & {locale: string}>) => (
-  <Link className={styles.card} href={`${locale}/blog-post/${id}`}>
+  title, name, date,
+}: Partial<PostCardType>) => (
+  <div className={styles.card}>
     <div className={styles.authorInfo}>
       <p>
         By
@@ -23,5 +23,5 @@ export const PostCard = ({
     <h3 className={styles.cardTitle}>
       {title}
     </h3>
-  </Link>
+  </div>
 );

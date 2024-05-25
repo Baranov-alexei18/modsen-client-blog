@@ -8,7 +8,7 @@ import { YellowButton } from '@/components/ui-components/button/options';
 import { InputApp } from '@/components/ui-components/input';
 import { Toast } from '@/components/ui-components/toast';
 
-import { options } from './options';
+import { initialValues, validationSchema } from './options';
 
 import styles from './styles.module.scss';
 
@@ -16,34 +16,39 @@ export const SubscribeForm = () => {
   const t = useTranslations('forms.subscribe');
   const [pending, setPending] = useState(false);
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'error' } | null>(null);
-  const {
-    handleChange, handleBlur, values, touched, errors,
-  } = useFormik(options);
 
-  const onSubmitForm = () => {
-    setPending(true);
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_SUBSCRIBE!,
-        { to_email: values.email },
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_KEY!,
-        },
-      )
-      .then(
-        () => {
-          values.email = '';
-          setToast({ message: t('successMessage'), type: 'success' });
-        },
-        (error) => {
-          setToast({ message: t('errorMessage'), type: 'error' });
-        },
-      )
-      .finally(() => {
-        setPending(false);
-      });
-  };
+  const {
+    handleSubmit, handleChange, handleBlur, values, touched, errors,
+  } = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: async (values: {
+      email: string,
+    }, { resetForm }: { resetForm: () => void }) => {
+      setPending(true);
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_SUBSCRIBE!,
+          { to_email: values.email },
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_KEY!,
+          },
+        )
+        .then(
+          () => {
+            resetForm();
+            setToast({ message: t('successMessage'), type: 'success' });
+          },
+          (error) => {
+            setToast({ message: t('errorMessage'), type: 'error' });
+          },
+        )
+        .finally(() => {
+          setPending(false);
+        });
+    },
+  });
 
   const closeToast = useCallback(() => {
     setToast(null);
@@ -58,7 +63,7 @@ export const SubscribeForm = () => {
           onClose={closeToast}
         />
       )}
-      <form className={styles.wrapper} onSubmit={onSubmitForm}>
+      <form className={styles.wrapper} onSubmit={handleSubmit}>
         <span className={styles.info}>
           {t('title')}
         </span>
@@ -75,8 +80,8 @@ export const SubscribeForm = () => {
           />
           <ButtonApp
             {...YellowButton}
-            onClick={onSubmitForm}
             disabled={Boolean(errors.email)}
+            type="submit"
           >
             {pending ? t('loading') : t('subscribe')}
           </ButtonApp>

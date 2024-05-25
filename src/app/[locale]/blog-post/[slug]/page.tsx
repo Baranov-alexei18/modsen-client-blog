@@ -18,7 +18,9 @@ export default async function PagePost({ params }: { params: { slug: string } })
 
   const getNextPostsCategory = async (id: number) => {
     const posts = await getPosts();
-    const data = posts.filter((item: { categoryId: number }) => item.categoryId === id);
+    const data = posts.filter((
+      item: { id: string, categoryId: number },
+    ) => item.categoryId === id && parseInt(item.id, 10) !== id);
     return data.slice(0, 3);
   };
 
@@ -62,7 +64,7 @@ export default async function PagePost({ params }: { params: { slug: string } })
         <h3>{subtitle}</h3>
         <p>{body}</p>
       </div>
-      <Suspense fallback={<div>Загрузка...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <div className={styles.sectionNext}>
           <h1>What to read next</h1>
           <div className={styles.wrapperNextPosts}>

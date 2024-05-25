@@ -14,7 +14,7 @@ export const Banner = () => {
   const t = useTranslations('pages.home.banner');
 
   const handleClickToBlogPostPage = () => {
-    router.push(`${locale}/${LINK_BLOG_POST.path}/1`);
+    router.push(`${locale}/${LINK_BLOG_POST.path}/2`);
   };
 
   return (

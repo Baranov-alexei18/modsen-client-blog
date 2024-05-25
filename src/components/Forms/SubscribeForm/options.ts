@@ -1,13 +1,11 @@
 import * as Yup from 'yup';
 
-export const options = {
-  initialValues: {
-    email: '',
-  },
-  validationSchema: Yup.object({
-    email: Yup.string()
-      .email('Invalid email address')
-      .required('Required'),
-  }),
-  onSubmit: () => {},
+export const initialValues = {
+  email: '',
 };
+
+export const validationSchema = Yup.object({
+  email: Yup.string()
+    .email('Invalid email address')
+    .required('Required'),
+});

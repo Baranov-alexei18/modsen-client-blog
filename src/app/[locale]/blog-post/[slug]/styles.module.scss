@@ -102,11 +102,19 @@
         .wrapperNextPosts {
             display: flex;
             flex-wrap: wrap;
-            width: 100%;
             justify-content: space-between;
             padding-bottom: var(--spacing-40);
             border-bottom: 1px solid var(--color-light-grey);
-            gap: var(--spacing-12);
+            gap: var(--spacing-32);
+
+            a::after {
+                display: none;
+            }
+
+            a {
+                flex: 1;
+                width: 100%;
+            }
         }
     }
 
@@ -114,7 +122,7 @@
         margin: var(--spacing-64) var(--spacing-20);
 
         .wrapperNextPosts {
-            justify-content: center;
+            flex: 1;
         }
 
         .header {

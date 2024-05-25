@@ -17,6 +17,7 @@ const SectionStarted = () => {
   const handleClickToAboutUsPage = () => {
     router.push(`${locale}/${LINK_ABOUT_US.path}`);
   };
+
   return (
     <section className={styles.sectionStarted}>
       <div className={styles.imageContainer}>

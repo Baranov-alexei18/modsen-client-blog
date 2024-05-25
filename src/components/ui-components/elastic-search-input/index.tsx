@@ -56,13 +56,13 @@ export const ElasticSearch = (
       {showResult && query && (
         <div className={styles.results}>
           {isSearching ? (
-            <p>Совпадений нет</p>
+            <p>No results</p>
           ) : (
             results.map((result) => (
               <div
                 key={result}
                 className={styles.resultItem}
-                onClick={() => handleTag(result)}
+                onClick={handleTag.bind(null, result)}
                 aria-hidden
               >
                 {result}

@@ -12,6 +12,8 @@ import { SectionFeaturedPost } from './section/features-post';
 
 import styles from '../styles.module.scss';
 
+const MIN_PAGE = 1;
+
 export default function Blog() {
   const [posts, setPosts] = useState([]);
   const [featuredPost, setFeaturedPost] = useState(null);
@@ -23,6 +25,7 @@ export default function Blog() {
       const posts = await getPostsPage(page);
       setTotalPages(posts?.total);
       setPosts(posts?.data);
+
       if (!featuredPost) {
         setFeaturedPost(posts?.data[0]);
       }
@@ -35,7 +38,7 @@ export default function Blog() {
   };
 
   const getPrevPage = () => {
-    setPage((prev) => Math.max(prev - 1, 1));
+    setPage((prev) => Math.max(prev - 1, MIN_PAGE));
   };
 
   return (
@@ -45,7 +48,7 @@ export default function Blog() {
         data={posts}
         clickNext={getNextPage}
         clickPrev={getPrevPage}
-        disablePrev={page === 1}
+        disablePrev={page === MIN_PAGE}
         disableNext={page === totalPages}
       />
       <SectionCategory />

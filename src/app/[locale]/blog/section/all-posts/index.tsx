@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { PostCard } from '@/components/ui-components/card/card-blog-post';
@@ -14,23 +14,18 @@ export const SectionPosts = ({
 }: PostsAllTypes) => {
   const t = useTranslations('pages.home.posts');
   const tBtn = useTranslations('pages.blog');
-  const router = useRouter();
   const locale = useLocale();
-
-  const handleClickToBlogPostPage = (id: number) => {
-    router.push(`/${locale}/${LINK_BLOG_POST.path}/${id}`);
-  };
 
   return (
     <div className={styles.allPosts}>
       <h1>{t('allPost')}</h1>
       <div className={styles.postsList}>
         {data.map((post) => (
-          <PostCard
-            key={post.id}
-            data={post}
-            handleClickPost={() => handleClickToBlogPostPage(post.id)}
-          />
+          <Link key={post.id} href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`}>
+            <PostCard
+              data={post}
+            />
+          </Link>
         ))}
       </div>
       <div className={styles.pagination}>
