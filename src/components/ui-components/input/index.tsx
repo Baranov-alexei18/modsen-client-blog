@@ -1,15 +1,6 @@
-import styles from './styles.module.scss';
+import { InputType } from './types';
 
-type InputType = {
-  type: string,
-  name: string
-  value: string,
-  placeholder: string,
-  isTouch: boolean,
-  error: string,
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
-  onBlur: (e: React.ChangeEvent<HTMLInputElement>) => void,
-}
+import styles from './styles.module.scss';
 
 export const InputApp = ({
   value, placeholder, onChange, error, type, name, onBlur, isTouch,

@@ -1,14 +1,10 @@
 import React, { useEffect } from 'react';
 
+import { ToastProps } from './types';
+
 import styles from './styles.module.scss';
 
-type ToastProps = {
-  message: string;
-  type: 'success' | 'error';
-  onClose: () => void;
-}
-
-export const Toast: React.FC<ToastProps> = ({ message, type, onClose }) => {
+export const Toast = ({ message, type, onClose }:ToastProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();

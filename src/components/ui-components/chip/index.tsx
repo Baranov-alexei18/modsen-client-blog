@@ -1,12 +1,8 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+
+import { TagType } from './types';
 
 import styles from './styles.module.scss';
-
-type TagType = {
-    className: string,
-    children: ReactNode,
-    onHandleClick: () => void,
-};
 
 export const Chip = ({ className, children, onHandleClick }: Partial<TagType>) => (
   <span
