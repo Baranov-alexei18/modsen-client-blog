@@ -28,4 +28,8 @@
         color: var(--color-light-grey);
         margin-bottom: var(--spacing-0);
     }
+
+    @media (max-width: 768px) {
+        padding: var(--spacing-20);
+    }
 }
