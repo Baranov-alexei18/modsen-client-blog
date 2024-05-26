@@ -21,10 +21,12 @@
 
   .headerAllPost {
     display: flex;
-    justify-content: space-between;
+    justify-items: space-between;
     align-items: center;
 
     a {
+      flex: none;
+      margin-left: auto;
       margin-bottom: var(--spacing-16);
       color: var(--color-purple);
 
