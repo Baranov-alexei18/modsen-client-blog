@@ -10,7 +10,7 @@ type IntersectionObserverOptions = {
 
 export const useIntersectionObserver = (
   options?: Partial<IntersectionObserverOptions>,
-): [boolean, any] => {
+) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const ref = useRef(null);
 

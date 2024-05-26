@@ -9,6 +9,7 @@ export const getAuthorPosts = async (id: string) => {
     const data = await posts.json();
 
     const categories = await getCategories(data.categoryId);
+
     const filteredData = data.filter(({ authorId }:PostDataType) => authorId === parseInt(id, 10));
 
     const authorPosts = filteredData.map((item:PostDataType) => ({
