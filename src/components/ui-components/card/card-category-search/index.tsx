@@ -6,12 +6,12 @@ import styles from './styles.module.scss';
 
 export const CategorySearchCard = ({
   src, title, onHandleClick, className,
-}: CategoryCardType) => (
+}: Partial<CategoryCardType>) => (
   <div className={`${styles.card} ${className}`} onClick={onHandleClick} aria-hidden>
     <Image
       width="48"
       height="48"
-      src={src}
+      src={src!}
       alt="icon-category"
       className={styles.icon}
     />
