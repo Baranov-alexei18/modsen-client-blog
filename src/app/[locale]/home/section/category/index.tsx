@@ -29,7 +29,7 @@ export const SectionCategory = () => {
     <section className={styles.sectionCategory}>
       <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
       <div className={styles.categoryContainer}>
-        {categories.length && categories.map(({
+        {!!categories.length && categories.map(({
           src, title, subtitle, id,
         }:CategoryCardType) => (
           <Link key={src} href={`/${locale}/${LINK_CATEGORY.path}/${id}`}>
