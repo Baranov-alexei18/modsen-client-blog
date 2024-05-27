@@ -3,7 +3,7 @@ import { DB, SERVER_URL } from '@/constants';
 export const getAuthors = async (id?: string) => {
   try {
     const path = !id ? `${SERVER_URL}${DB.AUTHORS}` : `${SERVER_URL}${DB.AUTHORS}/${id}`;
-    const authors = await fetch(path, { cache: 'force-cache' });
+    const authors = await fetch(path);
 
     const dataAuthors = await authors.json();
 

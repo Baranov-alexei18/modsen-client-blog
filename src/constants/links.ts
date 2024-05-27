@@ -56,21 +56,17 @@ export const LINKS_FOOTER = [
 export const SOCIAL_NETWORK_LINKS = [
   {
     name: 'facebook',
-    src: '/image/svg/facebook.svg',
     path: 'https://www.facebook.com/ModsenSoftware/',
   },
   {
     name: 'twitter',
-    src: '/image/svg/twitter.svg',
     path: 'https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
   },
   {
     name: 'instagramm',
-    src: '/image/svg/instagramm.svg',
     path: 'https://www.instagram.com/modsencompany/',
   }, {
     name: 'linkedIn',
-    src: '/image/svg/linkedIn.svg',
     path: 'https://www.linkedin.com/company/modsen/?originalSubdomain=pl',
   },
 ];
