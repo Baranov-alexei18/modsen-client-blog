@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 import { AuthorCardType } from '@/components/ui-components/card/card-author/types';
-import { SOCIAL_NETWORK_LINKS } from '@/constants/links';
+import { SocialGroups } from '@/components/ui-components/socialGroups';
 
 import styles from './styles.module.scss';
 
 export const SectionAuthorMeta = ({ data }: { data: AuthorCardType }) => {
   const t = useTranslations('pages.home.authors');
 
-  const { src, name } = data!;
+  const { src, name, social } = data!;
 
   return (
     <section className={styles.wrapper}>
@@ -33,21 +33,7 @@ export const SectionAuthorMeta = ({ data }: { data: AuthorCardType }) => {
               aliqua. Non blandit massa enim nec. Scelerisque viverra
               mauris in aliquam sem. At risus viverra adipiscing at in tellus.
             </p>
-            <div className={styles.icons}>
-              {SOCIAL_NETWORK_LINKS.map(({ src, name, path }) => (
-                <Link
-                  key={name}
-                  href={path}
-                >
-                  <Image
-                    src={src}
-                    width={20}
-                    height={20}
-                    alt={name}
-                  />
-                </Link>
-              ))}
-            </div>
+            {social.length && <SocialGroups data={social} />}
           </div>
         </div>
         <div className={styles.colorBar} />

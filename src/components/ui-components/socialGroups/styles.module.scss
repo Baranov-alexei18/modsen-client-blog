@@ -1,0 +1,20 @@
+.icons {
+    display: flex;
+    gap: var(--spacing-20);
+
+    &::after {
+        display: none;
+    }
+
+    a::after {
+        display: none;
+    }
+
+    img {
+        cursor: pointer;
+
+        &:hover {
+            filter: contrast(150%) brightness(190%);
+        }
+    }
+}

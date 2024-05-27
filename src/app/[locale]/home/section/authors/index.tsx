@@ -30,13 +30,14 @@ export const SectionAuthor = () => {
       <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
       <div className={styles.cardsAuthors}>
         {authors.map(({
-          authorId, src, name, company,
+          authorId, src, name, company, social,
         }) => (
           <Link key={authorId} href={`${locale}/${LINK_AUTHOR.path}/${authorId}`}>
             <AuthorCard
               src={src}
               title={name}
               subTitle={company}
+              social={social}
             />
           </Link>
         ))}

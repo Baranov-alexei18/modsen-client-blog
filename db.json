@@ -4,13 +4,24 @@
         "id":1,
         "authorId": 1,
         "src": "/image/png/person1.png",
-        "name": "Floyd Miles",
-        "social": {
-          "twitter": "johndoe",
-          "linkedin": "johndoe",
-          "facebook": "johndoe",
-          "instagamm": "johndoe"
-        },
+        "name": "Floyd Mile",
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "Content Writer @Company"
       },
       {
@@ -18,12 +29,23 @@
         "authorId": 2,
         "src": "/image/png/person2.png",
         "name": "Dianne Russell",
-        "social": {
-          "twitter": "janesmith",
-          "linkedin": "janesmith",
-          "facebook": "janesmith",
-          "instagamm": "janesmith"
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "Content Writer @Company"
       },
       {
@@ -31,13 +53,23 @@
         "authorId": 3,
         "src": "/image/png/person3.png",
         "name": "Jenny Wilson",
-        "social": {
-          "twitter": "alicejohnson",
-          "linkedin": "alicejohnson",
-          "facebook": "alicejohnson",
-          "instagamm": "alicejohnson"
-          
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "Content Writer @Company"
       },
       {
@@ -45,12 +77,23 @@
         "authorId": 4,
         "src": "/image/png/person4.png",
         "name": "Leslie Alexander",
-        "social": {
-          "twitter": "bobbrown",
-          "linkedin": "bobbrown",
-          "facebook": "bobbrown",
-          "instagamm": "bobbrown"
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "Content Writer @Company"
       },
       {
@@ -58,12 +101,23 @@
         "authorId": 5,
         "src": "/image/png/person1.png",
         "name": "Eve Davis",
-        "social": {
-          "twitter": "evedavis",
-          "linkedin": "evedavis",
-          "facebook": "evedavis",
-          "instagamm": "evedavis"
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/company/modsen/?originalSubdomain=pl"
+          }
+        ],
         "company": "JKL Corporation"
       },
       {
@@ -71,12 +125,23 @@
         "authorId": 6,
         "src": "/image/png/person1.png",
         "name": "Michael Wilson",
-        "social": {
-          "twitter": "michaelwilson",
-          "linkedin": "michaelwilson",
-          "facebook": "michaelwilson",
-          "instagamm": "michaelwilson"
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "MNO Group"
       },
       {
@@ -84,12 +149,23 @@
         "authorId": 7,
         "src": "/image/png/person1.png",
         "name": "Sarah Lee",
-        "social": {
-          "twitter": "sarahlee",
-          "linkedin": "sarahlee",
-          "facebook": "sarahlee",
-          "instagamm": "sarahlee"
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "PQR Enterprises"
       },
       {
@@ -97,12 +173,23 @@
         "authorId": 8,
         "src": "/image/png/person1.png",
         "name": "David Clark",
-        "social": {
-          "twitter": "davidclark",
-          "linkedin": "davidclark",
-          "facebook": "davidclark",
-          "instagamm": "davidclark"
-        },
+        "social": [
+          {
+            "name": "facebook",
+            "path": "https://www.facebook.com/ModsenSoftware/"
+          },
+          {
+            "name": "twitter",
+            "path": "https://twitter.com/modsencompany?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          },
+          {
+            "name": "instagramm",
+            "path": "https://www.instagram.com/modsencompany/"
+          }, {
+            "name": "linkedIn",
+            "path": "https://www.linkedin.com/in/alexei-baranov/"
+          }
+        ],
         "company": "STU LLC"
       }
     ],
@@ -137,7 +224,7 @@
         "id": 22,
         "authorId": 1,
         "date_created": "2022-05-01",
-        "src": "/image/png/image-post.png",
+        "src": "/image/png/image-post.png", 
         "tags": ["Business", "Experience"],
         "categoryId": 3,
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
