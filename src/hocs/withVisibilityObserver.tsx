@@ -1,11 +1,16 @@
-import { JSX, useEffect, useState } from 'react';
+import {
+  ComponentType, FC, useEffect, useState,
+} from 'react';
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { VisibilityObserverProps } from '@/types';
 
 import styles from '../theme/styles.module.scss';
 
-export const withVisibilityObserver = (WrappedComponent: any) => {
-  const ComponentWithVisibility = (props: any) => {
+export const withVisibilityObserver = <P extends object>(
+  WrappedComponent: ComponentType<P & VisibilityObserverProps>,
+): FC<P> => {
+  const ComponentWithVisibility: FC<P> = (props) => {
     const [isVisible, ref] = useIntersectionObserver();
     const [isComponentVisible, setIsComponentVisible] = useState(false);
 

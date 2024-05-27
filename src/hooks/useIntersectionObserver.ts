@@ -1,18 +1,16 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import {
+  MutableRefObject, useEffect, useRef, useState,
+} from 'react';
 
-type IntersectionObserverOptions = {
-  root: Element | null;
-  rootMargin: string;
-  threshold: number | number[];
-}
+import { IntersectionObserverOptions } from '@/types';
 
 export const useIntersectionObserver = (
-  options?: Partial<IntersectionObserverOptions>,
-) => {
+  options?: IntersectionObserverOptions,
+): [boolean, MutableRefObject<HTMLDivElement | null>] => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
