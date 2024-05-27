@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl';
 
 import styles from './styles.module.scss';
 
-export default function SelectLanguage() {
+export default function SelectLanguage({ cyId }: { cyId: string }) {
   const router = useRouter();
   const locale = useLocale();
 
@@ -16,13 +16,16 @@ export default function SelectLanguage() {
 
     const newUrl = currentPath.replace(`/${locale}`, `/${value}/`);
 
-    router.replace(newUrl);
+    router.push(newUrl);
+
+    router.refresh();
   };
 
   return (
     <select
       className={styles.wrapper}
       defaultValue={locale}
+      data-testid={cyId}
       onChange={handleChange}
     >
       <option value="en">English</option>

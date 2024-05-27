@@ -31,4 +31,8 @@
         color: var(--color-white);
         text-decoration: none;
     }
+
+    @media (min-width: 992px) {
+        display: none;
+    }
 }
