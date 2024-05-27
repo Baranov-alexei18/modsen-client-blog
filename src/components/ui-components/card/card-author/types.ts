@@ -7,7 +7,8 @@ export type AuthorCardType = {
     name: string,
     company: string,
     social: {
-      [net: string]: string,
-    }
+      name: string,
+      path: string,
+    }[],
     onHandleClick: () => void;
 };

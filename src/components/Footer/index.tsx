@@ -1,12 +1,12 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { LINKS_FOOTER, SOCIAL_NETWORK_LINKS } from '@/constants/links';
 
 import { SubscribeForm } from '../Forms/SubscribeForm';
+import { SocialGroups } from '../ui-components/socialGroups';
 
 import styles from './styles.module.scss';
 
@@ -29,22 +29,7 @@ const Footer = () => {
           <br />
           Hello@finsweet.com  020 7993 2905
         </div>
-        <div className={styles.icons}>
-          {SOCIAL_NETWORK_LINKS.map(({ src, name, path }) => (
-            <Link
-              key={name}
-              href={path}
-            >
-              <Image
-                src={src}
-                width={20}
-                height={20}
-                alt={name}
-              />
-            </Link>
-
-          ))}
-        </div>
+        <SocialGroups data={SOCIAL_NETWORK_LINKS} />
       </div>
     </footer>
   );

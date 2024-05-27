@@ -28,28 +28,6 @@
         margin-bottom: var(--spacing-12);
     }
 
-    .iconGroup {
-        display: flex;
-        gap: var(--spacing-20);
-
-        a::after {
-            display: none;
-        }
-
-        button {
-            border: none;
-            background-color: inherit;
-        }
-
-        img {
-            cursor: pointer;
-
-            &:hover {
-                filter: invert(70%);
-            }
-        }
-    }
-
     &:hover {
         background-color: var(--color-light-yellow);
     }
