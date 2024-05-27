@@ -32,7 +32,7 @@ export const BaseModal: React.FC<ModalProps> = ({ isOpen, onClose, children }) =
       <div className={styles.modalContent}>
         <div className={styles.header}>
           <span>Present Video</span>
-          <ButtonApp onClick={onClose}>Закрыть</ButtonApp>
+          <ButtonApp onClick={onClose}>Close</ButtonApp>
         </div>
         {children}
       </div>

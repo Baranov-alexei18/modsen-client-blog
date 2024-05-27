@@ -16,10 +16,15 @@
   ],
   "rules": {
     "no-unused-vars": "off",
+    "no-use-before-define": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "react/no-unused-prop-types": "off",
     "react/display-name": "off",
+    "react/jsx-no-bind": "off",
     "no-shadow": "off",
+    "consistent-return": "off",
+    "react/button-has-type": "off",
+    "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": ["off", { "target": "any" }],
     "simple-import-sort/imports": [
       "error",
@@ -40,6 +45,7 @@
     "import/no-duplicates": "error",
     "import/no-unresolved": "off",
     "import/extensions": "off",
+    "@next/next/no-async-client-component": "off",
     "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration" ] }],
     "camelcase": "off",
     "no-undef": "off",

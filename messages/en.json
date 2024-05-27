@@ -1,0 +1,120 @@
+{
+    "header": {
+      "title": "Hello world!",
+      "btnModalTitle": "Video about us",
+      "home": "Home",
+      "blog": "Blog",
+      "aboutUs": "About Us",
+      "contact": "Contact Us",
+      "privacyPolice": "Privacy police"
+    },
+    "forms": {
+      "subscribe":{
+        "placeholder": "Enter your email",
+        "title": "Subscribe to our news letter to get latest updates and news",
+        "subscribe": "Subscribe",
+        "invalidData": "Invalid email",
+        "successMessage": "Subscription successful",
+        "errorMessage": "Subscription failed. Please try again",
+        "loading": "Loading..."
+      },
+      "contact":{
+        "email": "Your Email",
+        "name": "Full Name",
+        "queryRelated": "Query Related",
+        "support": "Support",
+        "sales": "Sales",
+        "message": "Message",
+        "btnTitle": "Send Message",
+        "successMessage": "Message sent successful",
+        "errorMessage": "Message sent failed. Please try again"
+      },
+      "join":{
+        "title": "Join our team to be a part of our story",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "btnTitle": "Join now"
+      }
+    },
+    "pages":{
+      "home": {
+        "banner":{
+          "startInfo": "POSTED ON STARTUP",
+          "title": "Step-by-step guide to choosing great font pairs",
+          "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+          "btnTitle": "Read More >"
+        },
+        "posts":{
+          "featuredPost": "Featured Post",
+          "allPost": "All Post",
+          "view": "View all",
+          "btnTitle": "Read More >",
+          "myPosts": "My Posts"
+        },
+        "aboutUs":{
+          "sectionTitleAboutUs": "ABOUT US",
+          "sectionTitleMision": "OUR MISION",
+          "titleAboutUs": "We are a community of content writers who share their learnings",
+          "titleMision": "Creating valuable content for creatives all around the world",
+          "subtitleAboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "link": "Read More >"
+        },
+        "category":{
+          "sectionTitle": "Choose A Catagory"
+        },
+        "started":{
+          "sectionTitle": "WHY WE STARTED",
+          "title": "It started out as a simple idea and evolved into our passion",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+          "btnTitle": "Discover our story >"
+        },
+        "authors":{
+          "sectionTitle": "List of Authors",
+          "title": "Hey there, I’m {name} and welcome to my Blog"
+        },
+        "testimonials":{
+          "sectionTitle": "TESTIMONIALS",
+          "title": "What people say about our blog",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        }
+      },
+      "blog":{
+        "next": "Next >",
+        "prev": "< Prev"
+      },
+      "aboutUs":{
+        "aboutUs": "ABOUT US",
+        "title": "We are a team of content writers who share their learnings",
+        "sectionTitleMision": "OUR MISION",
+        "titleMision": "Creating valuable content for creatives all around the world",
+        "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "sectionTitleVision": "OUR VISION",
+        "titleVision": "A platform that empowers individuals to improve",
+        "subtitleVision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "blogsPublish": "Blogs Published",
+        "viewsOnFinsweet": "Views on Finsweet",
+        "activeUser": "Total active Users",
+        "teamCreatives": "Our team of creatives",
+        "whyStarted": "Why we started this Blog"
+      },
+      "contact":{
+        "contactUs": "CONTACT US",
+        "title": "Let's Start a Conversation",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+        "worksHoursTitle": "Working hours",
+        "worksHours": "9:00 AM to 8:00 PM",
+        "worksDays": "Monday To Friday",
+        "support": "Our Support Team is available 24/7"
+      },
+      "category":{
+        "loading": "Loading...",
+        "nonPosts": "There are no posts by request",
+        "categories": "Categories",
+        "tags": "All Tags"
+      },
+      "privacyPolice":{
+        "title": "Privacy Policy",
+        "lastUpdate": "Last Updated  on 23th May 2024"
+      } 
+    }
+}

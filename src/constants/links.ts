@@ -1,41 +1,41 @@
 export const LINK_HOME = {
   path: '/',
-  name: 'Home',
+  name: 'home',
 };
 
 export const LINK_BLOG = {
   path: '/blog',
-  name: 'Blog',
+  name: 'blog',
 };
 
 export const LINK_BLOG_POST = {
   path: '/blog-post',
-  name: 'Blog-post',
+  name: 'blog-post',
 };
 
 export const LINK_ABOUT_US = {
   path: '/about-us',
-  name: 'About us',
+  name: 'aboutUs',
 };
 
 export const LINK_CATEGORY = {
   path: '/category',
-  name: 'Category',
+  name: 'category',
 };
 
 export const LINK_AUTHOR = {
   path: '/author',
-  name: 'Author',
+  name: 'author',
 };
 
 export const LINK_CONTACT = {
   path: '/contact',
-  name: 'Contact us',
+  name: 'contact',
 };
 
 export const LINK_PRIVACY_POLICY = {
   path: '/privacy-police',
-  name: 'Privacy police',
+  name: 'privacyPolice',
 };
 
 export const LINKS_HEADER = [

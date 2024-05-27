@@ -1,9 +1,24 @@
 .wrapper {
     width: 100%;
+    margin-right: var(--spacing-20);
+}
+
+.input {
+    width: 100%;
+    position: relative;
     font-size: inherit;
     background-color: inherit;
     border: 1px solid var(--color-grey);
-    color: var(--color-white);
+    color: inherit;
     padding: var(--spacing-16) var(--spacing-40) var(--spacing-16) var(--spacing-4);
-    margin-right: var(--spacing-20);
+}
+
+.invalid {
+    border: 1px solid var(--color-red);
+}
+
+.error {
+    position: absolute;
+    color: var(--color-red);
+    font-size: var(--font-size-14);
 }

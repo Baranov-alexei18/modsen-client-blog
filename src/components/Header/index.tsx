@@ -1,37 +1,76 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { LINKS_HEADER } from '@/constants/links';
 
+import { Sidebar } from '../Sidebar';
 import { ButtonApp } from '../ui-components/button';
 import { VideoModal } from '../ui-components/modal/VideoModal';
+import { SelectApp } from '../ui-components/select';
 
 import styles from './styles.module.scss';
 
 export const Header = () => {
+  const t = useTranslations('header');
+  const router = useRouter();
+  const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const handleChange = (e: { target: { value: string; }; }) => {
+    const { value } = e.target;
+
+    const currentPath = window.location.href;
+
+    const newUrl = currentPath.replace(`/${locale}`, `/${value}/`);
+
+    router.push(newUrl);
+
+    router.refresh();
   };
 
-  const closeModal = () => {
+  const openModal = useCallback(() => {
+    setIsModalOpen(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <>
       <header className={styles.header}>
         <div className={styles.logo}>Modsen Client Blog</div>
-
         <div className={styles.actions}>
-          {LINKS_HEADER.map(({ path, name }) => <Link key={`${path}-${name}`} href={path}>{name}</Link>)}
-          <ButtonApp onClick={openModal}>Video about us</ButtonApp>
+          {LINKS_HEADER.map(({ path, name }) => (
+            <Link data-testid={path} key={`${path}-${name}`} href={`/${locale}/${path}`}>
+              {t(`${name}`)}
+            </Link>
+          ))}
+          <ButtonApp data-testid="modal-open-button" onClick={openModal}>{t('btnModalTitle')}</ButtonApp>
+          <SelectApp
+            cyId="select-language-main"
+            onChange={handleChange}
+            value={locale}
+          >
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+          </SelectApp>
         </div>
+        <button className={styles.menuButton} onClick={toggleSidebar}>
+          ☰
+        </button>
       </header>
       <VideoModal isOpen={isModalOpen} onClose={closeModal} />
+      <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} links={LINKS_HEADER} />
     </>
   );
 };

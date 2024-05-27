@@ -1,0 +1,120 @@
+{
+    "header": {
+      "title": "Ну привет мир!",
+      "btnModalTitle": "Видео о нас",
+      "home": "Главная",
+      "blog": "Блог",
+      "aboutUs": "О нас",
+      "contact": "Контакты",
+      "privacyPolice": "Конфиденциальность"
+    },
+    "forms": {
+      "subscribe":{
+        "placeholder": "Введите ваш емайл",
+        "title": "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости",
+        "subscribe": "Подписаться",
+        "invalidData": "Неверный email",
+        "successMessage": "Вы подписаны",
+        "errorMessage": "Что-то пошло не так. Попробуйте еще раз",
+        "loading": "Загрузка..."
+      },
+      "contact":{
+        "email": "Ваш емайл",
+        "name": "ФИО",
+        "queryRelated": "Связанный запрос",
+        "support": "Поддержка",
+        "sales": "Продажи",
+        "message": "Сообщение",
+        "btnTitle": "Отправить сообщение",
+        "successMessage": "Сообщение отправлено успешно",
+        "errorMessage": "Что-то пошло не так. Попробуйте еще раз"
+      },
+      "join":{
+        "title": "Присоединяйтесь к нашей команде, чтобы стать частью нашей истории",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "btnTitle": "Присоединяйся сейчас"
+      }
+    },
+    "pages":{
+      "home": {
+        "banner":{
+          "startInfo": "Размещено в STARTUP",
+          "title": "Пошаговое руководство по выбору отличных пар шрифтов",
+          "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+          "btnTitle": "Читать далее"
+        },
+        "posts":{
+          "featuredPost": "Лучший пост",
+          "allPost": "Посты",
+          "view": "Смотреть все",
+          "btnTitle": "Читать далее",
+          "myPosts": "Мои посты"
+        },
+        "aboutUs":{
+          "sectionTitleAboutUs": "О НАС",
+          "sectionTitleMision": "НАША МИССИЯ",
+          "titleAboutUs": "Мы — сообщество авторов контента, которые делятся своими знаниями.",
+          "titleMision": "Создание ценного контента для креативщиков по всему миру",
+          "subtitleAboutUs": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "link": "Читать далее"
+        },
+        "category":{
+          "sectionTitle": "Выберите категорию"
+        },
+        "started":{
+          "sectionTitle": "ПОЧЕМУ МЫ НАЧАЛИ",
+          "title": "Все началось с простой идеи и превратилось в нашу страсть.",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+          "btnTitle": "Откройте для себя нашу историю"
+        },
+        "authors":{
+          "sectionTitle": "Список авторов",
+          "title": "Привет, Меня зовут {name} и добро пожаловать в Мой Блог"
+        },
+        "testimonials":{
+          "sectionTitle": "ОТЗЫВЫ",
+          "title": "Что люди говорят о нашем блоге",
+          "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+        }
+      },
+      "blog":{
+        "next": "След.",
+        "prev": "Пред."
+      },
+      "aboutUs":{
+        "aboutUs": "О НАС",
+        "title": "Мы — команда авторов контента, которые делятся своими знаниями",
+        "sectionTitleMision": "НАША МИССИЯ",
+        "titleMision": "Создание ценного контента для креативщиков по всему миру",
+        "subtitleMision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "sectionTitleVision": "НАШЕ ВИДЕНИЕ",
+        "titleVision": "Платформа, которая дает людям возможность совершенствоваться",
+        "subtitleVision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+        "blogsPublish": "блогов опубликовано",
+        "viewsOnFinsweet": "просмотров в Finsweet",
+        "activeUser": "активных пользователей",
+        "teamCreatives": "Наша креативная команда",
+        "whyStarted": "Почему мы запустили этот блог"
+      },
+      "contact":{
+        "contactUs": "СВЯЗАТЬСЯ С НАМИ",
+        "title": "Давайте начнем беседу",
+        "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+        "worksHoursTitle": "Рабочее время",
+        "worksHours": "9:00 до 20:00",
+        "worksDays": "С понедельника по пятницу",
+        "support": "Служба поддержки доступна 24/7"
+      },
+      "category":{
+        "loading": "Загрузка...",
+        "nonPosts": "Постов по запросу нет",
+        "categories": "Категории",
+        "tags": "Тэги"
+      },
+      "privacyPolice":{
+        "title": "Политика конфиденциальности",
+        "lastUpdate": "Последнее обновление 23 мая 2024 г."
+      } 
+    }
+}

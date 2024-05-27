@@ -1,30 +1,36 @@
+'use client';
+
 import { useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { ButtonApp } from '@/components/ui-components/button';
+import { YellowButton } from '@/components/ui-components/button/options';
+import { LINK_CONTACT } from '@/constants/links';
 
 import styles from './styles.module.scss';
 
 export const JoinForm = () => {
   const router = useRouter();
+  const locale = useLocale();
+  const t = useTranslations('forms.join');
 
   const handleClickToContactPage = () => {
-    router.push('/contact');
+    router.push(`/${locale}/${LINK_CONTACT.path}`);
   };
 
   return (
     <section className={styles.sectionJoinForm}>
-      <p className={styles.title}>
-        Join our team to be a part of our story
-      </p>
+      <h3 className={styles.title}>
+        {t('title')}
+      </h3>
       <p className={styles.subtitle}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt.
+        {t('subtitle')}
       </p>
       <ButtonApp
-        backgroundColor="var(--color-yellow)"
+        {...YellowButton}
         onClick={handleClickToContactPage}
       >
-        Join now
+        {t('btnTitle')}
       </ButtonApp>
     </section>
   );

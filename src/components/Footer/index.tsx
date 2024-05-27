@@ -1,10 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { LINKS_FOOTER, SOCIAL_NETWORK_LINKS } from '@/constants/links';
 
@@ -13,17 +11,17 @@ import { SubscribeForm } from '../Forms/SubscribeForm';
 import styles from './styles.module.scss';
 
 const Footer = () => {
-  const [isModal, setIsModal] = useState(false);
+  const locale = useLocale();
+  const t = useTranslations('header');
 
   return (
     <footer className={styles.footer}>
       <div className={styles.row}>
         <div className={styles.logo}>Modsen Client Blog</div>
         <div className={styles.actions}>
-          {LINKS_FOOTER.map(({ path, name }) => <Link key={`${path}-${name}`} href={path}>{name}</Link>)}
+          {LINKS_FOOTER.map(({ path, name }) => <Link key={`${path}-${name}`} href={`/${locale}/${path}`}>{t(`${name}`)}</Link>)}
         </div>
       </div>
-      <div />
       <SubscribeForm />
       <div className={styles.row}>
         <div className={styles.info}>

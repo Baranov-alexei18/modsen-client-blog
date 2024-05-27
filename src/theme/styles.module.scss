@@ -1,0 +1,10 @@
+.section {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}

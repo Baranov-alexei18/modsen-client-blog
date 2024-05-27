@@ -15,6 +15,8 @@
   --color-light-yellow: #f9ecd0;
   --color-purple: #592EA9;
   --color-light-purple: #F4F0F8;
+  --color-red: #E3504F;
+  --color-green: #4CAF50;
 
   --font-size-12: 12px;
   --font-size-14: 14px;
@@ -25,6 +27,7 @@
   --font-size-28: 28px;
   --font-size-32: 32px;
   --font-size-36: 36px;
+  --font-size-48: 48px;
   --font-size-56: 56px;
 
   --font-weight-400: 400;
@@ -44,50 +47,23 @@
   --spacing-36: 36px;
   --spacing-40: 40px;
   --spacing-52: 52px;
+  --spacing-64: 64px;
   --spacing-80: 80px;
   --spacing-128: 128px;
 
   --border-radius-4: 4px;
   --border-radius-8: 8px;
   --border-radius-12: 12px;
+  --border-radius-half-circle: 25%;
   --border-radius-circle: 50%;
 
+  --z-index-1: 1;
   --z-index-100: 100;
 
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(to bottom right,
-        rgba(1, 65, 255, 0),
-        rgba(1, 65, 255, 0),
-        rgba(1, 65, 255, 0.3));
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(#ffffff80,
-        #ffffff40,
-        #ffffff30,
-        #ffffff20,
-        #ffffff10,
-        #ffffff10,
-        #ffffff80);
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
 }
 
 * {
@@ -105,4 +81,21 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  position: relative;
+
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: width 0.5s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 }

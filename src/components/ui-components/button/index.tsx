@@ -1,20 +1,19 @@
-import { ReactNode } from 'react';
+import { ButtonType } from './types';
 
 import styles from './styles.module.scss';
 
-export type ButtonType = {
-  children: ReactNode,
-  backgroundColor: string,
-  onClick: () => void;
-}
 export const ButtonApp = (
-  { children, backgroundColor, onClick }: Partial<ButtonType>,
+  {
+    children, backgroundColor, onClick, disabled, type, cyId,
+  }: Partial<ButtonType>,
 ) => (
   <button
-    type="button"
+    data-testid={cyId}
+    type={type || 'button'}
     className={styles.button}
     style={{ backgroundColor }}
     onClick={onClick}
+    disabled={disabled}
   >
     {children}
   </button>
