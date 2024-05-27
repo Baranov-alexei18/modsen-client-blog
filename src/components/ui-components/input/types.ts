@@ -1,4 +1,5 @@
 export type InputType = {
+    cyId: string,
     type: string,
     name: string
     value: string,

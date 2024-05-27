@@ -6,16 +6,9 @@ import { ButtonApp } from '../ui-components/button';
 import { VideoModal } from '../ui-components/modal/VideoModal';
 import SelectLanguage from '../ui-components/select/lang-select';
 
-import styles from './styles.module.scss';
+import { SidebarType } from './types';
 
-type SidebarType = {
-  isOpen: boolean,
-  onClose: () => void,
-  links: {
-    path: string,
-    name: string,
-  }[],
-}
+import styles from './styles.module.scss';
 
 export const Sidebar = ({ isOpen, onClose, links }: SidebarType) => {
   const t = useTranslations('header');
@@ -42,7 +35,7 @@ export const Sidebar = ({ isOpen, onClose, links }: SidebarType) => {
           </Link>
         ))}
         <ButtonApp onClick={openModal}>{t('btnModalTitle')}</ButtonApp>
-        <SelectLanguage />
+        <SelectLanguage cyId="select-language-mobile" />
       </div>
       <VideoModal isOpen={isModalOpen} onClose={closeModal} />
     </>

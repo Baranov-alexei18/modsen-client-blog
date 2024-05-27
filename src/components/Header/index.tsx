@@ -37,12 +37,12 @@ export const Header = () => {
         <div className={styles.logo}>Modsen Client Blog</div>
         <div className={styles.actions}>
           {LINKS_HEADER.map(({ path, name }) => (
-            <Link key={`${path}-${name}`} href={`/${locale}/${path}`}>
+            <Link data-testid={path} key={`${path}-${name}`} href={`/${locale}/${path}`}>
               {t(`${name}`)}
             </Link>
           ))}
-          <ButtonApp onClick={openModal}>{t('btnModalTitle')}</ButtonApp>
-          <SelectLanguage />
+          <ButtonApp data-testid="modal-open-button" onClick={openModal}>{t('btnModalTitle')}</ButtonApp>
+          <SelectLanguage cyId="select-language-main" />
         </div>
         <button className={styles.menuButton} onClick={toggleSidebar}>
           ☰

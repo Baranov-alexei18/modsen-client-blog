@@ -3,10 +3,11 @@ import { InputType } from './types';
 import styles from './styles.module.scss';
 
 export const InputApp = ({
-  value, placeholder, onChange, error, type, name, onBlur, isTouch,
+  value, placeholder, onChange, error, type, name, onBlur, isTouch, cyId,
 }: Partial<InputType>) => (
   <div className={styles.wrapper}>
     <input
+      data-testid={cyId}
       type={type}
       name={name}
       value={value}
