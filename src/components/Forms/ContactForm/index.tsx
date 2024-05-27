@@ -71,6 +71,7 @@ export const ContactForm = () => {
       )}
       <form className={styles.form} onSubmit={handleSubmit}>
         <InputApp
+          cyId="contact-form-name"
           type="text"
           name="fullName"
           placeholder={t('name')}
@@ -81,6 +82,7 @@ export const ContactForm = () => {
           isTouch={Boolean(touched.fullName)}
         />
         <InputApp
+          cyId="contact-form-email"
           type="email"
           name="email"
           placeholder={t('email')}
@@ -91,6 +93,7 @@ export const ContactForm = () => {
           isTouch={Boolean(touched.email)}
         />
         <select
+          data-testid="contact-form-queryRelated"
           name="queryRelated"
           onChange={handleChange}
           onBlur={handleBlur}
@@ -106,6 +109,7 @@ export const ContactForm = () => {
         ) : null}
 
         <textarea
+          data-testid="contact-form-message"
           name="message"
           placeholder={t('message')}
           onChange={handleChange}
@@ -116,7 +120,7 @@ export const ContactForm = () => {
           <span className={styles.error}>{`${errors.message}`}</span>
         ) : null}
 
-        <ButtonApp {...YellowButton} type="submit">{t('btnTitle')}</ButtonApp>
+        <ButtonApp {...YellowButton} cyId="contact-form-submit" type="submit">{t('btnTitle')}</ButtonApp>
       </form>
     </>
   );

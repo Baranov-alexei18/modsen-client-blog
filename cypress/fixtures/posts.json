@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "authorId": 1,
+      "date_created": "2022-05-01",
+      "src": "/image/png/image-post.png",
+      "tags": ["Business", "Experience"],
+      "categoryId": 3,
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
+      "body": "This is the body of post 1"
+    },
+    {
+      "id": 2,
+      "authorId": 2,
+      "date_created": "2022-05-02",
+      "src": "/image/png/image-post.png",
+      "tags": ["Technology", "Life"],
+      "categoryId": 2,
+      "title": "2. 8 Figma design systems that you can download for free today.",
+      "subtitle": "Subtitle 2",
+      "body": "This is the body of post 2"
+    },
+    {
+      "id": 3,
+      "authorId": 3,
+      "date_created": "2022-05-03",
+      "src": "/image/png/image-post.png",
+      "tags": ["Marketing"],
+      "categoryId": 3,
+      "title": "3. 8 Figma design systems that you can download for free today.",
+      "subtitle": "Subtitle 3",
+      "body": "This is the body of post 3"
+    },
+    {
+      "id": 4,
+      "authorId": 4,
+      "date_created": "2022-05-04",
+      "src": "/image/png/image-post.png",
+      "tags": ["Technology", "Experience"],
+      "categoryId": 4,
+      "title": "4. 8 Figma design systems that you can download for free today.",
+      "subtitle": "Subtitle 4",
+      "body": "This is the body of post 4"
+    },
+    {
+      "id": 5,
+      "authorId": 5,
+      "date_created": "2022-05-05",
+      "src": "/image/png/image-post.png",
+      "tags": ["Business", "Screen"],
+      "categoryId": 1,
+      "title": "5. 8 Figma design systems that you can download for free today.",
+      "subtitle": "Subtitle 5",
+      "body": "This is the body of post 5"
+    }
+]
