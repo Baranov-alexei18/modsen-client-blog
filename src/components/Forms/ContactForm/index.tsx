@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { ButtonApp } from '@/components/ui-components/button';
 import { YellowButton } from '@/components/ui-components/button/options';
 import { InputApp } from '@/components/ui-components/input';
+import { SelectApp } from '@/components/ui-components/select';
 import { Toast } from '@/components/ui-components/toast';
 
 import { initialValues, validationSchema } from './options';
@@ -92,7 +93,7 @@ export const ContactForm = () => {
           error={errors.email}
           isTouch={Boolean(touched.email)}
         />
-        <select
+        <SelectApp
           data-testid="contact-form-queryRelated"
           name="queryRelated"
           onChange={handleChange}
@@ -103,7 +104,7 @@ export const ContactForm = () => {
           <option value="HR" label="HR" />
           <option value="support" label={t('support')} />
           <option value="sales" label={t('sales')} />
-        </select>
+        </SelectApp>
         {touched.queryRelated && errors.queryRelated ? (
           <span className={styles.error}>{`${errors.queryRelated}`}</span>
         ) : null}

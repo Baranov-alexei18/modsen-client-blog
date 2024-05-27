@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { LINKS_HEADER } from '@/constants/links';
@@ -9,15 +10,28 @@ import { LINKS_HEADER } from '@/constants/links';
 import { Sidebar } from '../Sidebar';
 import { ButtonApp } from '../ui-components/button';
 import { VideoModal } from '../ui-components/modal/VideoModal';
-import SelectLanguage from '../ui-components/select/lang-select';
+import { SelectApp } from '../ui-components/select';
 
 import styles from './styles.module.scss';
 
 export const Header = () => {
   const t = useTranslations('header');
+  const router = useRouter();
   const locale = useLocale();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleChange = (e: { target: { value: string; }; }) => {
+    const { value } = e.target;
+
+    const currentPath = window.location.href;
+
+    const newUrl = currentPath.replace(`/${locale}`, `/${value}/`);
+
+    router.push(newUrl);
+
+    router.refresh();
+  };
 
   const openModal = useCallback(() => {
     setIsModalOpen(true);
@@ -42,7 +56,14 @@ export const Header = () => {
             </Link>
           ))}
           <ButtonApp data-testid="modal-open-button" onClick={openModal}>{t('btnModalTitle')}</ButtonApp>
-          <SelectLanguage cyId="select-language-main" />
+          <SelectApp
+            cyId="select-language-main"
+            onChange={handleChange}
+            value={locale}
+          >
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+          </SelectApp>
         </div>
         <button className={styles.menuButton} onClick={toggleSidebar}>
           ☰
