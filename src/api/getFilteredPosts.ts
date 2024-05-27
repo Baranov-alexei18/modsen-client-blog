@@ -7,17 +7,20 @@ export const getFilteredPosts = async (
   tags: string[] | null = null,
 ) => {
   try {
-    let posts = await getPosts();
-    console.log(posts);
+    let path = '';
+
     if (categoryId) {
-      posts = posts.filter((item: PostDataType) => item.categoryId.toString() === categoryId);
+      path = `categoryId=${categoryId}`;
     }
+
+    let posts = await getPosts(path);
+
     if (tags?.length) {
       posts = posts.filter(
         (item: PostDataType) => item.tags.some((tag: string) => tags.includes(tag)),
       );
     }
-    console.log(posts);
+
     return posts;
   } catch (error) {
     console.error(error);

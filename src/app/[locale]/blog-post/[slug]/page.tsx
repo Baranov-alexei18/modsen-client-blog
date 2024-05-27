@@ -58,7 +58,7 @@ export default async function PagePost({ params }: { params: { slug: string } })
         </div>
       </div>
       <div className={styles.image}>
-        <Image src={src} alt={title} fill />
+        <Image src={src} alt={category.title} fill />
       </div>
       <div className={styles.content}>
         <h3>{subtitle}</h3>
@@ -66,16 +66,21 @@ export default async function PagePost({ params }: { params: { slug: string } })
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <div className={styles.sectionNext}>
-          <h1>What to read next</h1>
-          <div className={styles.wrapperNextPosts}>
-            {nextPosts && nextPosts.map((post: PostDataType) => (
-              <Link className={styles.postCard} href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
-                <ArticlePostCard
-                  data={post}
-                />
-              </Link>
-            ))}
-          </div>
+          {!!nextPosts.length && (
+            <>
+              <h1>What to read next</h1>
+              <div className={styles.wrapperNextPosts}>
+                {nextPosts.map((post: PostDataType) => (
+                  <Link className={styles.postCard} href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
+                    <ArticlePostCard
+                      data={post}
+                    />
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+
         </div>
       </Suspense>
       <JoinForm />

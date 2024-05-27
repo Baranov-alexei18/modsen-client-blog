@@ -1,24 +1,21 @@
-import { getAuthorName } from '@/helpers/getAuthorName';
-import { getCategoryById } from '@/helpers/getCategoryById';
+import { DB, SERVER_URL } from '@/constants';
 
-import { getAuthors } from './getAuthors';
-import { getCategories } from './getCategories';
+import { getPostWithAuthorAndCategory } from './getPostWithAuthorAndCategory';
 
-export const getPosts = async () => {
+export const getPosts = async (query?:string) => {
   try {
-    const posts = await fetch('http://localhost:3001/posts');
-    const data = await posts.json();
+    const queryPosts = query ? `?${query}` : '';
 
-    const authors = await getAuthors();
-    const categories = await getCategories();
+    const posts = await fetch(`${SERVER_URL}${DB.POSTS}${queryPosts}`);
+    const postsData = await posts.json();
 
-    const dataWithAuthor = data.map((post: { authorId: number; categoryId: number; }) => ({
-      ...post,
-      authorName: getAuthorName(post.authorId, authors),
-      categoryTitle: getCategoryById(post.categoryId, categories),
-    }));
+    if (postsData.data) {
+      return postsData;
+    }
 
-    return dataWithAuthor;
+    const data = await getPostWithAuthorAndCategory(postsData);
+
+    return data;
   } catch (error) {
     console.error(error);
   }

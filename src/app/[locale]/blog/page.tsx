@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { getPostsPage } from '@/api/getPostsPage';
 import { JoinForm } from '@/components/Forms/JoinForm';
+import { PostDataType } from '@/types/post';
 
 import { SectionCategory } from '../home/section/category';
 
@@ -15,8 +16,8 @@ import styles from '../styles.module.scss';
 const MIN_PAGE = 1;
 
 export default function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [featuredPost, setFeaturedPost] = useState(null);
+  const [posts, setPosts] = useState<PostDataType[] | undefined>([]);
+  const [featuredPost, setFeaturedPost] = useState<PostDataType | null | undefined>(null);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -45,7 +46,7 @@ export default function Blog() {
     <main className={styles.main}>
       {featuredPost && <SectionFeaturedPost data={featuredPost} />}
       <SectionPosts
-        data={posts}
+        data={posts!}
         clickNext={getNextPage}
         clickPrev={getPrevPage}
         disablePrev={page === MIN_PAGE}

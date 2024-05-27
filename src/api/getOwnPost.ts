@@ -1,9 +1,12 @@
+import { DB, SERVER_URL } from '@/constants';
+
 import { getAuthors } from './getAuthors';
 import { getCategories } from './getCategories';
 
 export const getOwnPost = async (id: string) => {
   try {
-    const posts = await fetch(`http://localhost:3001/posts/${id}`);
+    const posts = await fetch(`${SERVER_URL}${DB.POSTS}/${id}`);
+
     const data = await posts.json();
 
     const author = await getAuthors(data.authorId);

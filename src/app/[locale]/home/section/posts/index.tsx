@@ -23,7 +23,7 @@ const SectionPost = () => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    router.push(`${locale}/${LINK_BLOG_POST.path}/2`);
+    router.push(`${locale}/${LINK_BLOG_POST.path}/22`);
   };
 
   useEffect(() => {

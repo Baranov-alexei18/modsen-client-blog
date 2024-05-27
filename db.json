@@ -134,7 +134,7 @@
     ],
     "posts": [
       {
-        "id": 1,
+        "id": 22,
         "authorId": 1,
         "date_created": "2022-05-01",
         "src": "/image/png/image-post.png",
@@ -156,12 +156,12 @@
         "body": "This is the body of post 2"
       },
       {
-        "id": 3,
+        "id": 23,
         "authorId": 3,
         "date_created": "2022-05-03",
         "src": "/image/png/image-post.png",
         "tags": ["Marketing"],
-        "categoryId": 3,
+        "categoryId": 2,
         "title": "3. 8 Figma design systems that you can download for free today.",
         "subtitle": "Subtitle 3",
         "body": "This is the body of post 3"
@@ -189,7 +189,7 @@
         "body": "This is the body of post 5"
       },
       {
-        "id": 6,
+        "id": 25,
         "authorId": 6,
         "date_created": "2022-05-06",
         "src": "/image/png/image-post.png",
@@ -211,7 +211,7 @@
         "body": "This is the body of post 7"
       },
       {
-        "id": 8,
+        "id": 26,
         "authorId": 8,
         "date_created": "2022-05-08",
         "src": "/image/png/image-post.png",
@@ -222,7 +222,7 @@
         "body": "This is the body of post 8"
       },
       {
-        "id": 9,
+        "id": 27,
         "authorId": 1,
         "date_created": "2022-05-09",
         "tags": ["Business", "Technology"],

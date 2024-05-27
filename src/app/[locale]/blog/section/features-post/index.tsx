@@ -16,7 +16,7 @@ export const SectionFeaturedPost = ({ data }: PostDataProps) => {
   const locale = useLocale();
 
   const handleClickToBlogPostPage = () => {
-    router.push(`/${locale}/${LINK_BLOG_POST.path}/1`);
+    router.push(`/${locale}/${LINK_BLOG_POST.path}/22`);
   };
 
   const {
