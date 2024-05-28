@@ -7,10 +7,10 @@
   resolved "https://registry.npmjs.org/@adobe/css-tools/-/css-tools-4.3.3.tgz"
   integrity sha512-rE0Pygv0sEZ4vBWHlAgJLGDU7Pm8xoO6p3wsEceb7GYAjScrOHpEo8KK/eVkAcnSM+slAEtXjA2JpdjLp4fJQQ==
 
-"@alexeika/client-blog-ui-kit@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@alexeika/client-blog-ui-kit/-/client-blog-ui-kit-1.0.5.tgz#008458d5200699782d7ae99cf8a159c5e59089b4"
-  integrity sha512-6urn+RPP9ovxFPPRb+sQvQ8GC5LZWu9POIcDCvN9Vr9qRVcjvPwCO4t5BstoWp5huAaqsF9M/zwmVzpmC9Fy6g==
+"@alexeika/client-blog-ui-kit@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@alexeika/client-blog-ui-kit/-/client-blog-ui-kit-1.0.6.tgz#a0e9a94042e704edad6ab00368633d141e43221e"
+  integrity sha512-+QorzMrANJjmr4LroBxxCYSyoHX9kTdn3dPj2nTaKuxSuFF204pFqgizJWg7F15GT+iRt24SZPPtwEv6Trch3Q==
 
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"

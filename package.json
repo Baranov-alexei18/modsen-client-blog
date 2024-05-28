@@ -15,7 +15,7 @@
     "commit": "cz"
   },
   "dependencies": {
-    "@alexeika/client-blog-ui-kit": "^1.0.5",
+    "@alexeika/client-blog-ui-kit": "^1.0.6",
     "@emailjs/browser": "^4.3.3",
     "formik": "^2.4.6",
     "json-server": "^1.0.0-beta.0",
