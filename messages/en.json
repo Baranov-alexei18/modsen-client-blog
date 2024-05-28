@@ -1,4 +1,7 @@
 {
+    "Manifest": {
+      "name": "next-intl example"
+    },
     "header": {
       "title": "Hello world!",
       "btnModalTitle": "Video about us",

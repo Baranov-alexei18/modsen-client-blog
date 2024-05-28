@@ -1,4 +1,7 @@
 {
+    "Manifest": {
+      "name": "Modsen client blog"
+    },
     "header": {
       "title": "Ну привет мир!",
       "btnModalTitle": "Видео о нас",

@@ -1,12 +1,10 @@
-'use client';
-
 import dynamic from 'next/dynamic';
+import { useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { JoinForm } from '@/components/Forms/JoinForm';
 
 import { Banner } from './home/banner';
-
-import styles from './styles.module.scss';
 
 const SectionPost = dynamic(() => import('./home/section/posts'));
 const SectionAboutUs = dynamic(() => import('./home/section/about-us'));
@@ -15,9 +13,17 @@ const SectionCategory = dynamic(() => import('./home/section/category'));
 const SectionStarted = dynamic(() => import('./home/section/started'));
 const SectionTestimonial = dynamic(() => import('./home/section/testimonials'));
 
-export default function Home() {
+type Props = {
+  params: {locale: string};
+};
+
+export default function IndexPage({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
+  const t = useTranslations('IndexPage');
+
   return (
-    <main className={styles.main}>
+    <div>
       <Banner />
       <SectionPost />
       <SectionAboutUs />
@@ -26,6 +32,6 @@ export default function Home() {
       <SectionAuthor />
       <SectionTestimonial />
       <JoinForm />
-    </main>
+    </div>
   );
 }

@@ -1,5 +1,8 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { getAuthors } from '@/api/getAuthors';
 import { AuthorCard } from '@/components/ui-components/card/card-author';
@@ -9,12 +12,22 @@ import { LINK_AUTHOR } from '@/constants/links';
 import styles from './styles.module.scss';
 
 export const SectionAuthor = async () => {
-  const authors = await getAuthors();
+  const [authors, serAuthors] = useState([]);
   const locale = useLocale();
+  const t = useTranslations('pages.home.authors');
+
+  useEffect(() => {
+    const getAuthorsData = async () => {
+      const data = await getAuthors();
+      serAuthors(data);
+    };
+
+    getAuthorsData();
+  }, []);
 
   return (
     <section className={styles.sectionAuthor}>
-      <h2 className={styles.sectionTitle}>List authors</h2>
+      <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
       <div className={styles.cardsAuthors}>
         {authors.length && authors.map(({
           authorId, src, name, company, social,

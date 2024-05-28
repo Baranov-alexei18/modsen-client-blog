@@ -1,3 +1,5 @@
+'use client';
+
 import { ContactForm } from '@/components/Forms/ContactForm';
 
 import { ContactInfo } from './section/contactInfo';
