@@ -1,12 +1,8 @@
 import { useCallback, useState } from 'react';
+import { ButtonApp, InputApp, Toast } from '@alexeika/client-blog-ui-kit';
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
 import { useTranslations } from 'next-intl';
-
-import { ButtonApp } from '@/components/ui-components/button';
-import { YellowButton } from '@/components/ui-components/button/options';
-import { InputApp } from '@/components/ui-components/input';
-import { Toast } from '@/components/ui-components/toast';
 
 import { initialValues, validationSchema } from './options';
 
@@ -79,7 +75,7 @@ export const SubscribeForm = () => {
             isTouch={Boolean(touched.email)}
           />
           <ButtonApp
-            {...YellowButton}
+            backgroundColor="var(--color-yellow)"
             disabled={Boolean(errors.email)}
             type="submit"
           >

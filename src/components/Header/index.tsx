@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useState } from 'react';
+import { ButtonApp, SelectApp } from '@alexeika/client-blog-ui-kit';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
@@ -8,9 +9,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { LINKS_HEADER } from '@/constants/links';
 
 import { Sidebar } from '../Sidebar';
-import { ButtonApp } from '../ui-components/button';
-import { VideoModal } from '../ui-components/modal/VideoModal';
-import { SelectApp } from '../ui-components/select';
+import { VideoModal } from '../VideoModal';
 
 import styles from './styles.module.scss';
 

@@ -1,15 +1,12 @@
 'use client';
 
 import { useCallback, useState } from 'react';
+import {
+  ButtonApp, InputApp, SelectApp, Toast,
+} from '@alexeika/client-blog-ui-kit';
 import emailjs from '@emailjs/browser';
 import { useFormik } from 'formik';
 import { useTranslations } from 'next-intl';
-
-import { ButtonApp } from '@/components/ui-components/button';
-import { YellowButton } from '@/components/ui-components/button/options';
-import { InputApp } from '@/components/ui-components/input';
-import { SelectApp } from '@/components/ui-components/select';
-import { Toast } from '@/components/ui-components/toast';
 
 import { initialValues, validationSchema } from './options';
 
@@ -121,7 +118,13 @@ export const ContactForm = () => {
           <span className={styles.error}>{`${errors.message}`}</span>
         ) : null}
 
-        <ButtonApp {...YellowButton} cyId="contact-form-submit" type="submit">{t('btnTitle')}</ButtonApp>
+        <ButtonApp
+          backgroundColor="var(--color-yellow)"
+          cyId="contact-form-submit"
+          type="submit"
+        >
+          {t('btnTitle')}
+        </ButtonApp>
       </form>
     </>
   );

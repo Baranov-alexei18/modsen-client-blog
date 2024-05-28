@@ -1,8 +1,9 @@
 'use client';
 
+import { Slider } from '@alexeika/client-blog-ui-kit';
 import { useTranslations } from 'next-intl';
 
-import { Slider } from '@/components/ui-components/slider';
+import { reviewsData } from '@/constants';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
@@ -23,7 +24,7 @@ export const SectionTestimonial = () => {
           </p>
         </div>
         <div className={styles.InfoWrapper}>
-          <Slider />
+          <Slider data={reviewsData} />
         </div>
       </div>
     </section>

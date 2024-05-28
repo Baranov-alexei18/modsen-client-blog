@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { BaseModal } from '@alexeika/client-blog-ui-kit';
 
-import { BaseModal } from '../baseModal';
-import { ModalProps } from '../types';
+import { ModalProps } from './types';
 
-import styles from '../styles.module.scss';
+import styles from './styles.module.scss';
 
 export const VideoModal = ({ isOpen, onClose }: Partial<ModalProps>) => {
   const videoRef = useRef<HTMLVideoElement>(null);

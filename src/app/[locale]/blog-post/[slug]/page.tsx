@@ -1,19 +1,18 @@
 import { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
 
 import { getOwnPost } from '@/api/getOwnPost';
 import { getPosts } from '@/api/getPosts';
+import { ArticlePostCard } from '@/components/Cards/card-article-post';
 import { JoinForm } from '@/components/Forms/JoinForm';
-import { ArticlePostCard } from '@/components/ui-components/card/card-article-post';
 import { LINK_BLOG_POST } from '@/constants/links';
 import { formatDate } from '@/helpers/formatDate';
 import { PostDataType } from '@/types/post';
 
 import styles from './styles.module.scss';
 
-export default async function PagePost({ params }: { params: { slug: string } }) {
+export default async function PagePost({ params }: { params: { locale: string, slug: string } }) {
   const postData = await getOwnPost(params.slug);
 
   const getNextPostsCategory = async (id: number) => {
@@ -25,8 +24,6 @@ export default async function PagePost({ params }: { params: { slug: string } })
   };
 
   const nextPosts = await getNextPostsCategory(postData.categoryId);
-
-  const locale = useLocale();
 
   const {
     src, title, subtitle, body, date_created, author, category,
@@ -71,7 +68,7 @@ export default async function PagePost({ params }: { params: { slug: string } })
               <h1>What to read next</h1>
               <div className={styles.wrapperNextPosts}>
                 {nextPosts.map((post: PostDataType) => (
-                  <Link className={styles.postCard} href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
+                  <Link className={styles.postCard} href={`/${params.locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
                     <ArticlePostCard
                       data={post}
                     />

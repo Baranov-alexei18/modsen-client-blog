@@ -1,15 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { ChipApp, ElasticSearch } from '@alexeika/client-blog-ui-kit';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { getCategories } from '@/api/getCategories';
 import { getFilteredPosts } from '@/api/getFilteredPosts';
-import { PostCard } from '@/components/ui-components/card/card-blog-post';
-import { CategorySearchCard } from '@/components/ui-components/card/card-category-search';
-import { Chip } from '@/components/ui-components/chip';
-import { ElasticSearch } from '@/components/ui-components/elastic-search-input';
+import { PostCard } from '@/components/Cards/card-blog-post';
+import { CategorySearchCard } from '@/components/Cards/card-category-search';
 import { tags } from '@/constants';
 import { LINK_BLOG_POST } from '@/constants/links';
 import { PostDataType } from '@/types/post';
@@ -84,13 +83,13 @@ export const ListPosts = ({ slug }: { slug: string }) => {
         <div className={styles.tags}>
           <div className={styles.tagList}>
             {tags.map((tag) => (
-              <Chip
+              <ChipApp
                 key={tag}
                 className={activeTags!.includes(tag) ? styles.active : ''}
                 onHandleClick={setTags.bind(null, tag)}
               >
                 {tag}
-              </Chip>
+              </ChipApp>
             ))}
           </div>
         </div>

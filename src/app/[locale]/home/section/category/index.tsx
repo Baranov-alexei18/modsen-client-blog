@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { getCategories } from '@/api/getCategories';
-import { CategoryCard } from '@/components/ui-components/card/card-category';
-import { CategoryCardType } from '@/components/ui-components/card/card-category-search/types';
+import { CategoryCard } from '@/components/Cards/card-category';
+import { CategoryCardType } from '@/components/Cards/card-category-search/types';
 import { LINK_CATEGORY } from '@/constants/links';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 

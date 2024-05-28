@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { getAuthors } from '@/api/getAuthors';
-import { AuthorCard } from '@/components/ui-components/card/card-author';
+import { AuthorCard } from '@/components/Cards/card-author';
 import { LINK_AUTHOR } from '@/constants/links';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 

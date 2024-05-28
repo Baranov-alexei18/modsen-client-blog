@@ -1,8 +1,7 @@
 'use client';
 
+import { SocialGroups } from '@alexeika/client-blog-ui-kit';
 import Image from 'next/image';
-
-import { SocialGroups } from '../../socialGroups';
 
 import { AuthorCardType } from './types';
 

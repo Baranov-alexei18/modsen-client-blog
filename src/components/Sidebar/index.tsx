@@ -1,11 +1,10 @@
 import React, { useCallback, useState } from 'react';
+import { ButtonApp, SelectApp } from '@alexeika/client-blog-ui-kit';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { ButtonApp } from '../ui-components/button';
-import { VideoModal } from '../ui-components/modal/VideoModal';
-import { SelectApp } from '../ui-components/select';
+import { VideoModal } from '../VideoModal';
 
 import { SidebarType } from './types';
 

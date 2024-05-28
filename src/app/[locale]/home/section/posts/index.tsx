@@ -1,15 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { ButtonApp } from '@alexeika/client-blog-ui-kit';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { getPosts } from '@/api/getPosts';
-import { ButtonApp } from '@/components/ui-components/button';
-import { YellowButton } from '@/components/ui-components/button/options';
-import { PostCard } from '@/components/ui-components/card/card-post';
+import { PostCard } from '@/components/Cards/card-post';
 import { LINK_BLOG, LINK_BLOG_POST } from '@/constants/links';
 import { formatDate } from '@/helpers/formatDate';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
@@ -74,7 +73,7 @@ const SectionPost = () => {
               {subtitle}
             </p>
             <ButtonApp
-              {...YellowButton}
+              backgroundColor="var(--color-yellow)"
               onClick={handleClickToBlogPostPage}
             >
               {t('btnTitle')}

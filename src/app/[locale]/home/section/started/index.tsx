@@ -1,11 +1,10 @@
 'use client';
 
+import { ButtonApp } from '@alexeika/client-blog-ui-kit';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { ButtonApp } from '@/components/ui-components/button';
-import { YellowButton } from '@/components/ui-components/button/options';
 import { LINK_ABOUT_US } from '@/constants/links';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
@@ -40,7 +39,7 @@ const SectionStarted = () => {
             {t('subtitle')}
           </p>
           <ButtonApp
-            {...YellowButton}
+            backgroundColor="var(--color-yellow)"
             onClick={handleClickToAboutUsPage}
           >
             {t('btnTitle')}

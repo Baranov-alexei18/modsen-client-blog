@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
-import { PostCard } from '@/components/ui-components/card/card-blog-post';
+import { PostCard } from '@/components/Cards/card-blog-post';
 import { LINK_BLOG_POST } from '@/constants/links';
 import { PostDataType } from '@/types/post';
 

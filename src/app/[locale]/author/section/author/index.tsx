@@ -1,9 +1,8 @@
+import { SocialGroups } from '@alexeika/client-blog-ui-kit';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { AuthorCardType } from '@/components/ui-components/card/card-author/types';
-import { SocialGroups } from '@/components/ui-components/socialGroups';
+import { AuthorCardType } from '@/components/Cards/card-author/types';
 
 import styles from './styles.module.scss';
 

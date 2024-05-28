@@ -1,12 +1,12 @@
 'use client';
 
+import { SocialGroups } from '@alexeika/client-blog-ui-kit';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { LINKS_FOOTER, SOCIAL_NETWORK_LINKS } from '@/constants/links';
 
 import { SubscribeForm } from '../Forms/SubscribeForm';
-import { SocialGroups } from '../ui-components/socialGroups';
 
 import styles from './styles.module.scss';
 
