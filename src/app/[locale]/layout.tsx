@@ -11,8 +11,6 @@ import Footer from '@/components/Footer';
 import { Header } from '@/components/Header';
 import { locales } from '@/config';
 
-import '@/theme/globals.scss';
-
 const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {

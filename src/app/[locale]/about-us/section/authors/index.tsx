@@ -11,7 +11,7 @@ import { LINK_AUTHOR } from '@/constants/links';
 
 import styles from './styles.module.scss';
 
-export const SectionAuthor = async () => {
+export const SectionAuthor = () => {
   const [authors, serAuthors] = useState([]);
   const locale = useLocale();
   const t = useTranslations('pages.home.authors');

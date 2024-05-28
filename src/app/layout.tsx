@@ -1,9 +1,6 @@
 import { ReactNode } from 'react';
 
-import Footer from '@/components/Footer';
-import { Header } from '@/components/Header';
-
-import styles from './styles.module.scss';
+import '@/theme/globals.scss';
 
 export default function RootLayout({
   children,
@@ -11,7 +8,7 @@ export default function RootLayout({
 }: {children: ReactNode, params: {locale: string}}) {
   return (
     <html lang={locale}>
-      <body className={styles.wrapper}>
+      <body>
         {children}
       </body>
     </html>
