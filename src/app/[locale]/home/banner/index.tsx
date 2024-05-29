@@ -22,7 +22,7 @@ export const Banner = () => {
   return (
     <div className={styles.banner}>
       <Image
-        src="/image/backgroundBannerHome.png"
+        src="/image/png/image-banner.png"
         alt="Banner Image"
         fill
         className={styles.image}
