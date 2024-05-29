@@ -17,9 +17,9 @@ export default async function PagePost({ params }: { params: { locale: string, s
 
   const getNextPostsCategory = async (id: number) => {
     const posts = await getPosts();
-    const data = posts.filter((
-      item: { id: string, categoryId: number },
-    ) => item.categoryId === id && parseInt(item.id, 10) !== id);
+    const data = posts!.filter((
+      item: PostDataType,
+    ) => item.categoryId === id && item.id !== parseFloat(params.slug));
     return data.slice(0, 3);
   };
 

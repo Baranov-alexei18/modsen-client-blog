@@ -16,7 +16,7 @@ export const getFilteredPosts = async (
     let posts = await getPosts(path);
 
     if (tags?.length) {
-      posts = posts.filter(
+      posts = posts!.filter(
         (item: PostDataType) => item.tags.some((tag: string) => tags.includes(tag)),
       );
     }

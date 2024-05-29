@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { getPostsPage } from '@/api/getPostsPage';
+import { getPosts } from '@/api/getPosts';
 import { JoinForm } from '@/components/Forms/JoinForm';
 import { PostDataType } from '@/types/post';
 
@@ -14,6 +14,7 @@ import { SectionFeaturedPost } from './section/features-post';
 import styles from '../styles.module.scss';
 
 const MIN_PAGE = 1;
+const LIMIT_POSTS = 10;
 
 export default function Blog() {
   const [posts, setPosts] = useState<PostDataType[] | undefined>([]);
@@ -22,13 +23,21 @@ export default function Blog() {
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
+    const getAllPost = async () => {
+      const posts = await getPosts();
+      const totalPage = Math.ceil(posts!.length / LIMIT_POSTS);
+      setTotalPages(totalPage);
+    };
+    getAllPost();
+  }, []);
+
+  useEffect(() => {
     const getPost = async () => {
-      const posts = await getPostsPage(page);
-      setTotalPages(posts?.total);
-      setPosts(posts?.data);
+      const posts = await getPosts(`_page=${page}&_limit=${LIMIT_POSTS}`);
+      setPosts(posts);
 
       if (!featuredPost) {
-        setFeaturedPost(posts?.data[0]);
+        setFeaturedPost(posts![0]);
       }
     };
     getPost();

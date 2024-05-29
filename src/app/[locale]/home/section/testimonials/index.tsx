@@ -1,15 +1,26 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Slider } from '@alexeika/client-blog-ui-kit';
 import { useTranslations } from 'next-intl';
 
-import { reviewsData } from '@/constants';
+import { getReviews } from '@/api/getReviews';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
 
 import styles from './styles.module.scss';
 
 export const SectionTestimonial = () => {
   const t = useTranslations('pages.home.testimonials');
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    const getDataReview = async () => {
+      const reviewsData = await getReviews();
+      setReviews(reviewsData);
+    };
+
+    getDataReview();
+  }, []);
 
   return (
     <section className={styles.SectionTestimonial}>
@@ -24,7 +35,7 @@ export const SectionTestimonial = () => {
           </p>
         </div>
         <div className={styles.InfoWrapper}>
-          <Slider data={reviewsData} />
+          {reviews.length && <Slider data={reviews} />}
         </div>
       </div>
     </section>

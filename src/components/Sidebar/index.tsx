@@ -57,7 +57,7 @@ export const Sidebar = ({ isOpen, onClose, links }: SidebarType) => {
           <option value="ru">Русский</option>
         </SelectApp>
       </div>
-      <VideoModal isOpen={isModalOpen} onClose={closeModal} />
+      {isModalOpen && <VideoModal isOpen={isModalOpen} onClose={closeModal} />}
     </>
   );
 };

@@ -13,7 +13,7 @@ export default async function Author({ params }: { params: { slug: string } }) {
   return (
     <main className={styles.main}>
       <SectionAuthorMeta data={author} />
-      <SectionAuthorPosts data={posts} />
+      {posts && <SectionAuthorPosts data={posts} />}
     </main>
   );
 }

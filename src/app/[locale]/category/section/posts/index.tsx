@@ -19,9 +19,9 @@ export const ListPosts = ({ slug }: { slug: string }) => {
   const t = useTranslations('pages.category');
   const locale = useLocale();
 
-  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState<PostDataType[] | undefined>([]);
   const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState<string | null>(slug);
+  const [activeCategory, setActiveCategory] = useState<number | null>(parseFloat(slug));
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,14 +36,14 @@ export const ListPosts = ({ slug }: { slug: string }) => {
   useEffect(() => {
     const getPostsData = async () => {
       setIsLoading(true);
-      const data = await getFilteredPosts(activeCategory, activeTags);
+      const data = await getFilteredPosts(activeCategory?.toString(), activeTags);
       setFilteredPosts(data);
       setIsLoading(false);
     };
     getPostsData();
   }, [activeCategory, activeTags, activeTags.length]);
 
-  const setCategory = (id: string) => {
+  const setCategory = (id: number) => {
     setActiveCategory((prev) => (prev === id ? null : id));
   };
 
@@ -56,7 +56,7 @@ export const ListPosts = ({ slug }: { slug: string }) => {
     <div className={styles.wrapper}>
       <div className={styles.listPosts}>
         {isLoading && <p>{t('loading')}</p>}
-        {!filteredPosts.length && <h2 className={styles.noPosts}>{t('nonPosts')}</h2>}
+        {!filteredPosts!.length && <h2 className={styles.noPosts}>{t('nonPosts')}</h2>}
         {!isLoading
           && filteredPosts
           && filteredPosts.map((item: PostDataType) => (

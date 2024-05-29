@@ -13,6 +13,7 @@
 
   .categoryContainer {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--spacing-52);
     justify-content: center;
     align-items: center;
@@ -23,8 +24,6 @@
     padding: var(--spacing-20);
 
     .categoryContainer {
-      flex-wrap: wrap;
-      justify-content: center;
       gap: var(--spacing-20);
     }
   }

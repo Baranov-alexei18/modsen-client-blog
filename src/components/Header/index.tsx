@@ -68,7 +68,7 @@ export const Header = () => {
           ☰
         </button>
       </header>
-      <VideoModal isOpen={isModalOpen} onClose={closeModal} />
+      {isModalOpen && <VideoModal isOpen={isModalOpen} onClose={closeModal} />}
       <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} links={LINKS_HEADER} />
     </>
   );

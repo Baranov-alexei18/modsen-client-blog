@@ -29,7 +29,7 @@ export const SectionAuthor = () => {
     <section className={styles.sectionAuthor}>
       <h2 className={styles.sectionTitle}>{t('sectionTitle')}</h2>
       <div className={styles.cardsAuthors}>
-        {authors.length && authors.map(({
+        {!!authors.length && authors.map(({
           authorId, src, name, company, social,
         }: AuthorCardType) => (
           <Link key={authorId} href={`/${locale}/${LINK_AUTHOR.path}/${authorId}`}>
