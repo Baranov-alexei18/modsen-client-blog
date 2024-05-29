@@ -17,8 +17,8 @@ import { PostDataType } from '@/types/post';
 import styles from './styles.module.scss';
 
 const SectionPost = () => {
-  const [posts, setPosts] = useState<PostDataType[] |null | undefined>([]);
-  const [featuredPost, setFeaturedPost] = useState < PostDataType | null>(null);
+  const [posts, setPosts] = useState<PostDataType[] | null | undefined>([]);
+  const [featuredPost, setFeaturedPost] = useState<PostDataType | null>(null);
 
   const t = useTranslations('pages.home.posts');
   const router = useRouter();
