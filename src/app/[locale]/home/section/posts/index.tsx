@@ -12,12 +12,13 @@ import { PostCard } from '@/components/Cards/card-post';
 import { LINK_BLOG, LINK_BLOG_POST } from '@/constants/links';
 import { formatDate } from '@/helpers/formatDate';
 import { withVisibilityObserver } from '@/hocs/withVisibilityObserver';
+import { PostDataType } from '@/types/post';
 
 import styles from './styles.module.scss';
 
 const SectionPost = () => {
-  const [posts, setPosts] = useState([]);
-  const [featuredPost, setFeaturedPost] = useState(null);
+  const [posts, setPosts] = useState<PostDataType[] |null | undefined>([]);
+  const [featuredPost, setFeaturedPost] = useState < PostDataType | null>(null);
 
   const t = useTranslations('pages.home.posts');
   const router = useRouter();
@@ -30,8 +31,8 @@ const SectionPost = () => {
   useEffect(() => {
     const getPostsData = async () => {
       const posts = await getPosts();
-      setPosts(posts.slice(1, 5));
-      setFeaturedPost(posts[0]);
+      setPosts(posts!.slice(1, 5));
+      setFeaturedPost(posts![0]);
     };
 
     getPostsData();
@@ -87,7 +88,7 @@ const SectionPost = () => {
           <Link href={`${locale}/${LINK_BLOG.path}`} locale={locale}>{t('view')}</Link>
         </div>
         <div className={styles.allPostWrapper}>
-          {posts.map(({
+          {posts!.map(({
             title, date_created, authorName, id,
           }) => (
             <Link key={`${title}-${date_created}`} href={`${locale}/${LINK_BLOG_POST.path}/${id}`}>
