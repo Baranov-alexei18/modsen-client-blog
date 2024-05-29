@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 
@@ -14,7 +12,7 @@ export const MapSection = () => {
   const map = useRef(null);
 
   useEffect(() => {
-    if (map.current) return;
+    if (typeof window === 'undefined' || map.current) return;
     if (mapContainer.current) {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
