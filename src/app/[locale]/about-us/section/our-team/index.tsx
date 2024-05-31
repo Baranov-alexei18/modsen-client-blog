@@ -26,13 +26,13 @@ export const SectionTeam = () => {
           </p>
         </div>
         <div className={styles.imageBlock}>
+          <div className={styles.decorationYellow} />
           <Image
             src="/image/png/image-team1.png"
             alt="Team"
             fill
             className={styles.image}
           />
-          <div className={styles.decorationYellow} />
         </div>
       </div>
       <div className={styles.row}>

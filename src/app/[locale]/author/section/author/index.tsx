@@ -19,6 +19,7 @@ export const SectionAuthorMeta = ({ data }: { data: AuthorCardType }) => {
             <Image
               src={src!}
               alt="Avatar"
+              quality={100}
               fill
             />
           </div>
