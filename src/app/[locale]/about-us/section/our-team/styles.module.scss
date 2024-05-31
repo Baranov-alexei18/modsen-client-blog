@@ -45,7 +45,7 @@
   .image {
     max-height: 500px;
     width: 500px;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .decorationYellow {
@@ -56,6 +56,7 @@
     height: 120px;
     background-color: var(--color-yellow);
     border-top-left-radius: var(--border-radius-half-circle);
+    z-index: var(--z-index-1);
   }
 
   .decorationPurple {
@@ -98,6 +99,7 @@
   }
 
   .imageBlock {
+    object-fit: cover;
     height: 500px;
     width: 100%;
     margin-bottom: var(--spacing-16);
@@ -105,6 +107,10 @@
 }
 
 @media (max-width: 768px) {
+  .wrapper {
+    margin: var(--spacing-20);
+  }
+
   .textBlock {
     h2 {
       font-size: var(--font-size-28);
@@ -124,10 +130,6 @@
 
   .imageBlock {
     height: 300px;
-
-    img {
-      height: 300px;
-    }
   }
 }
 
@@ -155,10 +157,6 @@
   }
 
   .imageBlock {
-    min-height: 200px;
-
-    .image {
-      height: 300px;
-    }
+    width: 100%;
   }
 }
