@@ -1,6 +1,7 @@
 {
     "Manifest": {
-      "name": "next-intl example"
+      "name": "main",
+      "title": "Client blog Modsen"
     },
     "header": {
       "title": "Hello world!",

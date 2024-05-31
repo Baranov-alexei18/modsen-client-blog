@@ -3,6 +3,7 @@ import { MetadataRoute } from 'next';
 import {
   defaultLocale, host, locales, pathnames,
 } from '@/config';
+import { LINK_HOME } from '@/constants/links';
 import { getPathname } from '@/navigation';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locale: (typeof locales)[number],
   ) {
     const pathname = getPathname({ locale, href: key });
-    return `${host}/${locale}${pathname === '/' ? '' : pathname}`;
+    return `${host}/${locale}${pathname === LINK_HOME.path ? '' : pathname}`;
   }
 
   return keys.map((key) => ({
