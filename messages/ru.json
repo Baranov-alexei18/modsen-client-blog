@@ -1,6 +1,7 @@
 {
     "Manifest": {
-      "name": "Modsen client blog"
+      "name": "Главная",
+      "title": "Клиентский блок Modsen"
     },
     "header": {
       "title": "Ну привет мир!",
