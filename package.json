@@ -18,7 +18,6 @@
     "@alexeika/client-blog-ui-kit": "^1.0.6",
     "@emailjs/browser": "^4.3.3",
     "formik": "^2.4.6",
-    "json-server": "^1.0.0-beta.0",
     "mapbox-gl": "^3.3.0",
     "next": "14.2.3",
     "next-intl": "^3.13.0",
