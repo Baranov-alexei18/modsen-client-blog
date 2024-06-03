@@ -1,3 +1,10 @@
+$space-30px: 30px;
+$space-120px: 120px;
+$space-300px: 300px;
+$space-500px: 500px;
+$space-600px: 600px;
+$width-100: 100%;
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -6,10 +13,10 @@
 }
 
 .headerSection {
-    width: 100%;
+    width: $width-100;
 
     .headerText {
-        width: 500px;
+        width: $space-500px;
         color: var(--color-grey);
         font-size: var(--font-size-18);
         font-weight: var(--font-weight-400);
@@ -19,10 +26,10 @@
 
 .imageWrapper {
     position: relative;
-    height: 500px;
+    height: $space-500px;
 
     .image {
-        height: 500px;
+        height: $space-500px;
     }
 }
 
@@ -71,9 +78,9 @@
 
 .text {
     position: absolute;
-    max-width: 600px;
-    top: 30px;
-    left: 120px;
+    max-width: $space-600px;
+    top: $space-30px;
+    left: $space-120px;
     background-color: var(--color-white);
     margin-right: var(--spacing-20);
     padding: var(--spacing-52);
@@ -108,11 +115,11 @@
 
     .imageWrapper {
         position: relative;
-        height: 300px;
+        height: $space-300px;
 
         .image {
-            width: 100%;
-            height: 300px;
+            width: $width-100;
+            height: $space-300px;
         }
     }
 

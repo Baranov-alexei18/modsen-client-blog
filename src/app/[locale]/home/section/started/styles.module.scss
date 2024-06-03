@@ -1,19 +1,28 @@
+$neg-space-200px: -200px;
+$space-400px: 400px;
+$space-500px: 500px;
+$space-700px: 700px;
+$space-1000px: 1000px;
+$width-60: 60%;
+$width-75: 75%;
+$width-100: 100%;
+
 .sectionStarted {
   position: relative;
   padding: var(--spacing-52) var(--spacing-80);
-  width: 100%;
+  width: $width-100;
 
   .imageContainer {
     position: relative;
-    width: 75%;
-    height: 700px;
+    width: $width-75;
+    height: $space-700px;
   }
 
   .overlayWrapper {
     position: absolute;
-    right: -200px;
+    right: $neg-space-200px;
     bottom: var(--spacing-0);
-    max-width: 60%;
+    max-width: $width-60;
     background-color: var(--color-white);
     padding: var(--spacing-80);
 
@@ -35,12 +44,12 @@
     padding: var(--spacing-0);
 
     .imageContainer {
-      width: 100%;
-      height: 500px;
+      width: $width-100;
+      height: $space-500px;
     }
 
     .overlayWrapper {
-      max-width: 70%;
+      max-width: $width-75;
       right: var(--spacing-0);
       padding: var(--spacing-40);
 
@@ -51,7 +60,6 @@
       .subtitle {
         font-size: var(--font-size-14);
       }
-
     }
   }
 }

@@ -1,3 +1,7 @@
+$space-250px: 250px;
+$space-320px: 320px;
+$space-500px: 500px;
+
 .SectionTestimonial {
   position: relative;
   padding: var(--spacing-52) var(--spacing-80);
@@ -26,8 +30,8 @@
 
   .InfoWrapper:first-child {
     flex: 1;
-    min-width: 500px;
-    height: 320px;
+    min-width: $space-500px;
+    height: $space-320px;
     padding: var(--spacing-0) var(--spacing-32);
     border-right: 1px solid var(--color-light-grey);
   }
@@ -60,7 +64,7 @@
       padding: var(--spacing-40);
 
       .InfoWrapper:first-child {
-        min-width: 250px;
+        min-width: $space-250px;
         padding: var(--spacing-0) var(--spacing-12);
         border-right: none;
         border-bottom: 1px solid var(--color-light-grey);

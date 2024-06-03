@@ -1,3 +1,6 @@
+$space-300px: 300px;
+$width-100: 100%;
+
 .wrapper {
     display: flex;
     margin: var(--spacing-80);
@@ -15,7 +18,7 @@
     }
 
     .wrapperSearch {
-        width: 300px;
+        width: $space-300px;
 
         h2 {
             font-size: var(--font-size-32);
@@ -32,7 +35,7 @@
 
         .tags {
             .tagList {
-                width: 100%;
+                width: $width-100;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -49,7 +52,7 @@
         flex-direction: column;
 
         .wrapperSearch {
-            width: 100%;
+            width: $width-100;
             order: 1;
         }
 
@@ -63,7 +66,7 @@
         gap: var(--spacing-40);
 
         .wrapperSearch {
-            width: 100%;
+            width: $width-100;
 
             h2 {
                 font-size: var(--font-size-24);

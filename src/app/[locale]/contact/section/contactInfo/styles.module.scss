@@ -1,5 +1,8 @@
+$space-768px: 768px;
+$width-100: 100%;
+
 .wrapper {
-    width: 768px;
+    width: $space-768px;
     padding-top: var(--spacing-80);
     margin: auto;
 
@@ -65,7 +68,7 @@
     }
 
     @media (max-width: 768px) {
-        width: 100%;
+        width: $width-100;
         padding: var(--spacing-20);
 
         .contactInfo {

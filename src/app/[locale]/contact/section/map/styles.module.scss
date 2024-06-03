@@ -1,4 +1,7 @@
+$space-100: 100vw;
+$space-355px: 355px;
+
 .wrapper {
-    width: 100vw;
-    height: 355px;
+    width: $space-100;
+    height: $space-355px;
 }

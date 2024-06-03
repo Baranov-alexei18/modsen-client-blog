@@ -1,7 +1,14 @@
+$space-150px: 150px;
+$space-250px: 250px;
+$space-300px: 300px;
+$space-700px: 700px;
+$width-80: 80%;
+$width-100: 100%;
+
 .wrapper {
   position: relative;
   background-color: var(--color-light-purple);
-  width: 100%;
+  width: $width-100;
   padding: var(--spacing-80) var(--spacing-80) var(--spacing-0) var(--spacing-80);
 
   .container {
@@ -9,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    max-width: $width-100;
     margin: auto;
 
 
@@ -21,14 +28,14 @@
 
     .image {
       position: relative;
-      min-width: 250px;
-      height: 300px;
+      min-width: $space-250px;
+      height: $space-300px;
       background-size: cover;
       background-position: center;
     }
 
     .userMeta {
-      max-width: 700px;
+      max-width: $space-700px;
 
       .title {
         font-size: var(--font-size-48);
@@ -49,7 +56,7 @@
 
     .colorBar {
       height: var(--spacing-20);
-      width: 80%;
+      width: $width-80;
       margin: auto;
       background: linear-gradient(to right, var(--color-purple) 70%, var(--color-yellow) 50%);
     }
@@ -65,12 +72,12 @@
       }
 
       .image {
-        width: 250px;
-        height: 300px;
+        width: $space-250px;
+        height: $space-300px;
       }
 
       .userMeta {
-        max-width: 700px;
+        max-width: $space-700px;
 
         .title {
           font-size: var(--font-size-32);
@@ -82,7 +89,7 @@
       }
 
       .colorBar {
-        width: 100%;
+        width: $width-100;
       }
     }
   }
@@ -98,8 +105,8 @@
       }
 
       .image {
-        width: 150px;
-        height: 230px;
+        width: $space-150px;
+        height: $space-250px;
       }
 
       .icons {

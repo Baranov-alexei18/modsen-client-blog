@@ -1,6 +1,9 @@
+$space-768px: 768px;
+$width-100: 100%;
+
 .wrapper {
     .main {
-        width: 768px;
+        width: $space-768px;
         margin: auto;
         padding: var(--spacing-80) var(--spacing-0);
 
@@ -27,7 +30,7 @@
 
         .main {
             padding: var(--spacing-32) var(--spacing-12);
-            width: 100%;
+            width: $width-100;
         }
     }
 }

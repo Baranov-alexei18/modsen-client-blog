@@ -1,14 +1,20 @@
+$space-400px: 400px;
+$space-600px: 600px;
+$space-720px: 720px;
+$space-1000px: 1000px;
+$width-100: 100%;
+
 .banner {
     position: relative;
-    width: 100%;
-    height: 720px;
+    width: $width-100;
+    height: $space-720px;
 
     .overlay {
         position: absolute;
         top: var(--spacing-0);
         left: var(--spacing-0);
-        width: 100%;
-        height: 100%;
+        width: $width-100;
+        height: $width-100;
         display: flex;
         justify-content: start;
         align-items: center;
@@ -23,7 +29,7 @@
     }
 
     .title {
-        max-width: 1000px;
+        max-width: $space-1000px;
         font-size: var(--font-size-56);
         font-weight: var(--font-weight-700);
         margin-bottom: var(--spacing-32);
@@ -36,7 +42,7 @@
     }
 
     .subtitle {
-        max-width: 600px;
+        max-width: $space-600px;
         font-size: var(--font-size-16);
         font-weight: var(--font-weight-400);
         margin-bottom: var(--spacing-32);
@@ -47,7 +53,7 @@
     }
 
     @media (max-width: 768px) {
-        height: 400px;
+        height: $space-400px;
         padding: var(--spacing-20);
         .overlay{
             padding: var(--spacing-20);

@@ -1,16 +1,20 @@
+$space-350px: 350px;
+$space-600px: 600px;
+$width-100: 100%;
+
 .wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
   background-color: var(--color-light-purple);
-  width: 100%;
+  width: $width-100;
   padding: var(--spacing-80);
   gap: var(--spacing-80);
 
 
   .featuredPostWrapper {
     flex: 1;
-    width: 100%;
+    width: $width-100;
 
     .sectionName {
       font-size: var(--font-size-16);
@@ -46,8 +50,8 @@
   .image {
     flex: 1;
     position: relative;
-    max-width: 600px;
-    height: 350px;
+    max-width: $space-600px;
+    height: $space-350px;
     background-size: cover;
     background-position: center;
   }

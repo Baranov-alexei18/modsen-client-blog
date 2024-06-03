@@ -1,3 +1,16 @@
+$neg-space-24: -24px;
+$neg-space-50: -50px;
+$space-74: 74px;
+$space-105px: 105px;
+$space-120px: 120px;
+$space-200px: 200px;
+$space-300px: 300px;
+$space-500px: 500px;
+$width-30: 30%;
+$width-40: 40%;
+$width-50: 50%;
+$width-100: 100%;
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -14,7 +27,7 @@
 
 .textBlock {
   flex: 1;
-  max-width: 40%;
+  max-width: $width-40;
 
   h2 {
     font-size: var(--font-size-36);
@@ -39,31 +52,31 @@
 
 .imageBlock {
   position: relative;
-  width: 50%;
-  height: 500px;
+  width: $width-50;
+  height: $space-500px;
 
   .image {
-    max-height: 500px;
-    width: 500px;
+    max-height: $space-500px;
+    width: $space-500px;
     object-fit: contain;
   }
 
   .decorationYellow {
     position: absolute;
-    top: 30%;
-    left: -50px;
-    width: 100px;
-    height: 120px;
+    top: $width-30;
+    left: $neg-space-50;
+    width: $space-105px;
+    height: $space-120px;
     background-color: var(--color-yellow);
     border-top-left-radius: var(--border-radius-half-circle);
   }
 
   .decorationPurple {
     position: absolute;
-    bottom: -24px;
-    left: 105px;
-    width: 74px;
-    height: 74px;
+    bottom: $neg-space-24;
+    left: $space-105px;
+    width: $space-74;
+    height: $space-74;
     background-color: var(--color-purple);
     border-radius: var(--border-radius-circle);
   }
@@ -94,12 +107,12 @@
 
   .textBlock,
   .imageBlock {
-    max-width: 100%;
+    max-width: $width-100;
   }
 
   .imageBlock {
-    height: 500px;
-    width: 100%;
+    height: $space-500px;
+    width: $width-100;
     margin-bottom: var(--spacing-16);
   }
 }
@@ -123,10 +136,10 @@
   }
 
   .imageBlock {
-    height: 300px;
+    height: $space-300px;
 
     img {
-      height: 300px;
+      height: $space-300px;
     }
   }
 }
@@ -155,10 +168,10 @@
   }
 
   .imageBlock {
-    min-height: 200px;
+    min-height: $space-200px;
 
     .image {
-      height: 300px;
+      height: $space-300px;
     }
   }
 }
