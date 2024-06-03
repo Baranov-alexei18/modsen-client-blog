@@ -4,9 +4,11 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compiler: {
-    reactRemoveProperties: { properties: ['data-testid'] },
-  },
+  compiler: {},
 };
+
+if (process.env.NODE_ENV === 'production') {
+  nextConfig.compiler.reactRemoveProperties = { properties: ['data-testid'] };
+}
 
 export default withNextIntl(nextConfig);
