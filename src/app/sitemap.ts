@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locale: (typeof locales)[number],
   ) {
     const pathname = getPathname({ locale, href: key });
-    return `${host}/${locale}${pathname === LINK_HOME.path ? '' : pathname}`;
+    return `${host}/${locale}${pathname === LINK_HOME ? '' : pathname}`;
   }
 
   return keys.map((key) => ({
