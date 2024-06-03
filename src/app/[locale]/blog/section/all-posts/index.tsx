@@ -20,7 +20,7 @@ export const SectionPosts = ({
       <h1>{t('allPost')}</h1>
       <div className={styles.postsList}>
         {data.map((post) => (
-          <Link key={post.id} href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`}>
+          <Link key={post.id} href={`/${locale}/${LINK_BLOG_POST}/${post.id}`}>
             <PostCard
               data={post}
             />

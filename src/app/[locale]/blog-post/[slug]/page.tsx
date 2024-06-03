@@ -68,7 +68,7 @@ export default async function PagePost({ params }: { params: { locale: string, s
               <h1>What to read next</h1>
               <div className={styles.wrapperNextPosts}>
                 {nextPosts.map((post: PostDataType) => (
-                  <Link className={styles.postCard} href={`/${params.locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
+                  <Link className={styles.postCard} href={`/${params.locale}/${LINK_BLOG_POST}/${post.id}`} key={post.id}>
                     <ArticlePostCard
                       data={post}
                     />

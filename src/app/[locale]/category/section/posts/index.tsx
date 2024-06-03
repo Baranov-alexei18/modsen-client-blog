@@ -60,7 +60,7 @@ export const ListPosts = ({ slug }: { slug: string }) => {
         {!isLoading
           && filteredPosts
           && filteredPosts.map((item: PostDataType) => (
-            <Link key={item.id} href={`/${locale}/${LINK_BLOG_POST.path}/${item.id}`}>
+            <Link key={item.id} href={`/${locale}/${LINK_BLOG_POST}/${item.id}`}>
               <PostCard data={item} />
             </Link>
           ))}

@@ -14,7 +14,7 @@ export const JoinForm = () => {
   const t = useTranslations('forms.join');
 
   const handleClickToContactPage = () => {
-    router.push(`/${locale}/${LINK_CONTACT.path}`);
+    router.push(`/${locale}/${LINK_CONTACT}`);
   };
 
   return (

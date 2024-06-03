@@ -42,9 +42,9 @@ export const Sidebar = ({ isOpen, onClose, links }: SidebarType) => {
         <button className={styles.closeButton} onClick={onClose}>
           X
         </button>
-        {links.map(({ path, name }) => (
-          <Link key={`${path}-${name}`} href={`/${locale}/${path}`} onClick={onClose}>
-            {t(`${name}`)}
+        {links.map((path) => (
+          <Link key={path} href={`/${locale}/${path}`} onClick={onClose}>
+            {t(`${path}`)}
           </Link>
         ))}
         <ButtonApp onClick={openModal}>{t('btnModalTitle')}</ButtonApp>

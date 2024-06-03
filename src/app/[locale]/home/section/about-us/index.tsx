@@ -24,7 +24,7 @@ const SectionAboutUs = () => {
           <p className={styles.subtitle}>
             {t('subtitleAboutUs')}
           </p>
-          <Link href={`${locale}/${LINK_ABOUT_US.path}`}>{t('link')}</Link>
+          <Link href={`${locale}/${LINK_ABOUT_US}`}>{t('link')}</Link>
         </div>
         <div className={styles.InfoWrapper}>
           <h2>{t('sectionTitleMision')}</h2>

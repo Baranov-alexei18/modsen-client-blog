@@ -16,7 +16,7 @@ export const SectionAuthorPosts = ({ data }: {data: PostDataType[]}) => {
       <h1>{t('myPosts')}</h1>
       <div className={styles.postsList}>
         {data.map((post) => (
-          <Link href={`/${locale}/${LINK_BLOG_POST.path}/${post.id}`} key={post.id}>
+          <Link href={`/${locale}/${LINK_BLOG_POST}/${post.id}`} key={post.id}>
             <PostCard
               data={post}
             />

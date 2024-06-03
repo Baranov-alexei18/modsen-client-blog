@@ -1,42 +1,11 @@
-export const LINK_HOME = {
-  path: '/',
-  name: 'home',
-};
-
-export const LINK_BLOG = {
-  path: '/blog',
-  name: 'blog',
-};
-
-export const LINK_BLOG_POST = {
-  path: '/blog-post',
-  name: 'blog-post',
-};
-
-export const LINK_ABOUT_US = {
-  path: '/about-us',
-  name: 'aboutUs',
-};
-
-export const LINK_CATEGORY = {
-  path: '/category',
-  name: 'category',
-};
-
-export const LINK_AUTHOR = {
-  path: '/author',
-  name: 'author',
-};
-
-export const LINK_CONTACT = {
-  path: '/contact',
-  name: 'contact',
-};
-
-export const LINK_PRIVACY_POLICY = {
-  path: '/privacy-police',
-  name: 'privacyPolice',
-};
+export const LINK_HOME = '/';
+export const LINK_BLOG = '/blog';
+export const LINK_BLOG_POST = '/blog-post';
+export const LINK_ABOUT_US = '/about-us';
+export const LINK_CATEGORY = '/category';
+export const LINK_AUTHOR = '/author';
+export const LINK_CONTACT = '/contact';
+export const LINK_PRIVACY_POLICY = '/privacy-police';
 
 export const LINKS_HEADER = [
   LINK_HOME,

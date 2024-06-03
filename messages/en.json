@@ -6,11 +6,11 @@
     "header": {
       "title": "Hello world!",
       "btnModalTitle": "Video about us",
-      "home": "Home",
-      "blog": "Blog",
-      "aboutUs": "About Us",
-      "contact": "Contact Us",
-      "privacyPolice": "Privacy police"
+      "/": "Home",
+      "/blog": "Blog",
+      "/about-us": "About Us",
+      "/contact": "Contact Us",
+      "/privacy-police": "Privacy police"
     },
     "forms": {
       "subscribe":{

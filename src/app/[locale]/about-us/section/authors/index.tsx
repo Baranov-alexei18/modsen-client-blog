@@ -32,7 +32,7 @@ export const SectionAuthor = () => {
         {!!authors.length && authors.map(({
           authorId, src, name, company, social,
         }: AuthorCardType) => (
-          <Link key={authorId} href={`/${locale}/${LINK_AUTHOR.path}/${authorId}`}>
+          <Link key={authorId} href={`/${locale}/${LINK_AUTHOR}/${authorId}`}>
             <AuthorCard
               src={src}
               title={name}

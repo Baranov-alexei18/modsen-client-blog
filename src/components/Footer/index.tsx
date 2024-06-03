@@ -19,7 +19,7 @@ const Footer = () => {
       <div className={styles.row}>
         <div className={styles.logo}>Modsen Client Blog</div>
         <div className={styles.actions}>
-          {LINKS_FOOTER.map(({ path, name }) => <Link key={`${path}-${name}`} href={`/${locale}/${path}`}>{t(`${name}`)}</Link>)}
+          {LINKS_FOOTER.map((path) => <Link key={path} href={`/${locale}/${path}`}>{t(`${path}`)}</Link>)}
         </div>
       </div>
       <SubscribeForm />

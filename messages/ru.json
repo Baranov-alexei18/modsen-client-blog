@@ -6,11 +6,11 @@
     "header": {
       "title": "Ну привет мир!",
       "btnModalTitle": "Видео о нас",
-      "home": "Главная",
-      "blog": "Блог",
-      "aboutUs": "О нас",
-      "contact": "Контакты",
-      "privacyPolice": "Конфиденциальность"
+      "/": "Главная",
+      "/blog": "Блог",
+      "/about-us": "О нас",
+      "/contact": "Контакты",
+      "/privacy-police": "Конфиденциальность"
     },
     "forms": {
       "subscribe":{

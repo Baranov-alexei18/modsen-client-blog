@@ -49,9 +49,9 @@ export const Header = () => {
       <header className={styles.header}>
         <div className={styles.logo}>Modsen Client Blog</div>
         <div className={styles.actions}>
-          {LINKS_HEADER.map(({ path, name }) => (
-            <Link data-testid={path} key={`${path}-${name}`} href={`/${locale}/${path}`}>
-              {t(`${name}`)}
+          {LINKS_HEADER.map((path) => (
+            <Link data-testid={path} key={path} href={`/${locale}/${path}`}>
+              {t(`${path}`)}
             </Link>
           ))}
           <ButtonApp data-testid="modal-open-button" onClick={openModal}>{t('btnModalTitle')}</ButtonApp>

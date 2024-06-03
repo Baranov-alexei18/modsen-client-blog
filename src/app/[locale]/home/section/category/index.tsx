@@ -32,7 +32,7 @@ export const SectionCategory = () => {
         {!!categories.length && categories.map(({
           src, title, subtitle, id,
         }:CategoryCardType) => (
-          <Link key={src} href={`/${locale}/${LINK_CATEGORY.path}/${id}`}>
+          <Link key={src} href={`/${locale}/${LINK_CATEGORY}/${id}`}>
             <CategoryCard
               src={src}
               title={title}

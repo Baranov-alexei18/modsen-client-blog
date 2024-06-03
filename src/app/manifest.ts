@@ -9,6 +9,6 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
 
   return {
     name: t('name'),
-    start_url: LINK_HOME.path,
+    start_url: LINK_HOME,
   };
 }

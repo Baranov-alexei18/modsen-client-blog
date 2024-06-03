@@ -13,7 +13,7 @@ export default function NotFound() {
         <div className={styles.wrapper}>
           <h2>Not Found page</h2>
           <p>Could not find requested resource</p>
-          <Link href={LINK_HOME.path}>Return to home page</Link>
+          <Link href={LINK_HOME}>Return to home page</Link>
         </div>
       </body>
     </html>

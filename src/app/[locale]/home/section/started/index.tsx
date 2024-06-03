@@ -16,7 +16,7 @@ const SectionStarted = () => {
   const t = useTranslations('pages.home.started');
 
   const handleClickToAboutUsPage = () => {
-    router.push(`${locale}/${LINK_ABOUT_US.path}`);
+    router.push(`${locale}/${LINK_ABOUT_US}`);
   };
 
   return (
