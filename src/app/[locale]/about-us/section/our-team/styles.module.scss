@@ -69,6 +69,7 @@ $width-100: 100%;
     height: $space-120px;
     background-color: var(--color-yellow);
     border-top-left-radius: var(--border-radius-half-circle);
+    z-index: var(--z-index-1);
   }
 
   .decorationPurple {
@@ -118,6 +119,10 @@ $width-100: 100%;
 }
 
 @media (max-width: 768px) {
+  .wrapper {
+    margin: var(--spacing-20);
+  }
+
   .textBlock {
     h2 {
       font-size: var(--font-size-28);

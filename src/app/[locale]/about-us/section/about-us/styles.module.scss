@@ -1,5 +1,6 @@
 $space-30px: 30px;
 $space-120px: 120px;
+$space-250px: 250px;
 $space-300px: 300px;
 $space-500px: 500px;
 $space-600px: 600px;
@@ -128,7 +129,7 @@ $width-100: 100%;
         top: var(--spacing-0);
         left: var(--spacing-0);
         text-align: center;
-        padding: var(--spacing-20);
+        padding: var(--spacing-32);
         margin: auto;
 
         h2 {
@@ -144,5 +145,18 @@ $width-100: 100%;
     .aboutUsWrapper {
         flex-direction: column;
         padding: var(--spacing-20);
+    }
+}
+
+@media (max-width: 768px) {
+    .imageWrapper{
+        height: $space-300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .imageWrapper{
+        height: $space-250px;
+        min-height: $width-100;
     }
 }

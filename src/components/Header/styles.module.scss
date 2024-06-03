@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,6 +11,8 @@
   background-color: var(--color-dark);
   color: var(--color-white);
   list-style: none;
+  z-index: var(--z-index-100);
+  margin-bottom: 100%;
 
   .logo {
     font-size: var(--font-size-24);
